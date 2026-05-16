@@ -1,14 +1,28 @@
 ﻿# RestApiModeloDDD
 
-Projeto de estudo focado em arquitetura corporativa utilizando **DDD (Domain-Driven Design)** com o ecossistema .NET 8.
+API desenvolvida em :contentReference[oaicite:2]{index=2} com foco em arquitetura corporativa, aplicando conceitos de Domain-Driven Design (DDD), separação por camadas e boas práticas utilizadas em sistemas reais.
 
-Arquitetura de sistemas corporativos costuma ser menos explorada do que APIs REST simples, mas é uma base essencial para aplicações escaláveis, organizadas e de fácil manutenção.
-
-Este projeto demonstra a construção de uma API utilizando separação por camadas, padrões de projeto e boas práticas aplicadas em sistemas reais.
+O objetivo do projeto é demonstrar uma estrutura escalável e organizada para construção de APIs empresariais, priorizando manutenção, desacoplamento e clareza de responsabilidades.
 
 ---
 
-## Tecnologias utilizadas
+## Arquitetura aplicada
+
+Este projeto foi estruturado com base em:
+
+- Domain-Driven Design (DDD)
+- SOLID
+- Clean Code
+- Repository Pattern
+- Service Layer
+- Dependency Injection
+- DTO
+- Mapeamento entre camadas
+- Testes automatizados
+
+---
+
+## Tecnologias
 
 ![.NET](https://img.shields.io/badge/.NET-8.0-purple)
 ![EF Core](https://img.shields.io/badge/Entity%20Framework-Core-blue)
@@ -17,20 +31,15 @@ Este projeto demonstra a construção de uma API utilizando separação por cama
 ![xUnit](https://img.shields.io/badge/xUnit-Tests-red)
 ![SQL Server](https://img.shields.io/badge/SQL-Server-darkblue)
 
----
+### Stack utilizada
 
-## Objetivo
-
-Demonstrar uma arquitetura padrão para aplicações corporativas utilizando:
-
-- DDD
-- Repository Pattern
-- Service Layer
-- DTO
-- Dependency Injection
-- Mapeamento entre camadas
-- Testes automatizados
-- Boas práticas com .NET
+- C#
+- ASP.NET Core
+- Entity Framework Core
+- SQL Server
+- AutoMapper
+- Autofac
+- xUnit
 
 ---
 
@@ -38,226 +47,153 @@ Demonstrar uma arquitetura padrão para aplicações corporativas utilizando:
 
 ```text
 RestApiModeloDDD
-
+│
 ├── RestApiModeloDDD.API
 │   └── Controllers
-│       ├── ClienteController.cs
-│       └── ProdutoController.cs
-
+│
 ├── RestApiModeloDDD.Application
 │   ├── DTOs
 │   ├── Interfaces
 │   ├── Mappers
 │   └── Services
-
+│
 ├── RestApiModeloDDD.Domain
 │   ├── Entities
 │   ├── Interfaces
-│   │   ├── Repositories
-│   │   └── Services
 │   ├── Services
 │   └── Validations
-
+│
 ├── RestApiModeloDDD.Infrastructure
-│   ├── IoC
-│   └── Data
-│       ├── Context
-│       └── Repositories
-
+│   ├── Data
+│   └── IoC
+│
 └── RestApiModeloDDD.Tests
 ```
 
 ---
 
-## Camadas
+## Responsabilidade das camadas
 
 ### API
 
-Responsável pela exposição da aplicação através de endpoints HTTP.
+Camada responsável pela exposição da aplicação por meio de endpoints HTTP.
 
 ### Application
 
-Responsável pela orquestração entre apresentação e domínio.
+Camada de aplicação responsável pela orquestração entre interface e domínio.
 
 ### Domain
 
-Responsável pelas regras de negócio, entidades e contratos.
+Contém entidades, contratos, validações e regras de negócio.
 
 ### Infrastructure
 
-Responsável por persistência, acesso a dados e injeção de dependência.
+Implementa persistência, acesso a dados e configuração de injeção de dependência.
 
 ### Tests
 
-Responsável pela validação e testes automatizados.
+Contém testes automatizados para validação do comportamento da aplicação.
 
 ---
 
-## Onde cada conceito está aplicado
+## Conceitos aplicados no projeto
 
-### DDD
+## DDD
 
-Separação da aplicação em camadas independentes seguindo o domínio do negócio.
+Separação das responsabilidades conforme domínio de negócio.
 
-**Implementado em:**
+Aplicado em:
 
-```text
-RestApiModeloDDD.Domain
-RestApiModeloDDD.Application
-RestApiModeloDDD.Infrastructure
-RestApiModeloDDD.API
-```
+- Domain
+- Application
+- Infrastructure
+- API
 
 ---
 
-### Repository Pattern
+## Repository Pattern
 
-Responsável por abstrair acesso ao banco de dados.
+Responsável por abstrair o acesso aos dados.
 
-**Implementado em:**
+Exemplos:
 
-```text
-RestApiModeloDDD.Domain.Interfaces.Repositories
-RestApiModeloDDD.Infrastructure.Data.Repositories
-```
-
-**Exemplo:**
-
-```text
-IClienteRepository
-RepositoryCliente
-```
+- IClienteRepository
+- RepositoryCliente
 
 ---
 
-### Service Layer
+## Service Layer
 
-Centraliza regras de negócio.
+Camada de centralização das regras de negócio.
 
-**Implementado em:**
+Exemplos:
 
-```text
-RestApiModeloDDD.Domain.Services
-RestApiModeloDDD.Application.Services
-```
-
-**Exemplo:**
-
-```text
-ServiceCliente
-ApplicationServiceCliente
-```
+- ServiceCliente
+- ApplicationServiceCliente
 
 ---
 
-### DTO
+## DTO
 
-Objetos de transferência entre API e aplicação.
+Transferência de dados entre API e aplicação.
 
-**Implementado em:**
+Exemplos:
 
-```text
-RestApiModeloDDD.Application.DTOs
-```
-
-**Exemplo:**
-
-```text
-ClienteDTO
-ProdutoDTO
-```
+- ClienteDTO
+- ProdutoDTO
 
 ---
 
-### Dependency Injection
+## Dependency Injection
 
-Responsável pela resolução de dependências.
+Registro e resolução de dependências.
 
-**Implementado em:**
+Aplicado em:
 
-```text
-RestApiModeloDDD.Infrastructure.IoC
-```
-
-**Exemplo:**
-
-```text
-DependencyContainer.cs
-NativeInjectorBootStrapper.cs
-```
+- Infrastructure/IoC
 
 ---
 
-### Mapeamento entre camadas
+## Mapeamento
 
-Conversão entre entidades e DTOs.
-
-**Implementado em:**
-
-```text
-RestApiModeloDDD.Application.Mappers
-```
-
-Utilizando AutoMapper.
+Conversão entre entidades e DTOs utilizando :contentReference[oaicite:3]{index=3}.
 
 ---
 
-### Testes automatizados
+## Testes
 
-Validação de regras e comportamento do sistema.
-
-**Implementado em:**
-
-```text
-RestApiModeloDDD.Tests
-```
-
-Utilizando xUnit.
+Validação de regras utilizando :contentReference[oaicite:4]{index=4}.
 
 ---
 
-### Boas práticas com .NET
+## Objetivo do projeto
 
-Aplicação de padrões utilizados em projetos corporativos.
+Este projeto foi desenvolvido com foco em estudo de arquitetura corporativa, visando aprofundamento em:
 
-Inclui:
-
-- SOLID
-- Clean Code
-- Injeção de dependência
+- APIs escaláveis
+- Organização de código
 - Separação de responsabilidades
-- Camadas desacopladas
-- Testes
-- Reutilização de código
+- Arquitetura limpa
+- Reutilização
+- Manutenção
+- Padrões de projeto
 
 ---
 
-## Conceitos abordados
+## Próximos passos
 
-- DDD
-- SOLID
-- Clean Code
-- Repository Pattern
-- Service Pattern
-- Dependency Injection
-- AutoMapper
-- Entity Framework Core
-- Testes unitários
+Evoluções previstas:
 
----
-
-## Finalidade
-
-Servir como modelo de arquitetura para APIs corporativas utilizando .NET, com foco em:
-
-- organização
-- escalabilidade
-- manutenção
-- reutilização
-- separação de responsabilidades
+- autenticação JWT
+- logs estruturados
+- versionamento de API
+- dockerização
+- integração com cloud
+- CI/CD
+- observabilidade
 
 ---
 
 ## Autor
 
-Projeto desenvolvido para fins de estudo e aprofundamento em arquitetura de software com .NET.
+Projeto desenvolvido para estudo prático e aprofundamento em arquitetura de software com :contentReference[oaicite:5]{index=5}.
