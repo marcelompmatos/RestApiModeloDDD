@@ -1,6 +1,6 @@
 ﻿# RestApiModeloDDD
 
-Projeto de estudo focado em arquitetura corporativa utilizando DDD (Domain-Driven Design) com o ecossistema :contentReference[oaicite:0]{index=0}.
+Projeto de estudo focado em arquitetura corporativa utilizando **DDD (Domain-Driven Design)** com o ecossistema .NET 8.
 
 Arquitetura de sistemas corporativos costuma ser menos explorada do que APIs REST simples, mas é uma base essencial para aplicações escaláveis, organizadas e de fácil manutenção.
 
@@ -10,7 +10,7 @@ Este projeto demonstra a construção de uma API utilizando separação por cama
 
 ## Tecnologias utilizadas
 
-![.NET](https://img.shields.io/badge/.NET-9.0-purple)
+![.NET](https://img.shields.io/badge/.NET-8.0-purple)
 ![EF Core](https://img.shields.io/badge/Entity%20Framework-Core-blue)
 ![Autofac](https://img.shields.io/badge/Autofac-IoC-green)
 ![AutoMapper](https://img.shields.io/badge/AutoMapper-Mapping-orange)
@@ -72,19 +72,163 @@ RestApiModeloDDD
 ## Camadas
 
 ### API
+
 Responsável pela exposição da aplicação através de endpoints HTTP.
 
 ### Application
+
 Responsável pela orquestração entre apresentação e domínio.
 
 ### Domain
+
 Responsável pelas regras de negócio, entidades e contratos.
 
 ### Infrastructure
+
 Responsável por persistência, acesso a dados e injeção de dependência.
 
 ### Tests
+
 Responsável pela validação e testes automatizados.
+
+---
+
+## Onde cada conceito está aplicado
+
+### DDD
+
+Separação da aplicação em camadas independentes seguindo o domínio do negócio.
+
+**Implementado em:**
+
+```text
+RestApiModeloDDD.Domain
+RestApiModeloDDD.Application
+RestApiModeloDDD.Infrastructure
+RestApiModeloDDD.API
+```
+
+---
+
+### Repository Pattern
+
+Responsável por abstrair acesso ao banco de dados.
+
+**Implementado em:**
+
+```text
+RestApiModeloDDD.Domain.Interfaces.Repositories
+RestApiModeloDDD.Infrastructure.Data.Repositories
+```
+
+**Exemplo:**
+
+```text
+IClienteRepository
+RepositoryCliente
+```
+
+---
+
+### Service Layer
+
+Centraliza regras de negócio.
+
+**Implementado em:**
+
+```text
+RestApiModeloDDD.Domain.Services
+RestApiModeloDDD.Application.Services
+```
+
+**Exemplo:**
+
+```text
+ServiceCliente
+ApplicationServiceCliente
+```
+
+---
+
+### DTO
+
+Objetos de transferência entre API e aplicação.
+
+**Implementado em:**
+
+```text
+RestApiModeloDDD.Application.DTOs
+```
+
+**Exemplo:**
+
+```text
+ClienteDTO
+ProdutoDTO
+```
+
+---
+
+### Dependency Injection
+
+Responsável pela resolução de dependências.
+
+**Implementado em:**
+
+```text
+RestApiModeloDDD.Infrastructure.IoC
+```
+
+**Exemplo:**
+
+```text
+DependencyContainer.cs
+NativeInjectorBootStrapper.cs
+```
+
+---
+
+### Mapeamento entre camadas
+
+Conversão entre entidades e DTOs.
+
+**Implementado em:**
+
+```text
+RestApiModeloDDD.Application.Mappers
+```
+
+Utilizando AutoMapper.
+
+---
+
+### Testes automatizados
+
+Validação de regras e comportamento do sistema.
+
+**Implementado em:**
+
+```text
+RestApiModeloDDD.Tests
+```
+
+Utilizando xUnit.
+
+---
+
+### Boas práticas com .NET
+
+Aplicação de padrões utilizados em projetos corporativos.
+
+Inclui:
+
+- SOLID
+- Clean Code
+- Injeção de dependência
+- Separação de responsabilidades
+- Camadas desacopladas
+- Testes
+- Reutilização de código
 
 ---
 
