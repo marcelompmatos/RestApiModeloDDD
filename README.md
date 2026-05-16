@@ -10,12 +10,12 @@ Este projeto demonstra a construção de uma API utilizando separação por cama
 
 ## Tecnologias utilizadas
 
-- :contentReference[oaicite:1]{index=1}
-- :contentReference[oaicite:2]{index=2}
-- :contentReference[oaicite:3]{index=3}
-- :contentReference[oaicite:4]{index=4}
-- xUnit
-- :contentReference[oaicite:5]{index=5}
+![.NET](https://img.shields.io/badge/.NET-9.0-purple)
+![EF Core](https://img.shields.io/badge/Entity%20Framework-Core-blue)
+![Autofac](https://img.shields.io/badge/Autofac-IoC-green)
+![AutoMapper](https://img.shields.io/badge/AutoMapper-Mapping-orange)
+![xUnit](https://img.shields.io/badge/xUnit-Tests-red)
+![SQL Server](https://img.shields.io/badge/SQL-Server-darkblue)
 
 ---
 
