@@ -1,6 +1,7 @@
 ﻿using RestApiModeloDDD.Domain.Core.Interfaces.Repositories;
 using RestApiModeloDDD.Domain.Core.Interfaces.Services;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace RestApiModeloDDD.Domain.Services
 {
@@ -13,29 +14,29 @@ namespace RestApiModeloDDD.Domain.Services
             this.repository = repository;
         }
 
-        public void Add(TEntity obj)
+        public async Task AddAsync(TEntity obj)
         {
-            repository.Add(obj);
+            await repository.AddAsync(obj);
         }
 
-        public IEnumerable<TEntity> GetAll()
+        public async Task<IEnumerable<TEntity>> GetAllAsync()
         {
-            return repository.GetAll();
+            return await repository.GetAllAsync();
         }
 
-        public TEntity GetById(int id)
+        public async Task<TEntity> GetByIdAsync(int id)
         {
-            return repository.GetById(id);
+            return await repository.GetByIdAsync(id);
         }
 
-        public void Remove(TEntity obj)
+        public async Task RemoveAsync(TEntity obj)
         {
-            repository.Remove(obj);
+            await repository.RemoveAsync(obj);
         }
 
-        public void Update(TEntity obj)
+        public async Task UpdateAsync(TEntity obj)
         {
-            repository.Update(obj);
+            await repository.UpdateAsync(obj);
         }
     }
 }

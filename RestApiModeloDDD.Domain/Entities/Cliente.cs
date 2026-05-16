@@ -1,5 +1,6 @@
 ﻿using RestApiModeloDDD.Domain.Entities;
 using System;
+using System.Collections.Generic;
 
 namespace RestApiModeloDDD.Domain.Entitys
 {
@@ -8,7 +9,6 @@ namespace RestApiModeloDDD.Domain.Entitys
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
         public string Email { get; set; }
-        public DateTime DataCadastro { get; set; }
-        public bool IsAtivo { get; set; }
+        public virtual ICollection<Pedido> Pedidos { get; set; } = new List<Pedido>();
     }
 }

@@ -3,6 +3,7 @@ using RestApiModeloDDD.Application.Dtos;
 using RestApiModeloDDD.Application.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace RestApiModeloDDD.API.Controllers
 {
@@ -19,77 +20,58 @@ namespace RestApiModeloDDD.API.Controllers
 
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public async Task<ActionResult<IEnumerable<ProdutoDto>>> Get()
         {
-            return Ok(applicationServiceProduto.GetAll());
+            var produtos = await applicationServiceProduto.GetAllAsync();
+            return Ok(produtos);
         }
 
         // GET api/values/5\
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public async Task<ActionResult<ProdutoDto>> Get(int id)
         {
-            return Ok(applicationServiceProduto.GetById(id));
+            var produto = await applicationServiceProduto.GetByIdAsync(id);
+
+            if (produto == null)
+                return NotFound();
+
+            return Ok(produto);
         }
 
         // POST api/values
         [HttpPost]
-        public ActionResult Post([FromBody] ProdutoDto produtoDTO)
+        public async Task<ActionResult> Post([FromBody] ProdutoDto produtoDTO)
         {
-            try
-            {
-                if (produtoDTO == null)
-                    return NotFound();
+            if (produtoDTO == null)
+                return BadRequest();
 
+            await applicationServiceProduto.AddAsync(produtoDTO);
 
-                applicationServiceProduto.Add(produtoDTO);
-                return Ok("O produto foi cadastrado com sucesso");
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
+            return Ok("Produto cadastrado com sucesso!");
         }
 
         // PUT api/values/5
         [HttpPut]
-        public ActionResult Put([FromBody] ProdutoDto produtoDTO)
+        public async Task<ActionResult> Put([FromBody] ProdutoDto produtoDTO)
         {
+            if (produtoDTO == null)
+                return BadRequest();
 
-            try
-            {
-                if (produtoDTO == null)
-                    return NotFound();
+            await applicationServiceProduto.UpdateAsync(produtoDTO);
 
-                applicationServiceProduto.Update(produtoDTO);
-                return Ok("O produto foi atualizado com sucesso!");
-
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
+            return Ok("Produto atualizado com sucesso!");
         }
 
         // DELETE api/values/5
         [HttpDelete()]
-        public ActionResult Delete([FromBody] ProdutoDto produtoDTO)
+        public async Task<ActionResult> Delete([FromBody] ProdutoDto produtoDTO)
         {
-            try
-            {
-                if (produtoDTO == null)
-                    return NotFound();
+            if (produtoDTO == null)
+                return BadRequest();
 
-                applicationServiceProduto.Remove(produtoDTO);
-                return Ok("O produto foi removido com sucesso!");
+            await applicationServiceProduto.RemoveAsync(produtoDTO);
 
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
+            return Ok("Produto removido com sucesso!");
         }
     }
 }

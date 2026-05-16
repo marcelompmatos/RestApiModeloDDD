@@ -36,7 +36,7 @@ namespace RestApiModeloDDD.Tests
             var clientes = _fixture.Build<Cliente>().CreateMany(5);
             var clientesDto = _fixture.Build<ClienteDto>().CreateMany(5);
 
-            _serviceClienteMock.Setup(x => x.GetAll()).Returns(clientes);
+            _serviceClienteMock.Setup(x => x.GetAllAsync()).ReturnsAsync(clientes);
             _mapperMock.Setup(x => x.Map<IEnumerable<ClienteDto>>(clientes)).Returns(clientesDto);
 
             var applicationServiceCliente = new ApplicationServiceCliente(_serviceClienteMock.Object, _mapperMock.Object);
@@ -67,7 +67,7 @@ namespace RestApiModeloDDD.Tests
                 .With(c => c.Email, "teste1@teste.com.br")
                 .Create();
             
-            _serviceClienteMock.Setup(x => x.GetById(id)).Returns(cliente);
+            _serviceClienteMock.Setup(x => x.GetByIdAsync(id)).ReturnsAsync(cliente);
             _mapperMock.Setup(x => x.Map<ClienteDto>(cliente)).Returns(clienteDto);
 
             var applicationServiceCliente =

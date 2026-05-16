@@ -1,18 +1,19 @@
 ﻿using RestApiModeloDDD.Application.Dtos;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace RestApiModeloDDD.Application.Interfaces
 {
     public interface IApplicationServiceCliente
     {
-        void Add(ClienteDto clienteDto);
+        Task AddAsync(ClienteDto clienteDto);
 
-        void Update(ClienteDto clienteDto);
+        Task UpdateAsync(ClienteDto clienteDto);
 
-        void Remove(ClienteDto clienteDto);
+        Task RemoveAsync(ClienteDto clienteDto);
 
-        IEnumerable<ClienteDto> GetAll();
+        Task<IEnumerable<ClienteDto>> GetAllAsync();
 
-        ClienteDto GetById(int id);
+        Task<ClienteDto> GetByIdAsync(int id);
     }
 }

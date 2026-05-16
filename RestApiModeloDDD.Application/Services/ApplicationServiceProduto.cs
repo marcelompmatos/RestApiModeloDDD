@@ -4,6 +4,7 @@ using RestApiModeloDDD.Application.Interfaces;
 using RestApiModeloDDD.Domain.Core.Interfaces.Services;
 using RestApiModeloDDD.Domain.Entitys;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace RestApiModeloDDD.Application.Services
 {
@@ -19,36 +20,42 @@ namespace RestApiModeloDDD.Application.Services
             this.mapper = mapper;
         }
 
-        public void Add(ProdutoDto produtoDto)
+
+        public async Task AddAsync(ProdutoDto produtoDto)
         {
             var produto = mapper.Map<Produto>(produtoDto);
-            serviceProduto.Add(produto);
+
+            await serviceProduto.AddAsync(produto);
         }
 
-        public IEnumerable<ProdutoDto> GetAll()
+        public async Task<IEnumerable<ProdutoDto>> GetAllAsync()
         {
-            var produtos = serviceProduto.GetAll();
-            var produtosDto = mapper.Map<IEnumerable<ProdutoDto>>(produtos);
-            return produtosDto;
+            var produtos = await serviceProduto.GetAllAsync();
+
+            return mapper.Map<IEnumerable<ProdutoDto>>(produtos);
         }
 
-        public ProdutoDto GetById(int id)
+        public async Task<ProdutoDto> GetByIdAsync(int id)
         {
-            var produto = serviceProduto.GetById(id);
-            var produtoDto = mapper.Map<ProdutoDto>(produto);
-            return produtoDto;
+            var produto = await serviceProduto.GetByIdAsync(id);
+
+            return mapper.Map<ProdutoDto>(produto);
         }
 
-        public void Remove(ProdutoDto produtoDto)
-        {
-            var produto = mapper.Map<Produto>(produtoDto);
-            serviceProduto.Remove(produto);
-        }
-
-        public void Update(ProdutoDto produtoDto)
+        public async Task RemoveAsync(ProdutoDto produtoDto)
         {
             var produto = mapper.Map<Produto>(produtoDto);
-            serviceProduto.Update(produto);
+
+            await serviceProduto.RemoveAsync(produto);
         }
+
+        public async Task UpdateAsync(ProdutoDto produtoDto)
+        {
+            var produto = mapper.Map<Produto>(produtoDto);
+
+            await serviceProduto.UpdateAsync(produto);
+        }
+
+
     }
 }

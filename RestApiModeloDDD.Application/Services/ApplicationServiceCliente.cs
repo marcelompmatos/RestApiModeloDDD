@@ -3,7 +3,9 @@ using RestApiModeloDDD.Application.Dtos;
 using RestApiModeloDDD.Application.Interfaces;
 using RestApiModeloDDD.Domain.Core.Interfaces.Services;
 using RestApiModeloDDD.Domain.Entitys;
+using RestApiModeloDDD.Domain.Services;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace RestApiModeloDDD.Application.Services
 {
@@ -17,38 +19,42 @@ namespace RestApiModeloDDD.Application.Services
             this.serviceCliente = serviceCliente;
             this.mapper = mapper;
         }
-        public void Add(ClienteDto clienteDto)
+
+        public async Task AddAsync(ClienteDto clienteDto)
         {
             var cliente = mapper.Map<Cliente>(clienteDto);
-            serviceCliente.Add(cliente);
+
+            await serviceCliente.AddAsync(cliente);
         }
 
-        public IEnumerable<ClienteDto> GetAll()
+        public async Task<IEnumerable<ClienteDto>> GetAllAsync()
         {
-            var clientes = serviceCliente.GetAll();
-            var clientesDto = mapper.Map<IEnumerable<ClienteDto>>(clientes);
+            var clientes = await serviceCliente.GetAllAsync();
 
-            return clientesDto;
+            return mapper.Map<IEnumerable<ClienteDto>>(clientes);
         }
 
-        public ClienteDto GetById(int id)
+        public async Task<ClienteDto> GetByIdAsync(int id)
         {
-            var cliente = serviceCliente.GetById(id);
-            var clienteDto = mapper.Map<ClienteDto>(cliente);
+            var cliente = await serviceCliente.GetByIdAsync(id);
 
-            return clienteDto;
+            return mapper.Map<ClienteDto>(cliente);
         }
 
-        public void Remove(ClienteDto clienteDto)
-        {
-            var cliente = mapper.Map<Cliente>(clienteDto);
-            serviceCliente.Remove(cliente);
-        }
-
-        public void Update(ClienteDto clienteDto)
+        public async Task RemoveAsync(ClienteDto clienteDto)
         {
             var cliente = mapper.Map<Cliente>(clienteDto);
-            serviceCliente.Update(cliente);
+
+            await serviceCliente.RemoveAsync(cliente);
         }
+
+        public async Task UpdateAsync(ClienteDto clienteDto)
+        {
+            var cliente = mapper.Map<Cliente>(clienteDto);
+
+            await serviceCliente.UpdateAsync(cliente);
+        }
+
+
     }
 }

@@ -3,6 +3,7 @@ using RestApiModeloDDD.Application.Dtos;
 using RestApiModeloDDD.Application.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace RestApiModeloDDD.API.Controllers
 {
@@ -20,76 +21,58 @@ namespace RestApiModeloDDD.API.Controllers
         }
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public async Task<ActionResult<IEnumerable<ClienteDto>>> Get()
         {
-            return Ok(applicationServiceCliente.GetAll());
+            var clientes = await applicationServiceCliente.GetAllAsync();
+            return Ok(clientes);
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public async Task<ActionResult<ClienteDto>> Get(int id)
         {
-            return Ok(applicationServiceCliente.GetById(id));
+            var cliente = await applicationServiceCliente.GetByIdAsync(id);
+
+            if (cliente == null)
+                return NotFound();
+
+            return Ok(cliente);
         }
 
         // POST api/values
         [HttpPost]
-        public ActionResult Post([FromBody] ClienteDto clienteDTO)
+        public async Task<ActionResult> Post([FromBody] ClienteDto clienteDTO)
         {
-            try
-            {
-                if (clienteDTO == null)
-                    return NotFound();
+            if (clienteDTO == null)
+                return BadRequest();
 
-                applicationServiceCliente.Add(clienteDTO);
-                return Ok("Cliente Cadastrado com sucesso!");
-            }
-            catch (Exception ex)
-            {
+            await applicationServiceCliente.AddAsync(clienteDTO);
 
-                throw ex;
-            }
-
-
+            return Ok("Cliente cadastrado com sucesso!");
         }
 
         // PUT api/values/5
         [HttpPut]
-        public ActionResult Put([FromBody] ClienteDto clienteDTO)
+        public async Task<ActionResult> Put([FromBody] ClienteDto clienteDTO)
         {
-            try
-            {
-                if (clienteDTO == null)
-                    return NotFound();
+            if (clienteDTO == null)
+                return BadRequest();
 
-                applicationServiceCliente.Update(clienteDTO);
-                return Ok("Cliente Atualizado com sucesso!");
-            }
-            catch (Exception)
-            {
+            await applicationServiceCliente.UpdateAsync(clienteDTO);
 
-                throw;
-            }
+            return Ok("Cliente atualizado com sucesso!");
         }
 
         // DELETE api/values/5
         [HttpDelete()]
-        public ActionResult Delete([FromBody] ClienteDto clienteDTO)
+        public async Task<ActionResult> Delete([FromBody] ClienteDto clienteDTO)
         {
-            try
-            {
-                if (clienteDTO == null)
-                    return NotFound();
+            if (clienteDTO == null)
+                return BadRequest();
 
-                applicationServiceCliente.Remove(clienteDTO);
-                return Ok("Cliente Removido com sucesso!");
-            }
-            catch (Exception ex)
-            {
+            await applicationServiceCliente.RemoveAsync(clienteDTO);
 
-                throw ex;
-            }
-
+            return Ok("Cliente removido com sucesso!");
         }
     }
 }

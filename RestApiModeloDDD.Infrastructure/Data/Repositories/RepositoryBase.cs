@@ -1,68 +1,43 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RestApiModeloDDD.Domain.Core.Interfaces.Repositories;
 using RestApiModeloDDD.Infrastructure.Data.Context;
-using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Threading.Tasks;
 
-namespace RestApiModeloDDD.Infrastructure.Data.Repositories
+public class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : class
 {
-    public class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : class
+    private readonly SqlContext sqlContext;
+
+    public RepositoryBase(SqlContext sqlContext)
     {
-        private readonly SqlContext sqlContext;
+        this.sqlContext = sqlContext;
+    }
 
-        public RepositoryBase(SqlContext sqlContext)
-        {
-            this.sqlContext = sqlContext;
-        }
+    public async Task AddAsync(TEntity obj)
+    {
+        await sqlContext.Set<TEntity>().AddAsync(obj);
+        await sqlContext.SaveChangesAsync();
+    }
 
-        public void Add(TEntity obj)
-        {
-            try
-            {
-                sqlContext.Set<TEntity>().Add(obj);
-                sqlContext.SaveChanges();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+    public async Task<IEnumerable<TEntity>> GetAllAsync()
+    {
+        return await sqlContext.Set<TEntity>().ToListAsync();
+    }
 
-        public IEnumerable<TEntity> GetAll()
-        {
-            return sqlContext.Set<TEntity>().ToList();
-        }
+    public async Task<TEntity> GetByIdAsync(int id)
+    {
+        return await sqlContext.Set<TEntity>().FindAsync(id);
+    }
 
-        public TEntity GetById(int id)
-        {
-            return sqlContext.Set<TEntity>().Find(id);
-        }
+    public async Task RemoveAsync(TEntity obj)
+    {
+        sqlContext.Set<TEntity>().Remove(obj);
+        await sqlContext.SaveChangesAsync();
+    }
 
-        public void Remove(TEntity obj)
-        {
-            try
-            {
-                sqlContext.Set<TEntity>().Remove(obj);
-                sqlContext.SaveChanges();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        public void Update(TEntity obj)
-        {
-            try
-            {
-                sqlContext.Entry(obj).State = EntityState.Modified;
-                sqlContext.SaveChanges();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+    public async Task UpdateAsync(TEntity obj)
+    {
+        sqlContext.Entry(obj).State = EntityState.Modified;
+        await sqlContext.SaveChangesAsync();
     }
 }
