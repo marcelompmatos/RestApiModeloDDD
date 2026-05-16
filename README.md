@@ -1,6 +1,6 @@
 ﻿# RestApiModeloDDD
 
-API desenvolvida em :contentReference[oaicite:0]{index=0} com foco em arquitetura corporativa, aplicando conceitos de Domain-Driven Design (DDD), separação por camadas e boas práticas utilizadas em sistemas reais.
+API desenvolvida em .NET 9 com foco em arquitetura corporativa, aplicando conceitos de Domain-Driven Design (DDD), separação por camadas e boas práticas utilizadas em sistemas reais.
 
 O objetivo do projeto é demonstrar uma estrutura escalável e organizada para construção de APIs empresariais, priorizando manutenção, desacoplamento e clareza de responsabilidades.
 
