@@ -196,4 +196,4 @@ Evoluções previstas:
 
 ## Autor
 
-Projeto desenvolvido para estudo prático e aprofundamento em arquitetura de software com :contentReference[oaicite:5]{index=5}.
+Projeto desenvolvido para fins de estudo prático e aprofundamento em arquitetura de software utilizando :contentReference[oaicite:1]{index=1}, com foco em boas práticas, escalabilidade e organização de código.
