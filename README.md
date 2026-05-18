@@ -156,13 +156,219 @@ Aplicado em:
 
 ## Mapeamento
 
-Conversão entre entidades e DTOs utilizando :contentReference[oaicite:3]{index=3}.
+Conversão entre entidades e DTOs utilizando AutoMapper..
 
 ---
 
 ## Testes
 
-Validação de regras utilizando :contentReference[oaicite:4]{index=4}.
+Validação de regras utilizando xUnit.
+
+---
+
+---
+
+## Fluxo da aplicação
+
+A comunicação entre as camadas ocorre da seguinte forma:
+
+```text
+Controller
+↓
+Application Service
+↓
+Domain Service
+↓
+Repository
+↓
+DbContext
+↓
+SQL Server
+```
+
+Esse fluxo garante separação de responsabilidades, desacoplamento e manutenção facilitada.
+
+---
+
+## Explicação das principais classes
+
+### Controllers
+
+Responsáveis por receber requisições HTTP e delegar o processamento para a camada de aplicação.
+
+Exemplos:
+
+- ClienteController
+- ProdutoController
+
+Aplicado:
+
+- API
+- DTO
+- Service Layer
+- SOLID
+
+---
+
+### DTOs
+
+Objetos de transferência de dados entre API e aplicação.
+
+Evita expor entidades de domínio diretamente.
+
+Exemplos:
+
+- ClienteDTO
+- ProdutoDTO
+
+Aplicado:
+
+- DTO
+- Clean Code
+- Encapsulamento
+
+---
+
+### Application Services
+
+Responsáveis por orquestrar chamadas entre API e domínio.
+
+Exemplos:
+
+- ApplicationServiceCliente
+
+Aplicado:
+
+- Service Layer
+- DDD
+- SOLID
+
+---
+
+### Entities
+
+Representam entidades do domínio.
+
+Exemplos:
+
+- Cliente
+- Produto
+
+Aplicado:
+
+- DDD
+- Entidades
+- Regras de negócio
+
+---
+
+### Domain Services
+
+Centralizam regras de negócio.
+
+Exemplos:
+
+- ServiceCliente
+
+Aplicado:
+
+- Service Pattern
+- DDD
+
+---
+
+### Repositories
+
+Abstraem acesso aos dados.
+
+Interfaces:
+
+- IClienteRepository
+
+Implementações:
+
+- RepositoryCliente
+
+Aplicado:
+
+- Repository Pattern
+- SOLID
+
+---
+
+### Mappers
+
+Responsáveis pela conversão entre DTO e Entity.
+
+Utilizando :contentReference[oaicite:1]{index=1}.
+
+Aplicado:
+
+- Mapping
+- Separação entre camadas
+
+---
+
+### IoC
+
+Registro de dependências.
+
+Exemplos:
+
+- DependencyContainer
+- NativeInjectorBootStrapper
+
+Utilizando :contentReference[oaicite:2]{index=2}.
+
+Aplicado:
+
+- Dependency Injection
+- Inversão de controle
+
+---
+
+### Context
+
+Classe responsável pela configuração de persistência.
+
+Exemplo:
+
+- ContextBase
+
+Utilizando :contentReference[oaicite:3]{index=3}.
+
+Aplicado:
+
+- ORM
+- Persistência
+
+---
+
+### Tests
+
+Validação automatizada das regras.
+
+Utilizando :contentReference[oaicite:4]{index=4}.
+
+Aplicado:
+
+- Testes unitários
+- Qualidade de código
+
+---
+
+## Benefícios da arquitetura
+
+A estrutura adotada permite:
+
+- Separação clara entre responsabilidades
+- Facilidade de manutenção
+- Escalabilidade
+- Reutilização de componentes
+- Testabilidade
+- Organização em projetos reais
+- Evolução para microsserviços
+- Integração com cloud
 
 ---
 
