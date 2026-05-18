@@ -298,34 +298,76 @@ Aplicado:
 
 ### Mappers
 
-Responsáveis pela conversão entre DTO e Entity.
+Responsáveis pela conversão entre DTOs e entidades do domínio, garantindo desacoplamento entre as camadas da aplicação.
 
-Utilizando :contentReference[oaicite:1]{index=1}.
+Utilizando AutoMapper para automatizar o mapeamento de objetos.
 
 Aplicado:
 
-- Mapping
+- Object Mapping
+- DTO Pattern
 - Separação entre camadas
+- Desacoplamento de responsabilidades
+- Organização da arquitetura
 
----
+### IoC — Inversão de Controle
 
-### IoC
+A classe `ConfigurationIOC` é responsável por centralizar o registro das dependências da aplicação.
 
-Registro de dependências.
+Nela são configuradas as associações entre interfaces e implementações concretas, permitindo que o container gerencie automaticamente a criação e o ciclo de vida dos objetos.
 
-Exemplos:
+### Responsabilidade
 
-- DependencyContainer
-- NativeInjectorBootStrapper
+Realizar o mapeamento das dependências entre as camadas da arquitetura:
 
-Utilizando :contentReference[oaicite:2]{index=2}.
+- Application
+- Domain
+- Infrastructure
 
-Aplicado:
+### Como funciona
+
+O método `Load(ContainerBuilder builder)` registra cada serviço no container do Autofac.
+
+Exemplo:
+
+- `ApplicationServiceCliente` → `IApplicationServiceCliente`
+- `ServiceCliente` → `IServiceCliente`
+- `RepositoryCliente` → `IRepositoryCliente`
+
+Quando uma classe precisa de uma interface no construtor, o container injeta automaticamente sua implementação registrada.
+
+### AutoMapper
+
+Também realiza o registro dos perfis do :contentReference[oaicite:1]{index=1}:
+
+- DTO para Entity
+- Entity para DTO
+
+Permitindo conversão automática entre objetos de diferentes camadas.
+
+### Fluxo
+
+Controller  
+↓  
+ApplicationService  
+↓  
+Service  
+↓  
+Repository  
+↓  
+DbContext
+
+Cada camada recebe suas dependências via injeção.
+
+### Conceitos aplicados
 
 - Dependency Injection
-- Inversão de controle
+- Inversion of Control
+- SOLID
+- Separation of Concerns
+- Clean Architecture
+- DDD
 
----
 
 ### Context
 
@@ -343,12 +385,24 @@ Aplicado:
 - Persistência
 
 ---
+## Decisão Arquitetural — Unit of Work
+
+Embora o padrão Unit of Work seja amplamente utilizado em arquiteturas corporativas, neste projeto sua implementação foi propositalmente omitida.
+
+Isso ocorre porque o Entity Framework Core já atua como Unit of Work através do `DbContext`, sendo responsável por:
+
+- Change Tracking
+- Transaction Management
+- Commit de operações
+- Controle de consistência
+
+Assim, optou-se por utilizar diretamente o `DbContext`, reduzindo complexidade e evitando sobreposição de padrões já fornecidos pela infraestrutura.
 
 ### Tests
 
 Validação automatizada das regras.
 
-Utilizando :contentReference[oaicite:4]{index=4}.
+Utilizando xunit.
 
 Aplicado:
 

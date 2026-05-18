@@ -24,7 +24,7 @@ namespace RestApiModeloDDD.Infrastructure.Data.Context
             {
                 if (entry.State == EntityState.Added)
                 {
-                    entry.Property("DataCadastro").CurrentValue = DateTime.Now;
+                    entry.Property("DataCadastro").CurrentValue = DateTime.UtcNow;
                 }
                 if (entry.State == EntityState.Modified)
                 {
