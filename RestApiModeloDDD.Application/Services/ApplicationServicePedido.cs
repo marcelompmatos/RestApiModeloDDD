@@ -31,7 +31,7 @@ namespace RestApiModeloDDD.Application.Services
                 DataPedido = p.DataPedido,
                 ValorTotal = p.ValorTotal,
 
-                Cliente = new ClienteDto
+                Cliente = p.Cliente == null ? null : new ClienteDto
                 {
                     Id = p.Cliente.Id,
                     Nome = p.Cliente.Nome,
@@ -42,10 +42,17 @@ namespace RestApiModeloDDD.Application.Services
                 Itens = p.Itens.Select(i => new ItemPedidoDTO
                 {
                     Id = i.Id,
-                    
                     ProdutoId = i.ProdutoId,
                     Quantidade = i.Quantidade,
-                    ValorUnitario = i.ValorUnitario
+                    ValorUnitario = i.ValorUnitario,
+
+                    Produto = i.Produto == null ? null : new ProdutoDto
+                    {
+                        Id = i.Produto.Id,
+                        Nome = i.Produto.Nome,
+                        Valor = i.Produto.Valor
+                    }
+
                 }).ToList()
 
             }).ToList();
