@@ -49,25 +49,113 @@ Este projeto foi estruturado com base em:
 RestApiModeloDDD
 │
 ├── RestApiModeloDDD.API
-│   └── Controllers
+│   ├── Controllers
+│   │   ├── ClienteController.cs
+│   │   ├── ProdutoController.cs
+│   │   └── PedidoController.cs
+│   │
+│   ├── Configurations
+│   │   ├── SwaggerConfiguration.cs
+│   │   └── AutoMapperConfiguration.cs
+│   │
+│   ├── Program.cs
+│   └── appsettings.json
 │
 ├── RestApiModeloDDD.Application
 │   ├── DTOs
+│   │   ├── ClienteDto.cs
+│   │   ├── ProdutoDto.cs
+│   │   ├── PedidoDto.cs
+│   │   └── ItemPedidoDto.cs
+│   │
 │   ├── Interfaces
+│   │   ├── IApplicationServiceBase.cs
+│   │   ├── IApplicationServiceCliente.cs
+│   │   ├── IApplicationServiceProduto.cs
+│   │   └── IApplicationServicePedido.cs
+│   │
 │   ├── Mappers
+│   │   ├── DtoToModelMappingCliente.cs
+│   │   ├── DtoToModelMappingProduto.cs
+│   │   ├── DtoToModelMappingPedido.cs
+│   │   ├── DtoToModelMappingItemPedido.cs
+│   │   ├── ModelToDtoMappingCliente.cs
+│   │   ├── ModelToDtoMappingProduto.cs
+│   │   ├── ModelToDtoMappingPedido.cs
+│   │   └── ModelToDtoMappingItemPedido.cs
+│   │
 │   └── Services
+│       ├── ApplicationServiceBase.cs
+│       ├── ApplicationServiceCliente.cs
+│       ├── ApplicationServiceProduto.cs
+│       └── ApplicationServicePedido.cs
 │
 ├── RestApiModeloDDD.Domain
 │   ├── Entities
+│   │   ├── Base.cs
+│   │   ├── Cliente.cs
+│   │   ├── Produto.cs
+│   │   ├── Pedido.cs
+│   │   └── ItemPedido.cs
+│   │
 │   ├── Interfaces
+│   │   ├── Services
+│   │   │   ├── IServiceBase.cs
+│   │   │   ├── IServiceCliente.cs
+│   │   │   ├── IServiceProduto.cs
+│   │   │   └── IServicePedido.cs
+│   │   │
+│   │   └── Repositories
+│   │       ├── IRepositoryBase.cs
+│   │       ├── IRepositoryCliente.cs
+│   │       ├── IRepositoryProduto.cs
+│   │       ├── IRepositoryPedido.cs
+│   │       └── IRepositoryItemPedido.cs
+│   │
 │   ├── Services
+│   │   ├── ServiceBase.cs
+│   │   ├── ServiceCliente.cs
+│   │   ├── ServiceProduto.cs
+│   │   └── ServicePedido.cs
+│   │
 │   └── Validations
+│       ├── ClienteValidation.cs
+│       ├── ProdutoValidation.cs
+│       └── PedidoValidation.cs
 │
 ├── RestApiModeloDDD.Infrastructure
 │   ├── Data
+│   │   ├── Context
+│   │   │   └── SqlContext.cs
+│   │   │
+│   │   ├── Repository
+│   │   │   ├── RepositoryBase.cs
+│   │   │   ├── RepositoryCliente.cs
+│   │   │   ├── RepositoryProduto.cs
+│   │   │   ├── RepositoryPedido.cs
+│   │   │   └── RepositoryItemPedido.cs
+│   │   │
+│   │   └── 
+│   │
 │   └── IoC
+│       ├── ConfigurationIOC.cs
+│       └── ModuleIOC.cs
 │
 └── RestApiModeloDDD.Tests
+    ├── Application
+    │   ├── ClienteTests.cs
+    │   ├── ProdutoTests.cs
+    │   └── PedidoTests.cs
+    │
+    ├── Domain
+    │   ├── ServiceClienteTests.cs
+    │   ├── ServiceProdutoTests.cs
+    │   └── ServicePedidoTests.cs
+    │
+    └── Repository
+        ├── RepositoryClienteTests.cs
+        ├── RepositoryProdutoTests.cs
+        └── RepositoryPedidoTests.cs
 ```
 
 ---

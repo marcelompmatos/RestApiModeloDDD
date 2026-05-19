@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using RestApiModeloDDD.Domain.Entities;
 using RestApiModeloDDD.Domain.Entitys;
 using System;
 using System.Linq;
@@ -17,6 +18,8 @@ namespace RestApiModeloDDD.Infrastructure.Data.Context
 
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Produto> Produtos { get; set; }
+        public DbSet<Pedido> Pedidos { get; set; }
+        public DbSet<ItemPedido> ItemPedidos { get; set; }
 
         public override int SaveChanges()
         {

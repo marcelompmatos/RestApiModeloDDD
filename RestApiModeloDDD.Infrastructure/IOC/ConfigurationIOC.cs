@@ -5,6 +5,8 @@ using RestApiModeloDDD.Application.Mappers;
 using RestApiModeloDDD.Application.Services;
 using RestApiModeloDDD.Domain.Core.Interfaces.Repositories;
 using RestApiModeloDDD.Domain.Core.Interfaces.Services;
+using RestApiModeloDDD.Domain.Interfaces.Repositories;
+using RestApiModeloDDD.Domain.Interfaces.Services;
 using RestApiModeloDDD.Domain.Services;
 using RestApiModeloDDD.Infrastructure.Data.Repositories;
 
@@ -17,11 +19,17 @@ namespace RestApiModeloDDD.Infrastructure.IOC
             #region IOC
 
             builder.RegisterType<ApplicationServiceCliente>().As<IApplicationServiceCliente>();
-            builder.RegisterType<ApplicationServiceProduto>().As<IApplicationServiceProduto>();
-            builder.RegisterType<ServiceCliente>().As<IServiceCliente>();
-            builder.RegisterType<ServiceProduto>().As<IServiceProduto>();
             builder.RegisterType<RepositoryCliente>().As<IRepositoryCliente>();
+            builder.RegisterType<ServiceCliente>().As<IServiceCliente>();
+
+            builder.RegisterType<ApplicationServiceProduto>().As<IApplicationServiceProduto>();
             builder.RegisterType<RepositoryProduto>().As<IRepositoryProduto>();
+            builder.RegisterType<ServiceProduto>().As<IServiceProduto>();
+
+            builder.RegisterType<ApplicationServicePedido>().As<IApplicationServicePedido>();
+            builder.RegisterType<RepositoryPedido>().As<IRepositoryPedido>();
+            builder.RegisterType<ServicePedido>().As<IServicePedido>();
+
             builder.Register(ctx => new MapperConfiguration(cfg =>
             {
                 cfg.AddProfile(new DtoToModelMappingCliente());

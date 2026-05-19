@@ -8,6 +8,7 @@ using RestApiModeloDDD.Domain.Core.Interfaces.Services;
 using RestApiModeloDDD.Domain.Entitys;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 
 namespace RestApiModeloDDD.Tests
@@ -30,7 +31,7 @@ namespace RestApiModeloDDD.Tests
         }
 
         [Test]
-        public void ApplicationServiceCliente_GetAll_ShouldReturnFiveClients()
+        public async Task ApplicationServiceCliente_GetAll_ShouldReturnFiveClients()
         {
             //Arrange
             var clientes = _fixture.Build<Cliente>().CreateMany(5);
@@ -42,7 +43,7 @@ namespace RestApiModeloDDD.Tests
             var applicationServiceCliente = new ApplicationServiceCliente(_serviceClienteMock.Object, _mapperMock.Object);
             
             //Act
-            var result = applicationServiceCliente.GetAll();
+            var result =  await applicationServiceCliente.GetAllAsync();
 
             //Assert
             Assert.IsNotNull(result);
@@ -52,7 +53,7 @@ namespace RestApiModeloDDD.Tests
         }
         
         [Test]
-        public void ApplicationServiceCliente_GetById_ShouldReturnClient()
+        public async Task ApplicationServiceCliente_GetById_ShouldReturnClient()
         {
             //Arrange
             const int id = 10;
@@ -74,7 +75,7 @@ namespace RestApiModeloDDD.Tests
                 new ApplicationServiceCliente(_serviceClienteMock.Object, _mapperMock.Object);
 
             //Act
-            var result = applicationServiceCliente.GetById(id);
+            var result = await applicationServiceCliente.GetByIdAsync(id);
 
             //Assert
             Assert.IsNotNull(result);
