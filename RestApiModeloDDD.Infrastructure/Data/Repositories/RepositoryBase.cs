@@ -1,10 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RestApiModeloDDD.Domain.Core.Interfaces.Repositories;
 using RestApiModeloDDD.Infrastructure.Data.Context;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 public class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : class

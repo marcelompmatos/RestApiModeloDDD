@@ -1,5 +1,4 @@
 ﻿using RestApiModeloDDD.Application.Dtos;
-using RestApiModeloDDD.Domain.Entities;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

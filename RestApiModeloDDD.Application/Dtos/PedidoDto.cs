@@ -1,5 +1,4 @@
-﻿using RestApiModeloDDD.Domain.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace RestApiModeloDDD.Application.Dtos

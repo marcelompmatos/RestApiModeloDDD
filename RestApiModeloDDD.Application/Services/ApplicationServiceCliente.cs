@@ -3,7 +3,6 @@ using RestApiModeloDDD.Application.Dtos;
 using RestApiModeloDDD.Application.Interfaces;
 using RestApiModeloDDD.Domain.Core.Interfaces.Services;
 using RestApiModeloDDD.Domain.Entitys;
-using RestApiModeloDDD.Domain.Services;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

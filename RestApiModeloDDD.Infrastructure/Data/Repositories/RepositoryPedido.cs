@@ -1,11 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RestApiModeloDDD.Application.Dtos;
 using RestApiModeloDDD.Domain.Entities;
-using RestApiModeloDDD.Domain.Entitys;
 using RestApiModeloDDD.Domain.Interfaces.Repositories;
 using RestApiModeloDDD.Infrastructure.Data.Context;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace RestApiModeloDDD.Infrastructure.Data.Repositories
