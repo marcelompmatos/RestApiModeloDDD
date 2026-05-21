@@ -16,11 +16,15 @@ namespace RestApiModeloDDD.Domain.Services
            this._pedidoRepository = pedidoRepository;
         }
 
-      
-
-        public async Task<List<Pedido>> GetPedidosCompletosAsync()
+        public async Task<Pedido> GetPedidoAsync(int id)
         {
-            var pedidos = await _pedidoRepository.GetPedidosCompletosAsync();
+            var pedido = await _pedidoRepository.GetPedidoAsync(id);
+            return pedido;
+        }
+
+        public async Task<List<Pedido>> GetPedidosAsync()
+        {
+            var pedidos = await _pedidoRepository.GetPedidosAsync();
             return pedidos;
         }
     }

@@ -7,6 +7,9 @@ namespace RestApiModeloDDD.Domain.Interfaces.Services
 {
     public interface IServicePedido : IServiceBase<Pedido>
     {
-        Task<List<Pedido>> GetPedidosCompletosAsync();
+        Task<List<Pedido>> GetPedidosAsync();
+        Task<Pedido> GetPedidoAsync(int id);
+
     }
+
 }

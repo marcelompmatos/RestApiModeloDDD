@@ -20,13 +20,20 @@ namespace RestApiModeloDDD.Infrastructure.Data.Repositories
             this._context = sqlContext;
         }
 
-        public async Task<List<Pedido>> GetPedidosCompletosAsync()
+        public async Task<Pedido> GetPedidoAsync(int id)
+        {
+            return await _context.Pedidos
+                .Include(p => p.Cliente)
+                .Include(p => p.Itens)
+                .ThenInclude(i => i.Produto)
+                .FirstOrDefaultAsync(p => p.Id == id);
+        }
+
+        public async Task<List<Pedido>> GetPedidosAsync()
         {
 
             return await _context.Pedidos
                         .Include(p => p.Cliente)
-                        .Include(p => p.Itens)
-                        .ThenInclude(i => i.Produto)
                         .AsNoTracking()
                         .ToListAsync();
 

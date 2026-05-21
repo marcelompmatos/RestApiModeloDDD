@@ -5,6 +5,7 @@ using RestApiModeloDDD.Domain.Interfaces.Services;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Linq;
+using RestApiModeloDDD.Domain.Entities;
 
 namespace RestApiModeloDDD.Application.Services
 {
@@ -20,9 +21,49 @@ namespace RestApiModeloDDD.Application.Services
             this.mapper = mapper;
         }
 
-        public async Task<List<PedidoDto>> GetPedidosCompletosAsync()
+        public async Task<PedidoDto> GetPedidoAsync(int id)
         {
-            var pedidos = await _servicePedido.GetPedidosCompletosAsync();
+            var pedido = await _servicePedido.GetPedidoAsync(id);
+
+            if (pedido == null)
+                return null;
+
+            return new PedidoDto
+            {
+                Id = pedido.Id,
+                ClienteId = pedido.ClienteId,
+                DataPedido = pedido.DataPedido,
+                ValorTotal = pedido.ValorTotal,
+
+                Cliente = pedido.Cliente == null ? null : new ClienteDto
+                {
+                    Id = pedido.Cliente.Id,
+                    Nome = pedido.Cliente.Nome,
+                    Sobrenome = pedido.Cliente.Sobrenome,
+                    Email = pedido.Cliente.Email
+                },
+
+                Itens = pedido.Itens.Select(i => new ItemPedidoDTO
+                {
+                    Id = i.Id,
+                    ProdutoId = i.ProdutoId,
+                    Quantidade = i.Quantidade,
+                    ValorUnitario = i.ValorUnitario,
+
+                    Produto = i.Produto == null ? null : new ProdutoDto
+                    {
+                        Id = i.Produto.Id,
+                        Nome = i.Produto.Nome,
+                        Valor = i.Produto.Valor
+                    }
+
+                }).ToList()
+            };
+        }
+
+        public async Task<List<PedidoDto>> GetPedidosAsync()
+        {
+            var pedidos = await _servicePedido.GetPedidosAsync();
 
             return pedidos.Select(p => new PedidoDto
             {
@@ -38,23 +79,6 @@ namespace RestApiModeloDDD.Application.Services
                     Sobrenome = p.Cliente.Sobrenome,
                     Email = p.Cliente.Email
                 },
-
-                Itens = p.Itens.Select(i => new ItemPedidoDTO
-                {
-                    Id = i.Id,
-                    ProdutoId = i.ProdutoId,
-                    Quantidade = i.Quantidade,
-                    ValorUnitario = i.ValorUnitario,
-
-                    Produto = i.Produto == null ? null : new ProdutoDto
-                    {
-                        Id = i.Produto.Id,
-                        Nome = i.Produto.Nome,
-                        Valor = i.Produto.Valor
-                    }
-
-                }).ToList()
-
             }).ToList();
         }
     }

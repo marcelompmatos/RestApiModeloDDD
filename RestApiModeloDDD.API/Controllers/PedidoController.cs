@@ -20,10 +20,16 @@ namespace RestApiModeloDDD.API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Pedido>>> GetAll()
         {
-            var pedidos = await _applicationServicePedido.GetPedidosCompletosAsync();
+            var pedidos = await _applicationServicePedido.GetPedidosAsync();
             return Ok(pedidos);
         }
 
-       
+        [HttpGet("{id}")]
+        public async Task<ActionResult<PedidoDto>> GetById(int id)
+        {
+            var pedidos = await _applicationServicePedido.GetPedidoAsync(id);
+            return Ok(pedidos);
+        }
+
     }
 }

@@ -7,6 +7,7 @@ namespace RestApiModeloDDD.Application.Interfaces
 {
     public interface IApplicationServicePedido
     {
-        Task<List<PedidoDto>> GetPedidosCompletosAsync();
+        Task<List<PedidoDto>> GetPedidosAsync();
+        Task<PedidoDto> GetPedidoAsync(int id);
     }
 }
