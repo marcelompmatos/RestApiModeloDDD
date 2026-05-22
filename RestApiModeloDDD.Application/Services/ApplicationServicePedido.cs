@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
+using Microsoft.Extensions.Logging;
 using RestApiModeloDDD.Application.Dtos;
 using RestApiModeloDDD.Application.Interfaces;
 using RestApiModeloDDD.Domain.Interfaces.Services;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using System.Linq;
-using RestApiModeloDDD.Domain.Entities;
+using System.Threading.Tasks;
 
 namespace RestApiModeloDDD.Application.Services
 {
@@ -13,20 +13,31 @@ namespace RestApiModeloDDD.Application.Services
     {
         private readonly IServicePedido _servicePedido;
         private readonly IMapper mapper;
+        private readonly ILogger<ApplicationServicePedido> _logger;
 
         public ApplicationServicePedido(IServicePedido servicePedido,
-                                        IMapper mapper)
+                                        IMapper mapper, ILogger<ApplicationServicePedido> logger)
         {
             this._servicePedido = servicePedido;
             this.mapper = mapper;
+            this._logger = logger;
         }
 
         public async Task<PedidoDto> GetPedidoAsync(int id)
         {
+            _logger.LogInformation("Iniciando consulta do pedido {PedidoId}", id);
+
+
             var pedido = await _servicePedido.GetPedidoAsync(id);
 
             if (pedido == null)
+            {
+                _logger.LogWarning("Pedido {PedidoId} não encontrado", id);
+
                 return null;
+            }
+
+            _logger.LogInformation("Pedido {PedidoId} encontrado", id);
 
             return new PedidoDto
             {
@@ -63,7 +74,11 @@ namespace RestApiModeloDDD.Application.Services
 
         public async Task<List<PedidoDto>> GetPedidosAsync()
         {
+            _logger.LogInformation("Iniciando consulta de pedidos");
+
             var pedidos = await _servicePedido.GetPedidosAsync();
+
+            _logger.LogInformation("Quantidade de pedidos encontrados: {Quantidade}", pedidos.Count);
 
             return pedidos.Select(p => new PedidoDto
             {

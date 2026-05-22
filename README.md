@@ -1,8 +1,18 @@
 ﻿# RestApiModeloDDD
 
+# RestApiModeloDDD
+
 API desenvolvida em .NET 9 com foco em arquitetura corporativa, aplicando conceitos de Domain-Driven Design (DDD), separação por camadas e boas práticas utilizadas em sistemas reais.
 
-O objetivo do projeto é demonstrar uma estrutura escalável e organizada para construção de APIs empresariais, priorizando manutenção, desacoplamento e clareza de responsabilidades.
+O objetivo do projeto é demonstrar uma estrutura escalável e organizada para construção de APIs empresariais, priorizando:
+
+- manutenção
+- desacoplamento
+- observabilidade
+- escalabilidade
+- clareza de responsabilidades
+- testabilidade
+- arquitetura enterprise
 
 ---
 
@@ -13,21 +23,27 @@ Este projeto foi estruturado com base em:
 - Domain-Driven Design (DDD)
 - SOLID
 - Clean Code
+- Clean Architecture
 - Repository Pattern
 - Service Layer
 - Dependency Injection
-- DTO
-- Mapeamento entre camadas
+- DTO Pattern
+- Object Mapping
+- Middleware Pipeline
+- Structured Logging
+- Observabilidade
+- Exception Handling Global
 - Testes automatizados
 
 ---
 
 ## Tecnologias
 
-![.NET](https://img.shields.io/badge/.NET-8.0-purple)
+![.NET](https://img.shields.io/badge/.NET-9.0-purple)
 ![EF Core](https://img.shields.io/badge/Entity%20Framework-Core-blue)
 ![Autofac](https://img.shields.io/badge/Autofac-IoC-green)
 ![AutoMapper](https://img.shields.io/badge/AutoMapper-Mapping-orange)
+![Serilog](https://img.shields.io/badge/Serilog-Logging-green)
 ![xUnit](https://img.shields.io/badge/xUnit-Tests-red)
 ![SQL Server](https://img.shields.io/badge/SQL-Server-darkblue)
 
@@ -39,13 +55,17 @@ Este projeto foi estruturado com base em:
 - SQL Server
 - AutoMapper
 - Autofac
+- Serilog
 - xUnit
+- Middleware Global
+- Structured Logging
 
 ---
 
 ## Estrutura da solução
 
 ```text
+
 RestApiModeloDDD
 │
 ├── RestApiModeloDDD.API
@@ -54,11 +74,18 @@ RestApiModeloDDD
 │   │   ├── ProdutoController.cs
 │   │   └── PedidoController.cs
 │   │
+│   ├── Middlewares
+│   │   └── ExceptionMiddleware.cs
+│   │
+│   ├── Logging
+│   │   └── SerilogConfiguration.cs
+│   │
 │   ├── Configurations
 │   │   ├── SwaggerConfiguration.cs
 │   │   └── AutoMapperConfiguration.cs
 │   │
 │   ├── Program.cs
+│   ├── Startup.cs
 │   └── appsettings.json
 │
 ├── RestApiModeloDDD.Application
@@ -135,7 +162,7 @@ RestApiModeloDDD
 │   │   │   ├── RepositoryPedido.cs
 │   │   │   └── RepositoryItemPedido.cs
 │   │   │
-│   │   └── 
+│   │   └──
 │   │
 │   └── IoC
 │       ├── ConfigurationIOC.cs
@@ -156,6 +183,7 @@ RestApiModeloDDD
         ├── RepositoryClienteTests.cs
         ├── RepositoryProdutoTests.cs
         └── RepositoryPedidoTests.cs
+
 ```
 
 ---
