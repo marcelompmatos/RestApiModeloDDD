@@ -20,8 +20,13 @@ namespace RestApiModeloDDD.API
                 .WriteTo.Console()
 
                 .WriteTo.File(
-                    "logs/log-.txt",
-                    rollingInterval: RollingInterval.Day)
+                            path: "logs/log-.txt",
+                            rollingInterval: RollingInterval.Day,
+                            retainedFileCountLimit: 7,
+                            fileSizeLimitBytes: 10485760,
+                            rollOnFileSizeLimit: true,
+                            shared: true,
+                            flushToDiskInterval: TimeSpan.FromSeconds(1))
 
                 .WriteTo.Seq("http://localhost:5341")
 

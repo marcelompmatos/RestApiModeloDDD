@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using RestApiModeloDDD.Application.Dtos;
 using RestApiModeloDDD.Application.Interfaces;
+using RestApiModeloDDD.Domain.Entities;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace RestApiModeloDDD.API.Controllers
@@ -12,28 +15,58 @@ namespace RestApiModeloDDD.API.Controllers
     {
 
         private readonly IApplicationServiceCliente applicationServiceCliente;
+        ILogger<PedidoController> _logger;
 
-
-        public ClientesController(IApplicationServiceCliente applicationServiceCliente)
+        public ClientesController(IApplicationServiceCliente applicationServiceCliente,  ILogger<PedidoController> logger)
         {
             this.applicationServiceCliente = applicationServiceCliente;
+            this._logger = logger;
         }
         // GET api/values
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ClienteDto>>> Get()
         {
+            _logger.LogInformation("Iniciando consulta de clientes");
+
             var clientes = await applicationServiceCliente.GetAllAsync();
-            return Ok(clientes);
+
+            var listaClientes = clientes.ToList();
+
+            _logger.LogInformation("Consulta finalizada. Total de clientes encontrados: {Quantidade}",listaClientes.Count);
+
+            if (!listaClientes.Any())
+            {
+                _logger.LogWarning("Nenhum cliente encontrado");
+
+                return NoContent();
+            }
+
+            return Ok(listaClientes);
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
         public async Task<ActionResult<ClienteDto>> Get(int id)
         {
-            var cliente = await applicationServiceCliente.GetByIdAsync(id);
+            _logger.LogInformation(
+          "Iniciando consulta do cliente. Id: {ClienteId}",
+          id);
+
+            var cliente = await applicationServiceCliente
+                .GetByIdAsync(id);
 
             if (cliente == null)
+            {
+                _logger.LogWarning(
+                    "Cliente não encontrado. Id: {ClienteId}",
+                    id);
+
                 return NotFound();
+            }
+
+            _logger.LogInformation(
+                "Cliente encontrado com sucesso. Id: {ClienteId}",
+                id);
 
             return Ok(cliente);
         }
@@ -42,10 +75,21 @@ namespace RestApiModeloDDD.API.Controllers
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] ClienteDto clienteDTO)
         {
+            _logger.LogInformation(
+                "Iniciando cadastro de cliente");
+
             if (clienteDTO == null)
+            {
+                _logger.LogWarning(
+                    "Tentativa de cadastro com payload nulo");
+
                 return BadRequest();
+            }
 
             await applicationServiceCliente.AddAsync(clienteDTO);
+
+            _logger.LogInformation(
+                "Cliente cadastrado com sucesso");
 
             return Ok("Cliente cadastrado com sucesso!");
         }
@@ -54,24 +98,56 @@ namespace RestApiModeloDDD.API.Controllers
         [HttpPut]
         public async Task<ActionResult> Put([FromBody] ClienteDto clienteDTO)
         {
+            _logger.LogInformation(
+                "Iniciando atualização do cliente. Id: {ClienteId}",
+                clienteDTO?.Id);
+
             if (clienteDTO == null)
+            {
+                _logger.LogWarning(
+                    "Tentativa de atualização com payload nulo");
+
                 return BadRequest();
+            }
 
             await applicationServiceCliente.UpdateAsync(clienteDTO);
 
-            return Ok("Cliente atualizado com sucesso!");
+            _logger.LogInformation(
+                "Cliente atualizado com sucesso. Id: {ClienteId}",
+                clienteDTO.Id);
+
+            return Ok(new
+            {
+                mensagem = "Cliente atualizado com sucesso!"
+            });
         }
 
         // DELETE api/values/5
-        [HttpDelete()]
+        [HttpDelete]
         public async Task<ActionResult> Delete([FromBody] ClienteDto clienteDTO)
         {
+            _logger.LogInformation(
+                "Iniciando remoção do cliente. Id: {ClienteId}",
+                clienteDTO?.Id);
+
             if (clienteDTO == null)
+            {
+                _logger.LogWarning(
+                    "Tentativa de remoção com payload nulo");
+
                 return BadRequest();
+            }
 
             await applicationServiceCliente.RemoveAsync(clienteDTO);
 
-            return Ok("Cliente removido com sucesso!");
+            _logger.LogInformation(
+                "Cliente removido com sucesso. Id: {ClienteId}",
+                clienteDTO.Id);
+
+            return Ok(new
+            {
+                mensagem = "Cliente removido com sucesso!"
+            });
         }
     }
 }

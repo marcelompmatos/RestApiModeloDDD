@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using RestApiModeloDDD.Application.Dtos;
 using RestApiModeloDDD.Application.Interfaces;
 using RestApiModeloDDD.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -50,6 +51,14 @@ namespace RestApiModeloDDD.API.Controllers
 
             return Ok(pedidos);
         }
+
+            [HttpGet("erro")]
+            public IActionResult GerarErro()
+            {
+                throw new Exception("Erro proposital");
+            }
+        
+
 
     }
 }

@@ -69,7 +69,7 @@ namespace RestApiModeloDDD.API
             app.UseSerilogRequestLogging();
 
             // MIDDLEWARE GLOBAL DE EXCEPTION
-            app.UseMiddleware<ExceptionMiddleware>();
+             app.UseMiddleware<ExceptionMiddleware>();
 
             app.UseRouting();
 

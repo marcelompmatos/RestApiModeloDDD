@@ -25,19 +25,25 @@ namespace RestApiModeloDDD.Application.Services
 
         public async Task<PedidoDto> GetPedidoAsync(int id)
         {
-            _logger.LogInformation("Iniciando consulta do pedido {PedidoId}", id);
+            _logger.LogInformation(
+                "Iniciando consulta de pedido na camada Application. PedidoId: {PedidoId}",
+                id);
 
-
-            var pedido = await _servicePedido.GetPedidoAsync(id);
+            var pedido = await _servicePedido
+                .GetPedidoAsync(id);
 
             if (pedido == null)
             {
-                _logger.LogWarning("Pedido {PedidoId} não encontrado", id);
+                _logger.LogWarning(
+                    "Pedido não encontrado na camada Application. PedidoId: {PedidoId}",
+                    id);
 
                 return null;
             }
 
-            _logger.LogInformation("Pedido {PedidoId} encontrado", id);
+            _logger.LogInformation(
+                "Pedido encontrado com sucesso na camada Application. PedidoId: {PedidoId}",
+                id);
 
             return new PedidoDto
             {
@@ -46,13 +52,15 @@ namespace RestApiModeloDDD.Application.Services
                 DataPedido = pedido.DataPedido,
                 ValorTotal = pedido.ValorTotal,
 
-                Cliente = pedido.Cliente == null ? null : new ClienteDto
-                {
-                    Id = pedido.Cliente.Id,
-                    Nome = pedido.Cliente.Nome,
-                    Sobrenome = pedido.Cliente.Sobrenome,
-                    Email = pedido.Cliente.Email
-                },
+                Cliente = pedido.Cliente == null
+                    ? null
+                    : new ClienteDto
+                    {
+                        Id = pedido.Cliente.Id,
+                        Nome = pedido.Cliente.Nome,
+                        Sobrenome = pedido.Cliente.Sobrenome,
+                        Email = pedido.Cliente.Email
+                    },
 
                 Itens = pedido.Itens.Select(i => new ItemPedidoDTO
                 {
@@ -61,12 +69,14 @@ namespace RestApiModeloDDD.Application.Services
                     Quantidade = i.Quantidade,
                     ValorUnitario = i.ValorUnitario,
 
-                    Produto = i.Produto == null ? null : new ProdutoDto
-                    {
-                        Id = i.Produto.Id,
-                        Nome = i.Produto.Nome,
-                        Valor = i.Produto.Valor
-                    }
+                    Produto = i.Produto == null
+                        ? null
+                        : new ProdutoDto
+                        {
+                            Id = i.Produto.Id,
+                            Nome = i.Produto.Nome,
+                            Valor = i.Produto.Valor
+                        }
 
                 }).ToList()
             };
@@ -74,27 +84,38 @@ namespace RestApiModeloDDD.Application.Services
 
         public async Task<List<PedidoDto>> GetPedidosAsync()
         {
-            _logger.LogInformation("Iniciando consulta de pedidos");
+            _logger.LogInformation(
+                "Iniciando consulta de pedidos na camada Application");
 
-            var pedidos = await _servicePedido.GetPedidosAsync();
+            var pedidos = await _servicePedido
+                .GetPedidosAsync();
 
-            _logger.LogInformation("Quantidade de pedidos encontrados: {Quantidade}", pedidos.Count);
+            var listaPedidos = pedidos.ToList();
 
-            return pedidos.Select(p => new PedidoDto
+            _logger.LogInformation(
+                "Consulta de pedidos finalizada na camada Application. Quantidade: {Quantidade}",
+                listaPedidos.Count);
+
+            return listaPedidos.Select(p => new PedidoDto
             {
                 Id = p.Id,
                 ClienteId = p.ClienteId,
                 DataPedido = p.DataPedido,
                 ValorTotal = p.ValorTotal,
 
-                Cliente = p.Cliente == null ? null : new ClienteDto
-                {
-                    Id = p.Cliente.Id,
-                    Nome = p.Cliente.Nome,
-                    Sobrenome = p.Cliente.Sobrenome,
-                    Email = p.Cliente.Email
-                },
+                Cliente = p.Cliente == null
+                    ? null
+                    : new ClienteDto
+                    {
+                        Id = p.Cliente.Id,
+                        Nome = p.Cliente.Nome,
+                        Sobrenome = p.Cliente.Sobrenome,
+                        Email = p.Cliente.Email
+                    }
+
             }).ToList();
         }
+
+
     }
 }
