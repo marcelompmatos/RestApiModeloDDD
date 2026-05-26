@@ -21,6 +21,22 @@ namespace RestApiModeloDDD.Infrastructure.Data.Context
         public DbSet<Pedido> Pedidos { get; set; }
         public DbSet<ItemPedido> ItemPedidos { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+            builder.Entity<Produto>()
+                .Property(p => p.Valor)
+                .HasPrecision(18, 2);
+
+            builder.Entity<Pedido>()
+                .Property(p => p.ValorTotal)
+                .HasPrecision(18, 2);
+
+            builder.Entity<ItemPedido>()
+                .Property(p => p.ValorUnitario)
+                .HasPrecision(18, 2);
+        }
         public override int SaveChanges()
         {
             foreach (var entry in ChangeTracker.Entries().Where(entry => entry.Entity.GetType().GetProperty("DataCadastro") != null))
