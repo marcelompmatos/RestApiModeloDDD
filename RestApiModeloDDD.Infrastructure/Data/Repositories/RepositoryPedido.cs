@@ -22,29 +22,31 @@ namespace RestApiModeloDDD.Infrastructure.Data.Repositories
             _logger = logger;
         }
 
-        public async Task<Pedido> GetPedidoAsync(int id)
+        public async Task<Pedido?> GetPedidoAsync(int id)
         {
             _logger.LogInformation(
-                "Iniciando consulta de pedido no repositório. PedidoId: {PedidoId}",
+                "Consultando pedido. PedidoId: {PedidoId}",
                 id);
 
             var pedido = await _context.Pedidos
+                .AsNoTracking()
+                .AsSplitQuery()
                 .Include(p => p.Cliente)
                 .Include(p => p.Itens)
-                .ThenInclude(i => i.Produto)
+                    .ThenInclude(i => i.Produto)
                 .FirstOrDefaultAsync(p => p.Id == id);
 
-            if (pedido == null)
+            if (pedido is null)
             {
                 _logger.LogWarning(
-                    "Pedido não encontrado no repositório. PedidoId: {PedidoId}",
+                    "Pedido não encontrado. PedidoId: {PedidoId}",
                     id);
 
                 return null;
             }
 
             _logger.LogInformation(
-                "Pedido encontrado com sucesso no repositório. PedidoId: {PedidoId}",
+                "Pedido encontrado. PedidoId: {PedidoId}",
                 id);
 
             return pedido;
@@ -52,16 +54,15 @@ namespace RestApiModeloDDD.Infrastructure.Data.Repositories
 
         public async Task<List<Pedido>> GetPedidosAsync()
         {
-            _logger.LogInformation(
-                "Iniciando consulta de pedidos no repositório");
+            _logger.LogInformation("Consultando pedidos no repositório");
 
             var pedidos = await _context.Pedidos
-                .Include(p => p.Cliente)
                 .AsNoTracking()
+                .Include(p => p.Cliente)
                 .ToListAsync();
 
             _logger.LogInformation(
-                "Consulta de pedidos finalizada no repositório. Quantidade: {Quantidade}",
+                "Consulta finalizada. Quantidade: {Quantidade}",
                 pedidos.Count);
 
             return pedidos;

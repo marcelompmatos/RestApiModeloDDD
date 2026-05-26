@@ -10,6 +10,7 @@ using RestApiModeloDDD.Infrastructure.IOC;
 using RestApiModeloDDD.Infrastructure.Data.Context;
 using RestApiModeloDDD.API.Middlewares;
 using Serilog;
+using RestApiModeloDDD.API.Observability;
 
 namespace RestApiModeloDDD.API
 {
@@ -33,6 +34,11 @@ namespace RestApiModeloDDD.API
             services.AddDbContext<SqlContext>(
                 options =>
                     options.UseSqlServer(connection));
+
+
+            // OBSERVABILIDADE
+            services.AddObservability();
+
 
             services.AddControllers();
 

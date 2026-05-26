@@ -8,7 +8,7 @@ namespace RestApiModeloDDD.Domain.Interfaces.Repositories
     public interface IRepositoryPedido : IRepositoryBase<Pedido>
     {
         Task<List<Pedido>> GetPedidosAsync();
-        Task<Pedido> GetPedidoAsync(int id);
+        Task<Pedido?> GetPedidoAsync(int id);
 
     }
 }

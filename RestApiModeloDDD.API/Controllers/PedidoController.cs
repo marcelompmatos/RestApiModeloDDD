@@ -1,12 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using RestApiModeloDDD.API.Observability;
 using RestApiModeloDDD.Application.Dtos;
 using RestApiModeloDDD.Application.Interfaces;
 using RestApiModeloDDD.Domain.Entities;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
 
 namespace RestApiModeloDDD.API.Controllers
 {
@@ -25,10 +28,11 @@ namespace RestApiModeloDDD.API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Pedido>>> GetAll()
         {
+           
             _logger.LogInformation( "Consultando todos os pedidos");
 
             var pedidos = await _applicationServicePedido.GetPedidosAsync();
-
+                      
             _logger.LogInformation("Total de pedidos encontrados: {Quantidade}", pedidos.Count());
 
             return Ok(pedidos);
