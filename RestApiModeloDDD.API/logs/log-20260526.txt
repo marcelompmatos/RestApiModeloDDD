@@ -1,96 +1,79 @@
-2026-05-26 09:18:20.554 -03:00 [INF] Iniciando API
-2026-05-26 09:18:23.518 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
-2026-05-26 09:18:23.632 -03:00 [INF] Application started. Press Ctrl+C to shut down.
-2026-05-26 09:18:23.632 -03:00 [INF] Hosting environment: Development
-2026-05-26 09:18:23.633 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
-2026-05-26 09:18:23.669 -03:00 [INF] HTTP GET /swagger responded 301 in 70.4736 ms
-2026-05-26 09:18:23.776 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 285.8617ms
-2026-05-26 09:18:23.797 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
-2026-05-26 09:18:23.941 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 130.9621 ms
-2026-05-26 09:18:23.974 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 178.0239ms
-2026-05-26 09:18:23.974 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
-2026-05-26 09:18:23.974 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
-2026-05-26 09:18:23.975 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
-2026-05-26 09:18:23.975 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
-2026-05-26 09:18:23.975 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
-2026-05-26 09:18:23.984 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 6.6066ms
-2026-05-26 09:18:24.009 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
-2026-05-26 09:18:24.010 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 35.2324 ms
-2026-05-26 09:18:24.014 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
-2026-05-26 09:18:24.015 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 39.9439 ms
-2026-05-26 09:18:24.050 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 75.8473ms
-2026-05-26 09:18:24.061 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
-2026-05-26 09:18:24.061 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 86.5124 ms
-2026-05-26 09:18:24.093 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 118.3006ms
-2026-05-26 09:18:24.125 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 149.9638ms
-2026-05-26 09:18:24.201 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 226.4087ms
-2026-05-26 09:18:24.373 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
-2026-05-26 09:18:24.410 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 36.2174 ms
-2026-05-26 09:18:24.412 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 38.5124ms
-2026-05-26 09:18:30.530 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/api/Pedido - null null
-2026-05-26 09:18:30.557 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.PedidoController.GetAll (RestApiModeloDDD.API)'
-2026-05-26 09:18:30.599 -03:00 [INF] Route matched with {action = "GetAll", controller = "Pedido"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RestApiModeloDDD.Domain.Entities.Pedido]]] GetAll() on controller RestApiModeloDDD.API.Controllers.PedidoController (RestApiModeloDDD.API).
-2026-05-26 09:18:31.183 -03:00 [INF] Consultando todos os pedidos
-2026-05-26 09:18:31.184 -03:00 [INF] Iniciando consulta de pedidos na camada Application
-2026-05-26 09:18:31.186 -03:00 [INF] Iniciando consulta de pedidos na camada Domain
-2026-05-26 09:18:33.464 -03:00 [INF] Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+2026-05-26 10:01:43.386 -03:00 [INF] Iniciando API
+2026-05-26 10:01:46.694 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-05-26 10:01:46.892 -03:00 [INF] HTTP GET /swagger responded 301 in 67.9481 ms
+2026-05-26 10:01:47.011 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 351.5376ms
+2026-05-26 10:01:47.033 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-05-26 10:01:47.121 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-26 10:01:47.122 -03:00 [INF] Hosting environment: Development
+2026-05-26 10:01:47.122 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-05-26 10:01:47.217 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 173.5090 ms
+2026-05-26 10:01:47.218 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 185.5488ms
+2026-05-26 10:01:47.291 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-05-26 10:01:47.291 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-05-26 10:01:47.292 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-05-26 10:01:47.321 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-05-26 10:01:47.321 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-05-26 10:01:47.321 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 29.4700 ms
+2026-05-26 10:01:47.321 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 29.5143 ms
+2026-05-26 10:01:47.322 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-05-26 10:01:47.322 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 30.4286 ms
+2026-05-26 10:01:47.405 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 113.9589ms
+2026-05-26 10:01:47.417 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 125.8466ms
+2026-05-26 10:01:47.418 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-26 10:01:47.422 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 2.6237ms
+2026-05-26 10:01:47.436 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-05-26 10:01:47.462 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 170.2987ms
+2026-05-26 10:01:47.567 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 130.1494ms
+2026-05-26 10:01:47.655 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-05-26 10:01:47.672 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 16.5701 ms
+2026-05-26 10:01:47.675 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.536ms
+2026-05-26 10:03:09.617 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/api/Pedido - null null
+2026-05-26 10:03:09.654 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.PedidoController.GetAll (RestApiModeloDDD.API)'
+2026-05-26 10:03:09.699 -03:00 [INF] Route matched with {action = "GetAll", controller = "Pedido"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RestApiModeloDDD.Domain.Entities.Pedido]]] GetAll() on controller RestApiModeloDDD.API.Controllers.PedidoController (RestApiModeloDDD.API).
+2026-05-26 10:03:10.363 -03:00 [INF] Consultando todos os pedidos
+2026-05-26 10:03:10.365 -03:00 [INF] Iniciando consulta de pedidos na camada Application
+2026-05-26 10:03:10.367 -03:00 [INF] Iniciando consulta de pedidos na camada Domain
+2026-05-26 10:03:10.370 -03:00 [INF] Iniciando consulta de pedidos no repositório
+2026-05-26 10:03:12.601 -03:00 [INF] Executed DbCommand (86ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
 SELECT [p].[Id], [p].[ClienteId], [p].[DataCadastro], [p].[DataPedido], [p].[IsAtivo], [p].[ValorTotal], [c].[Id], [c].[DataCadastro], [c].[Email], [c].[IsAtivo], [c].[Nome], [c].[Sobrenome]
 FROM [Pedidos] AS [p]
 INNER JOIN [Clientes] AS [c] ON [p].[ClienteId] = [c].[Id]
-2026-05-26 09:18:33.506 -03:00 [INF] Consulta de pedidos finalizada na camada Domain. Quantidade: 1
-2026-05-26 09:18:33.506 -03:00 [INF] Consulta de pedidos finalizada na camada Application. Quantidade: 1
-2026-05-26 09:18:33.515 -03:00 [INF] Total de pedidos encontrados: 1
-2026-05-26 09:18:33.530 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RestApiModeloDDD.Application.Dtos.PedidoDto, RestApiModeloDDD.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
-2026-05-26 09:18:33.575 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.PedidoController.GetAll (RestApiModeloDDD.API) in 2971.4476ms
-2026-05-26 09:18:33.576 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.PedidoController.GetAll (RestApiModeloDDD.API)'
-2026-05-26 09:18:33.579 -03:00 [INF] HTTP GET /api/Pedido responded 200 in 3048.5802 ms
-2026-05-26 09:18:33.600 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/api/Pedido - 200 null application/json; charset=utf-8 3061.9281ms
-2026-05-26 09:43:09.000 -03:00 [INF] Iniciando API
-2026-05-26 09:43:11.452 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
-2026-05-26 09:43:11.610 -03:00 [INF] Application started. Press Ctrl+C to shut down.
-2026-05-26 09:43:11.611 -03:00 [INF] Hosting environment: Development
-2026-05-26 09:43:11.611 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
-2026-05-26 09:43:11.621 -03:00 [INF] HTTP GET /swagger responded 301 in 71.1709 ms
-2026-05-26 09:43:11.717 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
-2026-05-26 09:43:11.894 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 461.6025ms
-2026-05-26 09:43:11.999 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 272.5318 ms
-2026-05-26 09:43:12.000 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 284.2409ms
-2026-05-26 09:43:12.023 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
-2026-05-26 09:43:12.027 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
-2026-05-26 09:43:12.032 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
-2026-05-26 09:43:12.035 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
-2026-05-26 09:43:12.051 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
-2026-05-26 09:43:12.051 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 17.4417 ms
-2026-05-26 09:43:12.051 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
-2026-05-26 09:43:12.052 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 27.1995 ms
-2026-05-26 09:43:12.053 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
-2026-05-26 09:43:12.059 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 18.9855ms
-2026-05-26 09:43:12.062 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
-2026-05-26 09:43:12.062 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 34.8476 ms
-2026-05-26 09:43:12.215 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 183.1002ms
-2026-05-26 09:43:12.217 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 193.822ms
-2026-05-26 09:43:12.266 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 213.2791ms
-2026-05-26 09:43:12.302 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 275.5431ms
-2026-05-26 09:43:12.539 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
-2026-05-26 09:43:12.560 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 20.8919 ms
-2026-05-26 09:43:12.562 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 23.2754ms
-2026-05-26 09:45:21.055 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/api/Pedido - null null
-2026-05-26 09:45:21.068 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.PedidoController.GetAll (RestApiModeloDDD.API)'
-2026-05-26 09:45:21.105 -03:00 [INF] Route matched with {action = "GetAll", controller = "Pedido"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RestApiModeloDDD.Domain.Entities.Pedido]]] GetAll() on controller RestApiModeloDDD.API.Controllers.PedidoController (RestApiModeloDDD.API).
-2026-05-26 09:45:21.628 -03:00 [INF] Consultando todos os pedidos
-2026-05-26 09:45:21.630 -03:00 [INF] Iniciando consulta de pedidos na camada Application
-2026-05-26 09:45:21.631 -03:00 [INF] Iniciando consulta de pedidos na camada Domain
-2026-05-26 09:45:21.633 -03:00 [INF] Iniciando consulta de pedidos no repositório
-2026-05-26 09:45:23.452 -03:00 [INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
-SELECT [p].[Id], [p].[ClienteId], [p].[DataCadastro], [p].[DataPedido], [p].[IsAtivo], [p].[ValorTotal], [c].[Id], [c].[DataCadastro], [c].[Email], [c].[IsAtivo], [c].[Nome], [c].[Sobrenome]
-FROM [Pedidos] AS [p]
-INNER JOIN [Clientes] AS [c] ON [p].[ClienteId] = [c].[Id]
-2026-05-26 09:45:23.497 -03:00 [INF] Consulta de pedidos finalizada no repositório. Quantidade: 1
-2026-05-26 09:45:23.498 -03:00 [INF] Consulta de pedidos finalizada na camada Domain. Quantidade: 1
-2026-05-26 09:45:23.499 -03:00 [INF] Consulta de pedidos finalizada na camada Application. Quantidade: 1
-2026-05-26 09:45:23.502 -03:00 [INF] Total de pedidos encontrados: 1
-2026-05-26 09:45:23.513 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RestApiModeloDDD.Application.Dtos.PedidoDto, RestApiModeloDDD.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
-2026-05-26 09:45:23.543 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.PedidoController.GetAll (RestApiModeloDDD.API) in 2431.7213ms
-2026-05-26 09:45:23.545 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.PedidoController.GetAll (RestApiModeloDDD.API)'
-2026-05-26 09:45:23.547 -03:00 [INF] HTTP GET /api/Pedido responded 200 in 2490.8011 ms
-2026-05-26 09:45:23.557 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/api/Pedido - 200 null application/json; charset=utf-8 2502.2401ms
+2026-05-26 10:03:12.662 -03:00 [INF] Consulta de pedidos finalizada no repositório. Quantidade: 1
+2026-05-26 10:03:12.663 -03:00 [INF] Consulta de pedidos finalizada na camada Domain. Quantidade: 1
+2026-05-26 10:03:12.664 -03:00 [INF] Consulta de pedidos finalizada na camada Application. Quantidade: 1
+2026-05-26 10:03:12.667 -03:00 [INF] Total de pedidos encontrados: 1
+2026-05-26 10:03:12.677 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RestApiModeloDDD.Application.Dtos.PedidoDto, RestApiModeloDDD.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-26 10:03:12.721 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.PedidoController.GetAll (RestApiModeloDDD.API) in 3015.6972ms
+2026-05-26 10:03:12.721 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.PedidoController.GetAll (RestApiModeloDDD.API)'
+2026-05-26 10:03:12.724 -03:00 [INF] HTTP GET /api/Pedido responded 200 in 3084.8535 ms
+2026-05-26 10:03:12.737 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/api/Pedido - 200 null application/json; charset=utf-8 3120.0913ms
+2026-05-26 10:03:17.622 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Clientes - null null
+2026-05-26 10:03:17.623 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API)'
+2026-05-26 10:03:17.633 -03:00 [INF] Route matched with {action = "Get", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RestApiModeloDDD.Application.Dtos.ClienteDto]]] Get() on controller RestApiModeloDDD.API.Controllers.ClientesController (RestApiModeloDDD.API).
+2026-05-26 10:03:17.675 -03:00 [INF] Iniciando consulta de clientes
+2026-05-26 10:03:17.676 -03:00 [INF] Iniciando consulta de clientes na camada Application
+2026-05-26 10:03:17.729 -03:00 [INF] Executed DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[DataCadastro], [c].[Email], [c].[IsAtivo], [c].[Nome], [c].[Sobrenome]
+FROM [Clientes] AS [c]
+2026-05-26 10:03:17.778 -03:00 [INF] Consulta de clientes finalizada na camada Application. Quantidade: 3
+2026-05-26 10:03:17.806 -03:00 [INF] Consulta finalizada. Total de clientes encontrados: 3
+2026-05-26 10:03:17.808 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RestApiModeloDDD.Application.Dtos.ClienteDto, RestApiModeloDDD.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-26 10:03:17.809 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API) in 175.9667ms
+2026-05-26 10:03:17.809 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API)'
+2026-05-26 10:03:17.810 -03:00 [INF] HTTP GET /Clientes responded 200 in 187.0208 ms
+2026-05-26 10:03:17.810 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Clientes - 200 null application/json; charset=utf-8 188.3857ms
+2026-05-26 10:03:26.628 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Produtos - null null
+2026-05-26 10:03:26.628 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ProdutosController.Get (RestApiModeloDDD.API)'
+2026-05-26 10:03:26.634 -03:00 [INF] Route matched with {action = "Get", controller = "Produtos"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RestApiModeloDDD.Application.Dtos.ProdutoDto]]] Get() on controller RestApiModeloDDD.API.Controllers.ProdutosController (RestApiModeloDDD.API).
+2026-05-26 10:03:26.680 -03:00 [INF] Iniciando consulta de produtos
+2026-05-26 10:03:26.681 -03:00 [INF] Iniciando consulta de produtos na camada Application
+2026-05-26 10:03:26.805 -03:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[DataCadastro], [p].[IsAtivo], [p].[IsDisponivel], [p].[Nome], [p].[Valor]
+FROM [Produtos] AS [p]
+2026-05-26 10:03:26.820 -03:00 [INF] Consulta de produtos finalizada na camada Application. Quantidade: 2
+2026-05-26 10:03:26.831 -03:00 [INF] Consulta de produtos finalizada. Quantidade: 2
+2026-05-26 10:03:26.831 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RestApiModeloDDD.Application.Dtos.ProdutoDto, RestApiModeloDDD.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-26 10:03:26.833 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ProdutosController.Get (RestApiModeloDDD.API) in 198.685ms
+2026-05-26 10:03:26.834 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ProdutosController.Get (RestApiModeloDDD.API)'
+2026-05-26 10:03:26.834 -03:00 [INF] HTTP GET /Produtos responded 200 in 206.1276 ms
+2026-05-26 10:03:26.835 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Produtos - 200 null application/json; charset=utf-8 207.066ms
