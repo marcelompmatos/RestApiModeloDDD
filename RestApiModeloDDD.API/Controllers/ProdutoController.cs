@@ -13,9 +13,9 @@ namespace RestApiModeloDDD.API.Controllers
     public class ProdutosController : ControllerBase
     {
         private readonly IApplicationServiceProduto applicationServiceProduto;
-        private readonly ILogger<PedidoController> _logger;
+        private readonly ILogger<ProdutosController> _logger;
 
-        public ProdutosController(IApplicationServiceProduto applicationServiceProduto,  ILogger<PedidoController> logger)
+        public ProdutosController(IApplicationServiceProduto applicationServiceProduto,  ILogger<ProdutosController> logger)
         {
             this.applicationServiceProduto = applicationServiceProduto;
             this._logger = logger;

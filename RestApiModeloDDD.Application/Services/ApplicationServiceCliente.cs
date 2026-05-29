@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
+using FluentValidation;
 using Microsoft.Extensions.Logging;
 using RestApiModeloDDD.Application.Dtos;
 using RestApiModeloDDD.Application.Interfaces;
 using RestApiModeloDDD.Domain.Core.Interfaces.Services;
 using RestApiModeloDDD.Domain.Entitys;
+using RestApiModeloDDD.Domain.Validations;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -15,8 +17,11 @@ namespace RestApiModeloDDD.Application.Services
         private readonly IServiceCliente serviceCliente;
         private readonly IMapper mapper;
         private readonly ILogger<ApplicationServiceCliente> _logger;
-        public ApplicationServiceCliente(IServiceCliente serviceCliente
-                                       , IMapper mapper , ILogger<ApplicationServiceCliente> logger)
+
+        public ApplicationServiceCliente(
+            IServiceCliente serviceCliente,
+            IMapper mapper,
+            ILogger<ApplicationServiceCliente> logger)
         {
             this.serviceCliente = serviceCliente;
             this.mapper = mapper;
@@ -29,13 +34,17 @@ namespace RestApiModeloDDD.Application.Services
                 "Iniciando cadastro de cliente na camada Application. Nome: {NomeCliente}",
                 clienteDto?.Nome);
 
+            ValidarClienteDto(clienteDto);
+
             var cliente = mapper.Map<Cliente>(clienteDto);
+
+            ValidarEntidade(cliente);
 
             await serviceCliente.AddAsync(cliente);
 
             _logger.LogInformation(
                 "Cliente cadastrado com sucesso na camada Application. Nome: {NomeCliente}",
-                clienteDto?.Nome);
+                clienteDto.Nome);
         }
 
         public async Task<IEnumerable<ClienteDto>> GetAllAsync()
@@ -59,6 +68,15 @@ namespace RestApiModeloDDD.Application.Services
             _logger.LogInformation(
                 "Iniciando consulta de cliente por Id na camada Application. Id: {ClienteId}",
                 id);
+
+            if (id <= 0)
+            {
+                _logger.LogWarning(
+                    "Id inválido informado para consulta. Id: {ClienteId}",
+                    id);
+
+                throw new ValidationException("O Id do cliente deve ser maior que zero.");
+            }
 
             var cliente = await serviceCliente.GetByIdAsync(id);
 
@@ -84,13 +102,24 @@ namespace RestApiModeloDDD.Application.Services
                 "Iniciando remoção de cliente na camada Application. Id: {ClienteId}",
                 clienteDto?.Id);
 
+            ValidarClienteDto(clienteDto);
+
+            if (clienteDto.Id <= 0)
+            {
+                _logger.LogWarning(
+                    "Tentativa de remoção com Id inválido. Id: {ClienteId}",
+                    clienteDto.Id);
+
+                throw new ValidationException("O Id do cliente deve ser maior que zero.");
+            }
+
             var cliente = mapper.Map<Cliente>(clienteDto);
 
             await serviceCliente.RemoveAsync(cliente);
 
             _logger.LogInformation(
                 "Cliente removido com sucesso na camada Application. Id: {ClienteId}",
-                clienteDto?.Id);
+                clienteDto.Id);
         }
 
         public async Task UpdateAsync(ClienteDto clienteDto)
@@ -99,15 +128,68 @@ namespace RestApiModeloDDD.Application.Services
                 "Iniciando atualização de cliente na camada Application. Id: {ClienteId}",
                 clienteDto?.Id);
 
+            ValidarClienteDto(clienteDto);
+
+            if (clienteDto.Id <= 0)
+            {
+                _logger.LogWarning(
+                    "Tentativa de atualização com Id inválido. Id: {ClienteId}",
+                    clienteDto.Id);
+
+                throw new ValidationException("O Id do cliente deve ser maior que zero.");
+            }
+
+            var clienteExistente = await serviceCliente.GetByIdAsync(clienteDto.Id);
+
+            if (clienteExistente == null)
+            {
+                _logger.LogWarning(
+                    "Cliente não encontrado para atualização. Id: {ClienteId}",
+                    clienteDto.Id);
+
+                throw new KeyNotFoundException(
+                    $"Cliente com Id {clienteDto.Id} não encontrado.");
+            }
+
             var cliente = mapper.Map<Cliente>(clienteDto);
+
+            ValidarEntidade(cliente);
 
             await serviceCliente.UpdateAsync(cliente);
 
             _logger.LogInformation(
                 "Cliente atualizado com sucesso na camada Application. Id: {ClienteId}",
-                clienteDto?.Id);
+                clienteDto.Id);
         }
 
+        private void ValidarClienteDto(ClienteDto clienteDto)
+        {
+            if (clienteDto == null)
+            {
+                _logger.LogWarning(
+                    "ClienteDto recebido é nulo");
 
+                throw new ValidationException("Os dados do cliente são obrigatórios.");
+            }
+        }
+
+        private void ValidarEntidade(Cliente cliente)
+        {
+            var validation = new ClienteValidation();
+
+            var result = validation.Validate(cliente);
+
+            if (!result.IsValid)
+            {
+                var erros = result.Errors
+                    .Select(e => $"{e.PropertyName}: {e.ErrorMessage}");
+
+                _logger.LogWarning(
+                    "Erro de validação da entidade Cliente. Erros: {Erros}",
+                    string.Join(" | ", erros));
+
+                throw new ValidationException(result.Errors);
+            }
+        }
     }
 }

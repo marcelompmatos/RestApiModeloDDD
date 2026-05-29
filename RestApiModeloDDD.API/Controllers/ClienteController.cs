@@ -3,7 +3,9 @@ using Microsoft.Extensions.Logging;
 using RestApiModeloDDD.Application.Dtos;
 using RestApiModeloDDD.Application.Interfaces;
 using RestApiModeloDDD.Domain.Entities;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,9 +17,9 @@ namespace RestApiModeloDDD.API.Controllers
     {
 
         private readonly IApplicationServiceCliente applicationServiceCliente;
-        ILogger<PedidoController> _logger;
+        ILogger<ClientesController> _logger;
 
-        public ClientesController(IApplicationServiceCliente applicationServiceCliente,  ILogger<PedidoController> logger)
+        public ClientesController(IApplicationServiceCliente applicationServiceCliente,  ILogger<ClientesController> logger)
         {
             this.applicationServiceCliente = applicationServiceCliente;
             this._logger = logger;
@@ -98,28 +100,67 @@ namespace RestApiModeloDDD.API.Controllers
         [HttpPut]
         public async Task<ActionResult> Put([FromBody] ClienteDto clienteDTO)
         {
-            _logger.LogInformation(
-                "Iniciando atualização do cliente. Id: {ClienteId}",
-                clienteDTO?.Id);
+            try
+            {
+                _logger.LogInformation(
+                    "Iniciando atualização do cliente. Id: {ClienteId}",
+                    clienteDTO?.Id);
 
-            if (clienteDTO == null)
+                if (clienteDTO == null)
+                {
+                    _logger.LogWarning(
+                        "Tentativa de atualização com payload nulo");
+
+                    return BadRequest(new
+                    {
+                        erro = "Os dados do cliente são obrigatórios."
+                    });
+                }
+
+                await applicationServiceCliente.UpdateAsync(clienteDTO);
+
+                _logger.LogInformation(
+                    "Cliente atualizado com sucesso. Id: {ClienteId}",
+                    clienteDTO.Id);
+
+                return Ok(new
+                {
+                    mensagem = "Cliente atualizado com sucesso!"
+                });
+            }
+            catch (ValidationException ex)
             {
                 _logger.LogWarning(
-                    "Tentativa de atualização com payload nulo");
+                    "Erro de validação ao atualizar cliente. Erro: {Erro}",
+                    ex.Message);
 
-                return BadRequest();
+                return BadRequest(new
+                {
+                    erro = ex.Message
+                });
             }
-
-            await applicationServiceCliente.UpdateAsync(clienteDTO);
-
-            _logger.LogInformation(
-                "Cliente atualizado com sucesso. Id: {ClienteId}",
-                clienteDTO.Id);
-
-            return Ok(new
+            catch (KeyNotFoundException ex)
             {
-                mensagem = "Cliente atualizado com sucesso!"
-            });
+                _logger.LogWarning(
+                    "Cliente não encontrado para atualização. Erro: {Erro}",
+                    ex.Message);
+
+                return NotFound(new
+                {
+                    erro = ex.Message
+                });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(
+                    ex,
+                    "Erro interno ao atualizar cliente");
+
+                return StatusCode(500, new
+                {
+                    erro = "Erro interno"
+                });
+            }
         }
 
         // DELETE api/values/5

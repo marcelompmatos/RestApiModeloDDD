@@ -1,4 +1,6 @@
 using Autofac;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -6,11 +8,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using RestApiModeloDDD.Infrastructure.IOC;
-using RestApiModeloDDD.Infrastructure.Data.Context;
 using RestApiModeloDDD.API.Middlewares;
-using Serilog;
 using RestApiModeloDDD.API.Observability;
+using RestApiModeloDDD.Domain.Validations;
+using RestApiModeloDDD.Infrastructure.Data.Context;
+using RestApiModeloDDD.Infrastructure.IOC;
+using Serilog;
 
 namespace RestApiModeloDDD.API
 {
@@ -21,6 +24,8 @@ namespace RestApiModeloDDD.API
         {
             Configuration = configuration;
         }
+
+
 
         public IConfiguration Configuration { get; }
 
@@ -41,6 +46,10 @@ namespace RestApiModeloDDD.API
 
 
             services.AddControllers();
+            // VALIDAÇÃO DE MODELOS
+            services.AddFluentValidationAutoValidation();
+            services.AddValidatorsFromAssemblyContaining<ClienteValidation>();
+
 
             services.AddEndpointsApiExplorer();
 

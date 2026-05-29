@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using RestApiModeloDDD.Application.Dtos;
 using RestApiModeloDDD.Domain.Core.Interfaces.Repositories;
+using RestApiModeloDDD.Domain.Services;
 using RestApiModeloDDD.Infrastructure.Data.Context;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -37,7 +39,18 @@ public class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : 
 
     public async Task UpdateAsync(TEntity obj)
     {
-        sqlContext.Entry(obj).State = EntityState.Modified;
+        var id = (int)typeof(TEntity)
+        .GetProperty("Id")
+        .GetValue(obj);
+
+        var entidadeExistente = await GetByIdAsync(id);
+
+        sqlContext.Entry(entidadeExistente)
+                  .CurrentValues
+                  .SetValues(obj);
+
         await sqlContext.SaveChangesAsync();
+
+
     }
 }
