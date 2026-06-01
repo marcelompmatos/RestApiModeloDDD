@@ -4,7 +4,6 @@ using Microsoft.Extensions.Logging;
 using RestApiModeloDDD.Domain.Exceptions;
 using System;
 using System.Linq;
-using System.Net;
 using System.Text.Json;
 using System.Threading.Tasks;
 
@@ -15,9 +14,9 @@ namespace RestApiModeloDDD.API.Middlewares
         private readonly RequestDelegate _next;
         private readonly ILogger<ExceptionMiddleware> _logger;
 
-        public ExceptionMiddleware(
-            RequestDelegate next,
-            ILogger<ExceptionMiddleware> logger)
+    public ExceptionMiddleware(
+        RequestDelegate next,
+        ILogger<ExceptionMiddleware> logger)
         {
             _next = next;
             _logger = logger;
@@ -31,56 +30,69 @@ namespace RestApiModeloDDD.API.Middlewares
             }
             catch (ValidationException ex)
             {
-                _logger.LogWarning(ex, "Erro de validação");
-
-                context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
-                context.Response.ContentType = "application/json";
-
-                var errors = ex.Errors.Select(e => new
-                {
-                    campo = e.PropertyName,
-                    mensagem = e.ErrorMessage
-                });
+                _logger.LogWarning(ex,
+                    "Erro de validação");
 
                 var response = new
                 {
                     erro = "Erro de validação",
-                    detalhes = errors
+                    detalhes = ex.Errors.Select(e => new
+                    {
+                        campo = e.PropertyName,
+                        mensagem = e.ErrorMessage
+                    })
                 };
 
-                await context.Response.WriteAsync(
-                    JsonSerializer.Serialize(response));
+                await WriteResponseAsync(
+                    context,
+                    StatusCodes.Status400BadRequest,
+                    response);
             }
             catch (NotFoundException ex)
             {
-                _logger.LogWarning(ex, ex.Message);
-
-                context.Response.StatusCode = (int)HttpStatusCode.NotFound;
-                context.Response.ContentType = "application/json";
+                _logger.LogWarning(ex,
+                    "Recurso não encontrado");
 
                 var response = new
                 {
                     erro = ex.Message
                 };
 
-                await context.Response.WriteAsync(
-                    JsonSerializer.Serialize(response));
+                await WriteResponseAsync(
+                    context,
+                    StatusCodes.Status404NotFound,
+                    response);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Erro interno");
-
-                context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-                context.Response.ContentType = "application/json";
+                _logger.LogError(ex,
+                    "Erro interno não tratado");
 
                 var response = new
                 {
-                    erro = "Erro interno"
+                    erro = "Ocorreu um erro interno."
                 };
 
-                await context.Response.WriteAsync(
-                    JsonSerializer.Serialize(response));
+                await WriteResponseAsync(
+                    context,
+                    StatusCodes.Status500InternalServerError,
+                    response);
             }
         }
+
+        private static async Task WriteResponseAsync(
+            HttpContext context,
+            int statusCode,
+            object response)
+        {
+            context.Response.Clear();
+            context.Response.StatusCode = statusCode;
+            context.Response.ContentType = "application/json";
+
+            await context.Response.WriteAsync(
+                JsonSerializer.Serialize(response));
+        }
     }
+
+
 }

@@ -5,6 +5,7 @@ using RestApiModeloDDD.Application.Dtos;
 using RestApiModeloDDD.Application.Interfaces;
 using RestApiModeloDDD.Domain.Core.Interfaces.Services;
 using RestApiModeloDDD.Domain.Entitys;
+using RestApiModeloDDD.Domain.Exceptions;
 using RestApiModeloDDD.Domain.Validations;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +26,7 @@ namespace RestApiModeloDDD.Application.Services
         {
             this.serviceCliente = serviceCliente;
             this.mapper = mapper;
-            this._logger = logger;
+            _logger = logger;
         }
 
         public async Task AddAsync(ClienteDto clienteDto)
@@ -63,7 +64,7 @@ namespace RestApiModeloDDD.Application.Services
             return mapper.Map<IEnumerable<ClienteDto>>(listaClientes);
         }
 
-        public async Task<ClienteDto> GetByIdAsync(int id)
+        public async Task<ClienteDto?> GetByIdAsync(int id)
         {
             _logger.LogInformation(
                 "Iniciando consulta de cliente por Id na camada Application. Id: {ClienteId}",
@@ -75,7 +76,8 @@ namespace RestApiModeloDDD.Application.Services
                     "Id inválido informado para consulta. Id: {ClienteId}",
                     id);
 
-                throw new ValidationException("O Id do cliente deve ser maior que zero.");
+                throw new ValidationException(
+                    "O Id do cliente deve ser maior que zero.");
             }
 
             var cliente = await serviceCliente.GetByIdAsync(id);
@@ -102,26 +104,17 @@ namespace RestApiModeloDDD.Application.Services
                 "Iniciando remoção de cliente na camada Application. Id: {ClienteId}",
                 id);
 
-            try
+            if (id <= 0)
             {
+                _logger.LogWarning(
+                    "Id inválido informado para remoção. Id: {ClienteId}",
+                    id);
 
-                //var cliente = mapper.Map<Cliente>(id);
-
-
-                    await serviceCliente.RemoveAsync(id);
-
-
-            }
-                catch (ValidationException ex)
-                {
-                    _logger.LogWarning(
-                        "Erro de validação ao remover cliente. Id: {ClienteId}. Erros: {Erros}",
-                        id,
-                        string.Join(" | ", ex.Errors.Select(e => $"{e.PropertyName}: {e.ErrorMessage}")));
-    
-                    throw;
+                throw new ValidationException(
+                    "O Id do cliente deve ser maior que zero.");
             }
 
+            await serviceCliente.RemoveAsync(id);
 
             _logger.LogInformation(
                 "Cliente removido com sucesso na camada Application. Id: {ClienteId}",
@@ -142,10 +135,12 @@ namespace RestApiModeloDDD.Application.Services
                     "Tentativa de atualização com Id inválido. Id: {ClienteId}",
                     clienteDto.Id);
 
-                throw new ValidationException("O Id do cliente deve ser maior que zero.");
+                throw new ValidationException(
+                    "O Id do cliente deve ser maior que zero.");
             }
 
-            var clienteExistente = await serviceCliente.GetByIdAsync(clienteDto.Id);
+            var clienteExistente =
+                await serviceCliente.GetByIdAsync(clienteDto.Id);
 
             if (clienteExistente == null)
             {
@@ -153,7 +148,7 @@ namespace RestApiModeloDDD.Application.Services
                     "Cliente não encontrado para atualização. Id: {ClienteId}",
                     clienteDto.Id);
 
-                throw new KeyNotFoundException(
+                throw new NotFoundException(
                     $"Cliente com Id {clienteDto.Id} não encontrado.");
             }
 
@@ -175,7 +170,8 @@ namespace RestApiModeloDDD.Application.Services
                 _logger.LogWarning(
                     "ClienteDto recebido é nulo");
 
-                throw new ValidationException("Os dados do cliente são obrigatórios.");
+                throw new ValidationException(
+                    "Os dados do cliente são obrigatórios.");
             }
         }
 
