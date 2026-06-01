@@ -1,5 +1,6 @@
 ﻿using RestApiModeloDDD.Domain.Core.Interfaces.Repositories;
 using RestApiModeloDDD.Domain.Core.Interfaces.Services;
+using RestApiModeloDDD.Domain.Exceptions;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -29,9 +30,14 @@ namespace RestApiModeloDDD.Domain.Services
             return await repository.GetByIdAsync(id);
         }
 
-        public async Task RemoveAsync(TEntity obj)
+        public async Task RemoveAsync(int id)
         {
-            await repository.RemoveAsync(obj);
+            var entity = await repository.GetByIdAsync(id);
+
+            if (entity == null)
+                throw new NotFoundException($"Cliente {id} não encontrado.");
+
+            await repository.RemoveAsync(entity);
         }
 
         public async Task UpdateAsync(TEntity obj)

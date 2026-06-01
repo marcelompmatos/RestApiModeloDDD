@@ -87,9 +87,23 @@ namespace RestApiModeloDDD.Application.Services
                 "Iniciando remoção de produto na camada Application. Id: {ProdutoId}",
                 produtoDto?.Id);
 
-            var produto = mapper.Map<Produto>(produtoDto);
 
-            await serviceProduto.RemoveAsync(produto);
+            try
+            {
+                var produto = mapper.Map<Produto>(produtoDto);
+                await serviceProduto.RemoveAsync(produto.Id);
+            }
+            catch (System.Exception ex)
+            {
+                _logger.LogError(
+                    ex,
+                    "Erro ao remover produto na camada Application. Id: {ProdutoId}",
+                    produtoDto?.Id);
+                throw;
+            }
+      
+
+            
 
             _logger.LogInformation(
                 "Produto removido com sucesso na camada Application. Id: {ProdutoId}",

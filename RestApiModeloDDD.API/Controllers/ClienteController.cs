@@ -163,27 +163,33 @@ namespace RestApiModeloDDD.API.Controllers
             }
         }
 
-        // DELETE api/values/5
-        [HttpDelete]
-        public async Task<ActionResult> Delete([FromBody] ClienteDto clienteDTO)
+        // DELETE api/cliente/5
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> Delete(int id)
         {
             _logger.LogInformation(
                 "Iniciando remoção do cliente. Id: {ClienteId}",
-                clienteDTO?.Id);
-
-            if (clienteDTO == null)
+                id);
+            try
+            {
+                await applicationServiceCliente.RemoveAsync(id);
+            }
+            catch (KeyNotFoundException ex)
             {
                 _logger.LogWarning(
-                    "Tentativa de remoção com payload nulo");
-
-                return BadRequest();
+                    "Cliente não encontrado para remoção. Id: {ClienteId}. Erro: {Erro}",
+                    id, ex.Message);
+                return NotFound(new
+                {
+                    erro = ex.Message
+                });
             }
 
-            await applicationServiceCliente.RemoveAsync(clienteDTO);
+         
 
             _logger.LogInformation(
                 "Cliente removido com sucesso. Id: {ClienteId}",
-                clienteDTO.Id);
+                id);
 
             return Ok(new
             {

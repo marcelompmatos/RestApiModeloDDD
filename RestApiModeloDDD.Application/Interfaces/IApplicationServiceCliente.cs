@@ -10,7 +10,7 @@ namespace RestApiModeloDDD.Application.Interfaces
 
         Task UpdateAsync(ClienteDto clienteDto);
 
-        Task RemoveAsync(ClienteDto clienteDto);
+        Task RemoveAsync(int id);
 
         Task<IEnumerable<ClienteDto>> GetAllAsync();
 

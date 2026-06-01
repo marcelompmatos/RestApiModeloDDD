@@ -96,30 +96,36 @@ namespace RestApiModeloDDD.Application.Services
             return mapper.Map<ClienteDto>(cliente);
         }
 
-        public async Task RemoveAsync(ClienteDto clienteDto)
+        public async Task RemoveAsync(int id)
         {
             _logger.LogInformation(
                 "Iniciando remoção de cliente na camada Application. Id: {ClienteId}",
-                clienteDto?.Id);
+                id);
 
-            ValidarClienteDto(clienteDto);
-
-            if (clienteDto.Id <= 0)
+            try
             {
-                _logger.LogWarning(
-                    "Tentativa de remoção com Id inválido. Id: {ClienteId}",
-                    clienteDto.Id);
 
-                throw new ValidationException("O Id do cliente deve ser maior que zero.");
+                //var cliente = mapper.Map<Cliente>(id);
+
+
+                    await serviceCliente.RemoveAsync(id);
+
+
+            }
+                catch (ValidationException ex)
+                {
+                    _logger.LogWarning(
+                        "Erro de validação ao remover cliente. Id: {ClienteId}. Erros: {Erros}",
+                        id,
+                        string.Join(" | ", ex.Errors.Select(e => $"{e.PropertyName}: {e.ErrorMessage}")));
+    
+                    throw;
             }
 
-            var cliente = mapper.Map<Cliente>(clienteDto);
-
-            await serviceCliente.RemoveAsync(cliente);
 
             _logger.LogInformation(
                 "Cliente removido com sucesso na camada Application. Id: {ClienteId}",
-                clienteDto.Id);
+                id);
         }
 
         public async Task UpdateAsync(ClienteDto clienteDto)

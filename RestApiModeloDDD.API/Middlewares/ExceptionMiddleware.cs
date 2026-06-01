@@ -1,6 +1,7 @@
 ﻿using FluentValidation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using RestApiModeloDDD.Domain.Exceptions;
 using System;
 using System.Linq;
 using System.Net;
@@ -30,11 +31,9 @@ namespace RestApiModeloDDD.API.Middlewares
             }
             catch (ValidationException ex)
             {
-                _logger.LogWarning(ex,
-                    "Erro de validação");
+                _logger.LogWarning(ex, "Erro de validação");
 
                 context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
-
                 context.Response.ContentType = "application/json";
 
                 var errors = ex.Errors.Select(e => new
@@ -52,13 +51,26 @@ namespace RestApiModeloDDD.API.Middlewares
                 await context.Response.WriteAsync(
                     JsonSerializer.Serialize(response));
             }
+            catch (NotFoundException ex)
+            {
+                _logger.LogWarning(ex, ex.Message);
+
+                context.Response.StatusCode = (int)HttpStatusCode.NotFound;
+                context.Response.ContentType = "application/json";
+
+                var response = new
+                {
+                    erro = ex.Message
+                };
+
+                await context.Response.WriteAsync(
+                    JsonSerializer.Serialize(response));
+            }
             catch (Exception ex)
             {
-                _logger.LogError(ex,
-                    "Erro interno");
+                _logger.LogError(ex, "Erro interno");
 
                 context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-
                 context.Response.ContentType = "application/json";
 
                 var response = new

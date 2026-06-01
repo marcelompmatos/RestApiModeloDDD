@@ -1,8 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RestApiModeloDDD.Application.Dtos;
 using RestApiModeloDDD.Domain.Core.Interfaces.Repositories;
-using RestApiModeloDDD.Domain.Services;
 using RestApiModeloDDD.Infrastructure.Data.Context;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -35,7 +34,8 @@ public class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : 
     {
         sqlContext.Set<TEntity>().Remove(obj);
         await sqlContext.SaveChangesAsync();
-    }
+
+    } 
 
     public async Task UpdateAsync(TEntity obj)
     {

@@ -9,7 +9,7 @@ namespace RestApiModeloDDD.Domain.Core.Interfaces.Services
 
         Task UpdateAsync(TEntity obj);
 
-        Task RemoveAsync(TEntity obj);
+        Task RemoveAsync(int id);
 
         Task<IEnumerable<TEntity>> GetAllAsync();   
 
