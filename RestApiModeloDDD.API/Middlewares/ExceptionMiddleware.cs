@@ -1,9 +1,7 @@
-﻿using FluentValidation;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using RestApiModeloDDD.Domain.Exceptions;
 using System;
-using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 
@@ -14,9 +12,9 @@ namespace RestApiModeloDDD.API.Middlewares
         private readonly RequestDelegate _next;
         private readonly ILogger<ExceptionMiddleware> _logger;
 
-    public ExceptionMiddleware(
-        RequestDelegate next,
-        ILogger<ExceptionMiddleware> logger)
+        public ExceptionMiddleware(
+            RequestDelegate next,
+            ILogger<ExceptionMiddleware> logger)
         {
             _next = next;
             _logger = logger;
@@ -28,7 +26,7 @@ namespace RestApiModeloDDD.API.Middlewares
             {
                 await _next(context);
             }
-            catch (ValidationException ex)
+            catch (DomainValidationException ex)
             {
                 _logger.LogWarning(ex,
                     "Erro de validação");
@@ -36,11 +34,7 @@ namespace RestApiModeloDDD.API.Middlewares
                 var response = new
                 {
                     erro = "Erro de validação",
-                    detalhes = ex.Errors.Select(e => new
-                    {
-                        campo = e.PropertyName,
-                        mensagem = e.ErrorMessage
-                    })
+                    detalhes = ex.Errors
                 };
 
                 await WriteResponseAsync(
@@ -63,6 +57,21 @@ namespace RestApiModeloDDD.API.Middlewares
                     StatusCodes.Status404NotFound,
                     response);
             }
+            catch (DomainException ex)
+            {
+                _logger.LogWarning(ex,
+                    "Erro de domínio");
+
+                var response = new
+                {
+                    erro = ex.Message
+                };
+
+                await WriteResponseAsync(
+                    context,
+                    StatusCodes.Status400BadRequest,
+                    response);
+            }
             catch (Exception ex)
             {
                 _logger.LogError(ex,
@@ -70,7 +79,7 @@ namespace RestApiModeloDDD.API.Middlewares
 
                 var response = new
                 {
-                    erro = "Ocorreu um erro interno."
+                    erro = "Ocorreu um erro interno no servidor."
                 };
 
                 await WriteResponseAsync(
@@ -93,6 +102,4 @@ namespace RestApiModeloDDD.API.Middlewares
                 JsonSerializer.Serialize(response));
         }
     }
-
-
 }

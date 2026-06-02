@@ -1,0 +1,676 @@
+2026-06-02 14:33:44.415 -03:00 [INF] Iniciando API
+2026-06-02 14:33:54.972 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-02 14:33:55.381 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-02 14:33:55.382 -03:00 [INF] Hosting environment: Development
+2026-06-02 14:33:55.382 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-02 14:33:56.324 -03:00 [INF] HTTP GET /swagger responded 301 in 50.2064 ms
+2026-06-02 14:33:56.472 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-02 14:33:56.708 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 1788.9117ms
+2026-06-02 14:33:56.806 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 194.5432 ms
+2026-06-02 14:33:56.808 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 336.5661ms
+2026-06-02 14:33:56.859 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-02 14:33:56.861 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-02 14:33:56.861 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-02 14:33:56.863 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-02 14:33:56.864 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-02 14:33:56.874 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 5.5493ms
+2026-06-02 14:33:56.897 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-02 14:33:56.897 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 35.5013 ms
+2026-06-02 14:33:56.898 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-02 14:33:56.899 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 37.4284 ms
+2026-06-02 14:33:56.905 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-02 14:33:56.905 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 44.8903 ms
+2026-06-02 14:33:56.976 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 116.8024ms
+2026-06-02 14:33:56.981 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 118.8006ms
+2026-06-02 14:33:57.008 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 143.0119ms
+2026-06-02 14:33:57.108 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 245.2175ms
+2026-06-02 14:33:57.239 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-02 14:33:57.282 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 42.4952 ms
+2026-06-02 14:33:57.290 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 52.2509ms
+2026-06-02 14:34:02.335 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Clientes - null null
+2026-06-02 14:34:02.361 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API)'
+2026-06-02 14:34:02.447 -03:00 [INF] Route matched with {action = "Get", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RestApiModeloDDD.Application.Dtos.ClienteDto]]] Get() on controller RestApiModeloDDD.API.Controllers.ClientesController (RestApiModeloDDD.API).
+2026-06-02 14:34:03.144 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-02 14:34:03.148 -03:00 [INF] Iniciando consulta de clientes
+2026-06-02 14:34:03.150 -03:00 [INF] Iniciando consulta de clientes na camada Application
+2026-06-02 14:34:05.922 -03:00 [INF] Executed DbCommand (259ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[DataCadastro], [c].[Email], [c].[IsAtivo], [c].[Nome], [c].[Sobrenome]
+FROM [Clientes] AS [c]
+2026-06-02 14:34:06.035 -03:00 [INF] Consulta de clientes finalizada na camada Application. Quantidade: 3
+2026-06-02 14:34:06.057 -03:00 [INF] Consulta finalizada. Total de clientes encontrados: 3
+2026-06-02 14:34:06.062 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2914.0696ms.
+2026-06-02 14:34:06.073 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RestApiModeloDDD.Application.Dtos.ClienteDto, RestApiModeloDDD.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-02 14:34:06.092 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API) in 3634.5804ms
+2026-06-02 14:34:06.093 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API)'
+2026-06-02 14:34:06.098 -03:00 [INF] HTTP GET /Clientes responded 200 in 3762.2295 ms
+2026-06-02 14:34:06.112 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Clientes - 200 null application/json; charset=utf-8 4141.7621ms
+2026-06-02 15:07:49.979 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/Clientes - application/json 44
+2026-06-02 15:07:49.987 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Post (RestApiModeloDDD.API)'
+2026-06-02 15:07:50.003 -03:00 [INF] Route matched with {action = "Post", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Post(RestApiModeloDDD.Application.Dtos.ClienteDto) on controller RestApiModeloDDD.API.Controllers.ClientesController (RestApiModeloDDD.API).
+2026-06-02 15:07:50.185 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.ClientesController.Post (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-02 15:07:50.188 -03:00 [INF] Iniciando cadastro de cliente
+2026-06-02 15:07:50.190 -03:00 [INF] Iniciando cadastro de cliente na camada Application. Nome: 
+2026-06-02 15:07:50.226 -03:00 [WRN] Erro de validação da entidade Cliente. Erros: Nome: O nome é obrigatório. | Sobrenome: O sobrenome é obrigatório. | Email: O e-mail é obrigatório. | Email: E-mail inválido.
+2026-06-02 15:07:50.733 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ClientesController.Post (RestApiModeloDDD.API) in 729.596ms
+2026-06-02 15:07:50.828 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Post (RestApiModeloDDD.API)'
+2026-06-02 15:07:51.002 -03:00 [WRN] Erro de validação
+FluentValidation.ValidationException: Validation failed: 
+ -- Nome: O nome é obrigatório. Severity: Error
+ -- Sobrenome: O sobrenome é obrigatório. Severity: Error
+ -- Email: O e-mail é obrigatório. Severity: Error
+ -- Email: E-mail inválido. Severity: Error
+   at RestApiModeloDDD.Application.Services.ApplicationServiceCliente.ValidarEntidade(Cliente cliente) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Application\Services\ApplicationServiceCliente.cs:line 193
+   at RestApiModeloDDD.Application.Services.ApplicationServiceCliente.AddAsync(ClienteDto clienteDto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Application\Services\ApplicationServiceCliente.cs:line 42
+   at RestApiModeloDDD.API.Controllers.ClientesController.Post(ClienteDto clienteDto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Controllers\ClienteController.cs:line 75
+   at lambda_method493(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at RestApiModeloDDD.API.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Middlewares\ExceptionMiddleware.cs:line 29
+2026-06-02 15:07:51.049 -03:00 [INF] HTTP POST /Clientes responded 400 in 1068.9110 ms
+2026-06-02 15:07:51.050 -03:00 [INF] Request finished HTTP/2 POST https://localhost:44387/Clientes - 400 null application/json 1071.6171ms
+2026-06-02 15:44:12.778 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/Clientes - application/json 70
+2026-06-02 15:44:12.863 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Post (RestApiModeloDDD.API)'
+2026-06-02 15:44:12.871 -03:00 [INF] Route matched with {action = "Post", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Post(RestApiModeloDDD.Application.Dtos.ClienteDto) on controller RestApiModeloDDD.API.Controllers.ClientesController (RestApiModeloDDD.API).
+2026-06-02 15:44:12.941 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.ClientesController.Post (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-02 15:44:12.941 -03:00 [INF] Iniciando cadastro de cliente
+2026-06-02 15:44:12.941 -03:00 [INF] Iniciando cadastro de cliente na camada Application. Nome: testet
+2026-06-02 15:44:13.637 -03:00 [INF] Executed DbCommand (165ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Clientes] ([DataCadastro], [Email], [IsAtivo], [Nome], [Sobrenome])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-06-02 15:44:13.679 -03:00 [INF] Cliente cadastrado com sucesso na camada Application. Nome: testet
+2026-06-02 15:44:13.680 -03:00 [INF] Cliente cadastrado com sucesso
+2026-06-02 15:44:13.684 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.ClientesController.Post (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 742.8896ms.
+2026-06-02 15:44:13.686 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'RestApiModeloDDD.Application.Dtos.ClienteDto'.
+2026-06-02 15:44:13.741 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ClientesController.Post (RestApiModeloDDD.API) in 869.5449ms
+2026-06-02 15:44:13.741 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Post (RestApiModeloDDD.API)'
+2026-06-02 15:44:13.742 -03:00 [INF] HTTP POST /Clientes responded 201 in 962.1180 ms
+2026-06-02 15:44:13.743 -03:00 [INF] Request finished HTTP/2 POST https://localhost:44387/Clientes - 201 null application/json; charset=utf-8 968.6316ms
+2026-06-02 15:45:46.959 -03:00 [INF] Iniciando API
+2026-06-02 15:45:50.570 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-02 15:45:50.699 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-02 15:45:50.700 -03:00 [INF] Hosting environment: Development
+2026-06-02 15:45:50.700 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-02 15:45:50.753 -03:00 [INF] HTTP GET /swagger responded 301 in 38.8810 ms
+2026-06-02 15:45:50.820 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 287.0732ms
+2026-06-02 15:45:50.844 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-02 15:45:50.963 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 113.2671 ms
+2026-06-02 15:45:50.965 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 123.6755ms
+2026-06-02 15:45:51.010 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-02 15:45:51.010 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-02 15:45:51.010 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-02 15:45:51.039 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-02 15:45:51.039 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 27.2706 ms
+2026-06-02 15:45:51.040 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-02 15:45:51.040 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 28.9132 ms
+2026-06-02 15:45:51.042 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 31.8148ms
+2026-06-02 15:45:51.057 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-02 15:45:51.058 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 47.2327 ms
+2026-06-02 15:45:51.060 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-02 15:45:51.072 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 6.9577ms
+2026-06-02 15:45:51.082 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 72.4285ms
+2026-06-02 15:45:51.102 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-02 15:45:51.206 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 196.3196ms
+2026-06-02 15:45:51.235 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 133.8453ms
+2026-06-02 15:45:51.327 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-02 15:45:51.337 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 10.5238 ms
+2026-06-02 15:45:51.339 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.6405ms
+2026-06-02 15:46:11.441 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/Clientes - application/json 64
+2026-06-02 15:46:11.455 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Post (RestApiModeloDDD.API)'
+2026-06-02 15:46:11.501 -03:00 [INF] Route matched with {action = "Post", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Post(RestApiModeloDDD.Application.Dtos.ClienteDto) on controller RestApiModeloDDD.API.Controllers.ClientesController (RestApiModeloDDD.API).
+2026-06-02 15:46:12.195 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.ClientesController.Post (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-02 15:46:16.561 -03:00 [INF] Iniciando cadastro de cliente
+2026-06-02 15:46:21.311 -03:00 [INF] Iniciando cadastro de cliente na camada Application. Nome: yik
+2026-06-02 15:46:43.253 -03:00 [INF] Executed DbCommand (79ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Clientes] ([DataCadastro], [Email], [IsAtivo], [Nome], [Sobrenome])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-06-02 15:46:52.533 -03:00 [INF] Cliente cadastrado com sucesso na camada Application. Nome: yik
+2026-06-02 15:46:54.457 -03:00 [INF] Cliente cadastrado com sucesso
+2026-06-02 15:46:59.897 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.ClientesController.Post (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 46128.8021ms.
+2026-06-02 15:47:00.321 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'RestApiModeloDDD.Application.Dtos.ClienteDto'.
+2026-06-02 15:47:00.415 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ClientesController.Post (RestApiModeloDDD.API) in 48908.5884ms
+2026-06-02 15:47:00.417 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Post (RestApiModeloDDD.API)'
+2026-06-02 15:47:00.421 -03:00 [INF] HTTP POST /Clientes responded 201 in 48980.2589 ms
+2026-06-02 15:47:00.436 -03:00 [INF] Request finished HTTP/2 POST https://localhost:44387/Clientes - 201 null application/json; charset=utf-8 48996.0248ms
+2026-06-02 15:47:52.494 -03:00 [INF] Request starting HTTP/2 PUT https://localhost:44387/Clientes - application/json 64
+2026-06-02 15:47:52.504 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API)'
+2026-06-02 15:47:52.519 -03:00 [INF] Route matched with {action = "Put", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Put(RestApiModeloDDD.Application.Dtos.ClienteDto) on controller RestApiModeloDDD.API.Controllers.ClientesController (RestApiModeloDDD.API).
+2026-06-02 15:47:52.571 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-02 15:47:52.573 -03:00 [INF] Iniciando atualização do cliente. Id: 120
+2026-06-02 15:47:52.575 -03:00 [INF] Iniciando atualização de cliente na camada Application. Id: 120
+2026-06-02 15:47:53.120 -03:00 [INF] Executed DbCommand (24ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DataCadastro], [c].[Email], [c].[IsAtivo], [c].[Nome], [c].[Sobrenome]
+FROM [Clientes] AS [c]
+WHERE [c].[Id] = @__p_0
+2026-06-02 15:47:53.130 -03:00 [WRN] Cliente não encontrado para atualização. Id: 120
+2026-06-02 15:47:54.327 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API) in 1807.95ms
+2026-06-02 15:47:54.856 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API)'
+2026-06-02 15:47:56.280 -03:00 [WRN] Recurso não encontrado
+RestApiModeloDDD.Domain.Exceptions.NotFoundException: Cliente com Id 120 não encontrado.
+   at RestApiModeloDDD.Application.Services.ApplicationServiceCliente.UpdateAsync(ClienteDto clienteDto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Application\Services\ApplicationServiceCliente.cs:line 151
+   at RestApiModeloDDD.API.Controllers.ClientesController.Put(ClienteDto clienteDto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Controllers\ClienteController.cs:line 93
+   at lambda_method535(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at RestApiModeloDDD.API.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Middlewares\ExceptionMiddleware.cs:line 29
+2026-06-02 15:47:56.303 -03:00 [INF] HTTP PUT /Clientes responded 404 in 3807.4289 ms
+2026-06-02 15:47:56.304 -03:00 [INF] Request finished HTTP/2 PUT https://localhost:44387/Clientes - 404 null application/json 3810.9114ms
+2026-06-02 15:48:02.795 -03:00 [INF] Request starting HTTP/2 PUT https://localhost:44387/Clientes - application/json 63
+2026-06-02 15:48:02.796 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API)'
+2026-06-02 15:48:02.798 -03:00 [INF] Route matched with {action = "Put", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Put(RestApiModeloDDD.Application.Dtos.ClienteDto) on controller RestApiModeloDDD.API.Controllers.ClientesController (RestApiModeloDDD.API).
+2026-06-02 15:48:02.837 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-02 15:48:02.837 -03:00 [INF] Iniciando atualização do cliente. Id: 12
+2026-06-02 15:48:02.837 -03:00 [INF] Iniciando atualização de cliente na camada Application. Id: 12
+2026-06-02 15:48:02.866 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DataCadastro], [c].[Email], [c].[IsAtivo], [c].[Nome], [c].[Sobrenome]
+FROM [Clientes] AS [c]
+WHERE [c].[Id] = @__p_0
+2026-06-02 15:48:02.889 -03:00 [WRN] Erro de validação da entidade Cliente. Erros: Email: E-mail inválido.
+2026-06-02 15:48:04.103 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API) in 1303.9811ms
+2026-06-02 15:48:04.504 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API)'
+2026-06-02 15:48:05.691 -03:00 [WRN] Erro de validação
+FluentValidation.ValidationException: Validation failed: 
+ -- Email: E-mail inválido. Severity: Error
+   at RestApiModeloDDD.Application.Services.ApplicationServiceCliente.ValidarEntidade(Cliente cliente) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Application\Services\ApplicationServiceCliente.cs:line 193
+   at RestApiModeloDDD.Application.Services.ApplicationServiceCliente.UpdateAsync(ClienteDto clienteDto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Application\Services\ApplicationServiceCliente.cs:line 157
+   at RestApiModeloDDD.API.Controllers.ClientesController.Put(ClienteDto clienteDto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Controllers\ClienteController.cs:line 93
+   at lambda_method535(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at RestApiModeloDDD.API.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Middlewares\ExceptionMiddleware.cs:line 29
+2026-06-02 15:48:05.698 -03:00 [INF] HTTP PUT /Clientes responded 400 in 2902.2251 ms
+2026-06-02 15:48:05.698 -03:00 [INF] Request finished HTTP/2 PUT https://localhost:44387/Clientes - 400 null application/json 2904.6343ms
+2026-06-02 15:48:52.030 -03:00 [INF] Request starting HTTP/2 PUT https://localhost:44387/Clientes - application/json 70
+2026-06-02 15:48:52.031 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API)'
+2026-06-02 15:48:52.032 -03:00 [INF] Route matched with {action = "Put", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Put(RestApiModeloDDD.Application.Dtos.ClienteDto) on controller RestApiModeloDDD.API.Controllers.ClientesController (RestApiModeloDDD.API).
+2026-06-02 15:48:52.047 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-02 15:48:52.048 -03:00 [INF] Iniciando atualização do cliente. Id: 12
+2026-06-02 15:48:52.048 -03:00 [INF] Iniciando atualização de cliente na camada Application. Id: 12
+2026-06-02 15:48:52.051 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DataCadastro], [c].[Email], [c].[IsAtivo], [c].[Nome], [c].[Sobrenome]
+FROM [Clientes] AS [c]
+WHERE [c].[Id] = @__p_0
+2026-06-02 15:48:52.093 -03:00 [INF] Executed DbCommand (24ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Clientes] SET [DataCadastro] = @p0, [Email] = @p1, [Nome] = @p2, [Sobrenome] = @p3
+OUTPUT 1
+WHERE [Id] = @p4;
+2026-06-02 15:48:52.103 -03:00 [INF] Cliente atualizado com sucesso na camada Application. Id: 12
+2026-06-02 15:48:52.103 -03:00 [INF] Cliente atualizado com sucesso. Id: 12
+2026-06-02 15:48:52.104 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 56.3846ms.
+2026-06-02 15:48:52.108 -03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2026-06-02 15:48:52.108 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API) in 76.3769ms
+2026-06-02 15:48:52.109 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API)'
+2026-06-02 15:48:52.110 -03:00 [INF] HTTP PUT /Clientes responded 204 in 79.1784 ms
+2026-06-02 15:48:52.112 -03:00 [INF] Request finished HTTP/2 PUT https://localhost:44387/Clientes - 204 null null 264.4126ms
+2026-06-02 15:53:36.237 -03:00 [INF] Request starting HTTP/2 PUT https://localhost:44387/Clientes - application/json 72
+2026-06-02 15:53:36.238 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API)'
+2026-06-02 15:53:36.238 -03:00 [INF] Route matched with {action = "Put", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Put(RestApiModeloDDD.Application.Dtos.ClienteDto) on controller RestApiModeloDDD.API.Controllers.ClientesController (RestApiModeloDDD.API).
+2026-06-02 15:53:36.259 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-02 15:53:36.260 -03:00 [INF] Iniciando atualização do cliente. Id: 12
+2026-06-02 15:53:39.748 -03:00 [INF] Iniciando atualização de cliente na camada Application. Id: 12
+2026-06-02 15:53:55.008 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DataCadastro], [c].[Email], [c].[IsAtivo], [c].[Nome], [c].[Sobrenome]
+FROM [Clientes] AS [c]
+WHERE [c].[Id] = @__p_0
+2026-06-02 15:54:04.703 -03:00 [INF] Executed DbCommand (51ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Clientes] SET [DataCadastro] = @p0, [Nome] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+2026-06-02 15:54:04.703 -03:00 [INF] Cliente atualizado com sucesso na camada Application. Id: 12
+2026-06-02 15:54:04.703 -03:00 [INF] Cliente atualizado com sucesso. Id: 12
+2026-06-02 15:54:04.704 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 28443.9992ms.
+2026-06-02 15:54:04.704 -03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2026-06-02 15:54:04.704 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API) in 28465.7677ms
+2026-06-02 15:54:04.704 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API)'
+2026-06-02 15:54:04.704 -03:00 [INF] HTTP PUT /Clientes responded 204 in 28467.0474 ms
+2026-06-02 15:54:04.705 -03:00 [INF] Request finished HTTP/2 PUT https://localhost:44387/Clientes - 204 null null 28468.3371ms
+2026-06-02 15:54:27.619 -03:00 [INF] Request starting HTTP/2 PUT https://localhost:44387/Clientes - application/json 66
+2026-06-02 15:54:27.620 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API)'
+2026-06-02 15:54:27.621 -03:00 [INF] Route matched with {action = "Put", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Put(RestApiModeloDDD.Application.Dtos.ClienteDto) on controller RestApiModeloDDD.API.Controllers.ClientesController (RestApiModeloDDD.API).
+2026-06-02 15:54:27.642 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-02 15:54:27.642 -03:00 [INF] Iniciando atualização do cliente. Id: 12
+2026-06-02 15:54:29.425 -03:00 [INF] Iniciando atualização de cliente na camada Application. Id: 12
+2026-06-02 15:54:29.470 -03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DataCadastro], [c].[Email], [c].[IsAtivo], [c].[Nome], [c].[Sobrenome]
+FROM [Clientes] AS [c]
+WHERE [c].[Id] = @__p_0
+2026-06-02 15:54:29.483 -03:00 [WRN] Erro de validação da entidade Cliente. Erros: Sobrenome: O sobrenome é obrigatório.
+2026-06-02 15:54:30.631 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API) in 3009.6267ms
+2026-06-02 15:54:31.178 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API)'
+2026-06-02 15:54:32.385 -03:00 [WRN] Erro de validação
+FluentValidation.ValidationException: Validation failed: 
+ -- Sobrenome: O sobrenome é obrigatório. Severity: Error
+   at RestApiModeloDDD.Application.Services.ApplicationServiceCliente.ValidarEntidade(Cliente cliente) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Application\Services\ApplicationServiceCliente.cs:line 193
+   at RestApiModeloDDD.Application.Services.ApplicationServiceCliente.UpdateAsync(ClienteDto clienteDto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Application\Services\ApplicationServiceCliente.cs:line 157
+   at RestApiModeloDDD.API.Controllers.ClientesController.Put(ClienteDto clienteDto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Controllers\ClienteController.cs:line 93
+   at lambda_method535(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at RestApiModeloDDD.API.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Middlewares\ExceptionMiddleware.cs:line 29
+2026-06-02 15:54:32.388 -03:00 [INF] HTTP PUT /Clientes responded 400 in 4768.8157 ms
+2026-06-02 15:54:32.389 -03:00 [INF] Request finished HTTP/2 PUT https://localhost:44387/Clientes - 400 null application/json 4770.6894ms
+2026-06-02 15:57:54.960 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Clientes/456 - null null
+2026-06-02 15:57:55.035 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API)'
+2026-06-02 15:57:55.050 -03:00 [INF] Route matched with {action = "Get", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RestApiModeloDDD.Application.Dtos.ClienteDto]] Get(Int32) on controller RestApiModeloDDD.API.Controllers.ClientesController (RestApiModeloDDD.API).
+2026-06-02 15:57:55.078 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-02 15:57:55.081 -03:00 [INF] Iniciando consulta do cliente. Id: 456
+2026-06-02 15:57:55.083 -03:00 [INF] Iniciando consulta de cliente por Id na camada Application. Id: 456
+2026-06-02 15:57:55.090 -03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DataCadastro], [c].[Email], [c].[IsAtivo], [c].[Nome], [c].[Sobrenome]
+FROM [Clientes] AS [c]
+WHERE [c].[Id] = @__p_0
+2026-06-02 15:57:55.092 -03:00 [WRN] Cliente não encontrado na camada Application. Id: 456
+2026-06-02 15:57:55.096 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 17.3533ms.
+2026-06-02 15:57:55.097 -03:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-02 15:57:55.099 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API) in 48.3359ms
+2026-06-02 15:57:55.099 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API)'
+2026-06-02 15:57:55.099 -03:00 [INF] HTTP GET /Clientes/456 responded 404 in 101.9675 ms
+2026-06-02 15:57:55.100 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Clientes/456 - 404 null application/json; charset=utf-8 140.0632ms
+2026-06-02 15:58:01.607 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Clientes/3 - null null
+2026-06-02 15:58:01.608 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API)'
+2026-06-02 15:58:01.609 -03:00 [INF] Route matched with {action = "Get", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RestApiModeloDDD.Application.Dtos.ClienteDto]] Get(Int32) on controller RestApiModeloDDD.API.Controllers.ClientesController (RestApiModeloDDD.API).
+2026-06-02 15:58:01.638 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-02 15:58:01.639 -03:00 [INF] Iniciando consulta do cliente. Id: 3
+2026-06-02 15:58:01.639 -03:00 [INF] Iniciando consulta de cliente por Id na camada Application. Id: 3
+2026-06-02 15:58:01.648 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DataCadastro], [c].[Email], [c].[IsAtivo], [c].[Nome], [c].[Sobrenome]
+FROM [Clientes] AS [c]
+WHERE [c].[Id] = @__p_0
+2026-06-02 15:58:01.653 -03:00 [WRN] Cliente não encontrado na camada Application. Id: 3
+2026-06-02 15:58:01.654 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 14.96ms.
+2026-06-02 15:58:01.655 -03:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-02 15:58:01.656 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API) in 45.8674ms
+2026-06-02 15:58:01.656 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API)'
+2026-06-02 15:58:01.657 -03:00 [INF] HTTP GET /Clientes/3 responded 404 in 49.0861 ms
+2026-06-02 15:58:01.658 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Clientes/3 - 404 null application/json; charset=utf-8 51.2033ms
+2026-06-02 15:58:09.175 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Clientes/1 - null null
+2026-06-02 15:58:09.177 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API)'
+2026-06-02 15:58:09.178 -03:00 [INF] Route matched with {action = "Get", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RestApiModeloDDD.Application.Dtos.ClienteDto]] Get(Int32) on controller RestApiModeloDDD.API.Controllers.ClientesController (RestApiModeloDDD.API).
+2026-06-02 15:58:09.202 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-02 15:58:09.203 -03:00 [INF] Iniciando consulta do cliente. Id: 1
+2026-06-02 15:58:09.203 -03:00 [INF] Iniciando consulta de cliente por Id na camada Application. Id: 1
+2026-06-02 15:58:09.205 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DataCadastro], [c].[Email], [c].[IsAtivo], [c].[Nome], [c].[Sobrenome]
+FROM [Clientes] AS [c]
+WHERE [c].[Id] = @__p_0
+2026-06-02 15:58:09.210 -03:00 [INF] Cliente encontrado com sucesso na camada Application. Id: 1
+2026-06-02 15:58:09.213 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 10.553ms.
+2026-06-02 15:58:09.215 -03:00 [INF] Executing OkObjectResult, writing value of type 'RestApiModeloDDD.Application.Dtos.ClienteDto'.
+2026-06-02 15:58:09.216 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API) in 37.84ms
+2026-06-02 15:58:09.216 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API)'
+2026-06-02 15:58:09.216 -03:00 [INF] HTTP GET /Clientes/1 responded 200 in 39.4891 ms
+2026-06-02 15:58:09.217 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Clientes/1 - 200 null application/json; charset=utf-8 42.4931ms
+2026-06-02 15:59:20.872 -03:00 [INF] Iniciando API
+2026-06-02 15:59:23.166 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-02 15:59:23.266 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-02 15:59:23.267 -03:00 [INF] Hosting environment: Development
+2026-06-02 15:59:23.267 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-02 15:59:23.345 -03:00 [INF] HTTP GET /swagger responded 301 in 56.5611 ms
+2026-06-02 15:59:23.413 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 289.2642ms
+2026-06-02 15:59:23.425 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-02 15:59:23.545 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 114.8638 ms
+2026-06-02 15:59:23.547 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 123.4762ms
+2026-06-02 15:59:23.612 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-02 15:59:23.612 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-02 15:59:23.612 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-02 15:59:23.650 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-02 15:59:23.650 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-02 15:59:23.651 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 37.5452 ms
+2026-06-02 15:59:23.650 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 37.5412 ms
+2026-06-02 15:59:23.656 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-02 15:59:23.657 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 43.4034 ms
+2026-06-02 15:59:23.708 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 95.6957ms
+2026-06-02 15:59:23.710 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-02 15:59:23.713 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 2.9367ms
+2026-06-02 15:59:23.744 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 132.3581ms
+2026-06-02 15:59:23.755 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-02 15:59:23.831 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 218.1576ms
+2026-06-02 15:59:23.862 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 106.6642ms
+2026-06-02 15:59:24.133 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-02 15:59:24.151 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 17.4309 ms
+2026-06-02 15:59:24.154 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.7052ms
+2026-06-02 16:00:03.014 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Clientes/5675 - null null
+2026-06-02 16:00:03.029 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API)'
+2026-06-02 16:00:03.077 -03:00 [INF] Route matched with {action = "Get", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RestApiModeloDDD.Application.Dtos.ClienteDto]] Get(Int32) on controller RestApiModeloDDD.API.Controllers.ClientesController (RestApiModeloDDD.API).
+2026-06-02 16:00:03.582 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-02 16:00:05.367 -03:00 [INF] Iniciando consulta do cliente. Id: 5675
+2026-06-02 16:00:07.855 -03:00 [INF] Iniciando consulta de cliente por Id na camada Application. Id: 5675
+2026-06-02 16:00:12.899 -03:00 [INF] Executed DbCommand (98ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DataCadastro], [c].[Email], [c].[IsAtivo], [c].[Nome], [c].[Sobrenome]
+FROM [Clientes] AS [c]
+WHERE [c].[Id] = @__p_0
+2026-06-02 16:00:16.174 -03:00 [WRN] Cliente não encontrado na camada Application. Id: 5675
+2026-06-02 16:00:17.675 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 13060.3398ms.
+2026-06-02 16:00:18.075 -03:00 [INF] Executing OkObjectResult, writing value of type 'null'.
+2026-06-02 16:00:18.080 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API) in 14998.5309ms
+2026-06-02 16:00:18.083 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API)'
+2026-06-02 16:00:18.085 -03:00 [INF] HTTP GET /Clientes/5675 responded 204 in 15070.1545 ms
+2026-06-02 16:00:18.096 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Clientes/5675 - 204 null null 15082.0038ms
+2026-06-02 16:14:28.076 -03:00 [INF] Iniciando API
+2026-06-02 16:14:31.265 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-02 16:14:31.415 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-02 16:14:31.416 -03:00 [INF] Hosting environment: Development
+2026-06-02 16:14:31.417 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-02 16:14:31.498 -03:00 [INF] HTTP GET /swagger responded 301 in 70.3637 ms
+2026-06-02 16:14:31.660 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-02 16:14:31.662 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 440.8304ms
+2026-06-02 16:14:31.782 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 109.6294 ms
+2026-06-02 16:14:31.784 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 125.0899ms
+2026-06-02 16:14:31.801 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-02 16:14:31.801 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-02 16:14:31.801 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-02 16:14:31.801 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-02 16:14:31.801 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-02 16:14:31.809 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 6.7405ms
+2026-06-02 16:14:31.830 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-02 16:14:31.830 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 28.3469 ms
+2026-06-02 16:14:31.837 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 36.0557ms
+2026-06-02 16:14:31.840 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-02 16:14:31.840 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 38.2086 ms
+2026-06-02 16:14:31.869 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 68.7691ms
+2026-06-02 16:14:31.880 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-02 16:14:31.880 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 78.7067 ms
+2026-06-02 16:14:31.922 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 121.0082ms
+2026-06-02 16:14:31.944 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 143.0403ms
+2026-06-02 16:14:32.184 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-02 16:14:32.232 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 47.2363 ms
+2026-06-02 16:14:32.237 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 52.4968ms
+2026-06-02 16:15:34.081 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Clientes/1 - null null
+2026-06-02 16:15:34.122 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API)'
+2026-06-02 16:15:34.163 -03:00 [INF] Route matched with {action = "Get", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RestApiModeloDDD.Application.Dtos.ClienteDto]] Get(Int32) on controller RestApiModeloDDD.API.Controllers.ClientesController (RestApiModeloDDD.API).
+2026-06-02 16:15:34.843 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-02 16:15:36.905 -03:00 [INF] Executed DbCommand (85ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DataCadastro], [c].[Email], [c].[IsAtivo], [c].[Nome], [c].[Sobrenome]
+FROM [Clientes] AS [c]
+WHERE [c].[Id] = @__p_0
+2026-06-02 16:15:37.063 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2215.5544ms.
+2026-06-02 16:15:37.072 -03:00 [INF] Executing OkObjectResult, writing value of type 'RestApiModeloDDD.Application.Dtos.ClienteDto'.
+2026-06-02 16:15:37.084 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API) in 2916.2066ms
+2026-06-02 16:15:37.086 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API)'
+2026-06-02 16:15:37.088 -03:00 [INF] HTTP GET /Clientes/1 responded 200 in 3006.1179 ms
+2026-06-02 16:15:37.100 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Clientes/1 - 200 null application/json; charset=utf-8 3018.9269ms
+2026-06-02 16:15:41.143 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Clientes/111 - null null
+2026-06-02 16:15:41.144 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API)'
+2026-06-02 16:15:41.145 -03:00 [INF] Route matched with {action = "Get", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RestApiModeloDDD.Application.Dtos.ClienteDto]] Get(Int32) on controller RestApiModeloDDD.API.Controllers.ClientesController (RestApiModeloDDD.API).
+2026-06-02 16:15:41.185 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-02 16:15:41.273 -03:00 [INF] Executed DbCommand (11ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DataCadastro], [c].[Email], [c].[IsAtivo], [c].[Nome], [c].[Sobrenome]
+FROM [Clientes] AS [c]
+WHERE [c].[Id] = @__p_0
+2026-06-02 16:15:42.589 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API) in 1443.3376ms
+2026-06-02 16:15:43.054 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API)'
+2026-06-02 16:15:44.436 -03:00 [WRN] Recurso não encontrado
+RestApiModeloDDD.Domain.Exceptions.NotFoundException: Cliente com Id 111 não encontrado.
+   at RestApiModeloDDD.Application.Services.ApplicationServiceCliente.GetByIdAsync(Int32 id) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Application\Services\ApplicationServiceCliente.cs:line 72
+   at RestApiModeloDDD.API.Controllers.ClientesController.Get(Int32 id) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Controllers\ClienteController.cs:line 52
+   at lambda_method436(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at RestApiModeloDDD.API.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Middlewares\ExceptionMiddleware.cs:line 29
+2026-06-02 16:15:44.509 -03:00 [INF] HTTP GET /Clientes/111 responded 404 in 3365.3170 ms
+2026-06-02 16:15:44.510 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Clientes/111 - 404 null application/json 3367.3861ms
+2026-06-02 17:09:52.146 -03:00 [INF] Iniciando API
+2026-06-02 17:09:58.466 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-02 17:09:59.546 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-02 17:09:59.547 -03:00 [INF] Hosting environment: Development
+2026-06-02 17:09:59.548 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-02 17:09:59.630 -03:00 [INF] HTTP GET /swagger responded 301 in 57.3937 ms
+2026-06-02 17:09:59.741 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 1899.8994ms
+2026-06-02 17:09:59.752 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-02 17:09:59.878 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 114.6405 ms
+2026-06-02 17:09:59.880 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 130.932ms
+2026-06-02 17:09:59.958 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-02 17:09:59.958 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-02 17:10:00.003 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-02 17:10:00.008 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 4.3771ms
+2026-06-02 17:10:00.008 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-02 17:10:00.012 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-02 17:10:00.021 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-02 17:10:00.021 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-02 17:10:00.021 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-02 17:10:00.022 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 5.9050 ms
+2026-06-02 17:10:00.022 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 9.6782 ms
+2026-06-02 17:10:00.022 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 21.6573 ms
+2026-06-02 17:10:00.118 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 160.4708ms
+2026-06-02 17:10:00.120 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 108.4315ms
+2026-06-02 17:10:00.133 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 126.4784ms
+2026-06-02 17:10:00.224 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 266.0267ms
+2026-06-02 17:10:00.431 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-02 17:10:00.445 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 12.9363 ms
+2026-06-02 17:10:00.450 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.206ms
+2026-06-02 17:11:13.147 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Clientes - null null
+2026-06-02 17:11:13.170 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API)'
+2026-06-02 17:11:13.208 -03:00 [INF] Route matched with {action = "Get", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RestApiModeloDDD.Application.Dtos.ClienteDto]]] Get() on controller RestApiModeloDDD.API.Controllers.ClientesController (RestApiModeloDDD.API).
+2026-06-02 17:11:13.814 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-02 17:11:13.818 -03:00 [INF] Iniciando consulta de clientes
+2026-06-02 17:11:13.819 -03:00 [INF] Iniciando consulta de clientes na camada Application
+2026-06-02 17:11:15.798 -03:00 [INF] Executed DbCommand (88ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[DataCadastro], [c].[Email], [c].[IsAtivo], [c].[Nome], [c].[Sobrenome]
+FROM [Clientes] AS [c]
+2026-06-02 17:11:15.921 -03:00 [INF] Consulta de clientes finalizada na camada Application. Quantidade: 5
+2026-06-02 17:11:15.958 -03:00 [INF] Consulta finalizada. Total de clientes encontrados: 5
+2026-06-02 17:11:15.970 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2146.6442ms.
+2026-06-02 17:11:15.986 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RestApiModeloDDD.Application.Dtos.ClienteDto, RestApiModeloDDD.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-02 17:11:16.000 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API) in 2785.9689ms
+2026-06-02 17:11:16.002 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API)'
+2026-06-02 17:11:16.005 -03:00 [INF] HTTP GET /Clientes responded 200 in 2855.7427 ms
+2026-06-02 17:11:16.037 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Clientes - 200 null application/json; charset=utf-8 2889.5661ms
+2026-06-02 17:11:26.486 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/Clientes - application/json 62
+2026-06-02 17:11:26.489 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Post (RestApiModeloDDD.API)'
+2026-06-02 17:11:26.513 -03:00 [INF] Route matched with {action = "Post", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Post(RestApiModeloDDD.Application.Dtos.ClienteDto) on controller RestApiModeloDDD.API.Controllers.ClientesController (RestApiModeloDDD.API).
+2026-06-02 17:11:26.667 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.ClientesController.Post (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-02 17:11:29.292 -03:00 [INF] Iniciando cadastro de cliente
+2026-06-02 17:11:29.304 -03:00 [INF] Iniciando cadastro de cliente na camada Application. Nome: string
+2026-06-02 17:11:29.345 -03:00 [WRN] Erro de validação da entidade Cliente. Erros: Email: E-mail inválido.
+2026-06-02 17:11:30.022 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ClientesController.Post (RestApiModeloDDD.API) in 3507.7367ms
+2026-06-02 17:11:30.142 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Post (RestApiModeloDDD.API)'
+2026-06-02 17:11:30.533 -03:00 [WRN] Erro de validação
+RestApiModeloDDD.Domain.Exceptions.DomainValidationException: Erro de validação.
+   at RestApiModeloDDD.Application.Services.ApplicationServiceCliente.ValidarEntidade(Cliente cliente) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Application\Services\ApplicationServiceCliente.cs:line 167
+   at RestApiModeloDDD.Application.Services.ApplicationServiceCliente.AddAsync(ClienteDto clienteDto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Application\Services\ApplicationServiceCliente.cs:line 41
+   at RestApiModeloDDD.API.Controllers.ClientesController.Post(ClienteDto clienteDto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Controllers\ClienteController.cs:line 64
+   at lambda_method493(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at RestApiModeloDDD.API.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Middlewares\ExceptionMiddleware.cs:line 27
+2026-06-02 17:11:30.567 -03:00 [INF] HTTP POST /Clientes responded 400 in 4078.5008 ms
+2026-06-02 17:11:30.567 -03:00 [INF] Request finished HTTP/2 POST https://localhost:44387/Clientes - 400 null application/json 4081.8652ms
+2026-06-02 17:12:50.800 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/Clientes - application/json 44
+2026-06-02 17:12:50.801 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Post (RestApiModeloDDD.API)'
+2026-06-02 17:12:50.803 -03:00 [INF] Route matched with {action = "Post", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Post(RestApiModeloDDD.Application.Dtos.ClienteDto) on controller RestApiModeloDDD.API.Controllers.ClientesController (RestApiModeloDDD.API).
+2026-06-02 17:12:50.854 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.ClientesController.Post (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-02 17:12:53.867 -03:00 [INF] Iniciando cadastro de cliente
+2026-06-02 17:12:53.872 -03:00 [INF] Iniciando cadastro de cliente na camada Application. Nome: 
+2026-06-02 17:12:53.887 -03:00 [WRN] Erro de validação da entidade Cliente. Erros: Nome: O nome é obrigatório. | Sobrenome: O sobrenome é obrigatório. | Email: O e-mail é obrigatório. | Email: E-mail inválido.
+2026-06-02 17:12:54.343 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ClientesController.Post (RestApiModeloDDD.API) in 3539.6966ms
+2026-06-02 17:12:54.421 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Post (RestApiModeloDDD.API)'
+2026-06-02 17:12:54.613 -03:00 [WRN] Erro de validação
+RestApiModeloDDD.Domain.Exceptions.DomainValidationException: Erro de validação.
+   at RestApiModeloDDD.Application.Services.ApplicationServiceCliente.ValidarEntidade(Cliente cliente) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Application\Services\ApplicationServiceCliente.cs:line 167
+   at RestApiModeloDDD.Application.Services.ApplicationServiceCliente.AddAsync(ClienteDto clienteDto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Application\Services\ApplicationServiceCliente.cs:line 41
+   at RestApiModeloDDD.API.Controllers.ClientesController.Post(ClienteDto clienteDto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Controllers\ClienteController.cs:line 64
+   at lambda_method493(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at RestApiModeloDDD.API.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Middlewares\ExceptionMiddleware.cs:line 27
+2026-06-02 17:12:54.616 -03:00 [INF] HTTP POST /Clientes responded 400 in 3815.2166 ms
+2026-06-02 17:12:54.617 -03:00 [INF] Request finished HTTP/2 POST https://localhost:44387/Clientes - 400 null application/json 3817.1434ms
+2026-06-02 17:21:23.191 -03:00 [INF] Iniciando API
+2026-06-02 17:21:26.723 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-02 17:21:26.861 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-02 17:21:26.862 -03:00 [INF] Hosting environment: Development
+2026-06-02 17:21:26.862 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-02 17:21:26.944 -03:00 [INF] HTTP GET /swagger responded 301 in 54.2879 ms
+2026-06-02 17:21:27.068 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 381.8731ms
+2026-06-02 17:21:27.086 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-02 17:21:27.325 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 112.1522 ms
+2026-06-02 17:21:27.326 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 242.0619ms
+2026-06-02 17:21:27.347 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-02 17:21:27.347 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-02 17:21:27.348 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-02 17:21:27.351 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-02 17:21:27.354 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 5.4489ms
+2026-06-02 17:21:27.355 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-02 17:21:27.378 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-02 17:21:27.378 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-02 17:21:27.378 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 29.8171 ms
+2026-06-02 17:21:27.378 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 30.7986 ms
+2026-06-02 17:21:27.412 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 64.6973ms
+2026-06-02 17:21:27.421 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-02 17:21:27.421 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 66.2920 ms
+2026-06-02 17:21:27.427 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 79.9468ms
+2026-06-02 17:21:27.484 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 133.4104ms
+2026-06-02 17:21:27.506 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 151.4895ms
+2026-06-02 17:21:27.715 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-02 17:21:27.746 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 28.7500 ms
+2026-06-02 17:21:27.753 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 39.0675ms
+2026-06-02 17:21:33.372 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/api/Clientes - null null
+2026-06-02 17:21:33.387 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API)'
+2026-06-02 17:21:33.425 -03:00 [INF] Route matched with {action = "Get", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RestApiModeloDDD.Application.Dtos.ClienteDto]]] Get() on controller RestApiModeloDDD.API.Controllers.ClientesController (RestApiModeloDDD.API).
+2026-06-02 17:21:34.109 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-02 17:21:34.111 -03:00 [INF] Iniciando consulta de clientes
+2026-06-02 17:21:34.113 -03:00 [INF] Iniciando consulta de clientes na camada Application
+2026-06-02 17:21:36.276 -03:00 [INF] Executed DbCommand (69ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[DataCadastro], [c].[Email], [c].[IsAtivo], [c].[Nome], [c].[Sobrenome]
+FROM [Clientes] AS [c]
+2026-06-02 17:21:36.436 -03:00 [INF] Consulta de clientes finalizada na camada Application. Quantidade: 5
+2026-06-02 17:21:36.471 -03:00 [INF] Consulta finalizada. Total de clientes encontrados: 5
+2026-06-02 17:21:36.480 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2364.0675ms.
+2026-06-02 17:21:36.490 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RestApiModeloDDD.Application.Dtos.ClienteDto, RestApiModeloDDD.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-02 17:21:36.507 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API) in 3075.8604ms
+2026-06-02 17:21:36.508 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API)'
+2026-06-02 17:21:36.513 -03:00 [INF] HTTP GET /api/Clientes responded 200 in 3140.2727 ms
+2026-06-02 17:21:36.527 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/api/Clientes - 200 null application/json; charset=utf-8 3155.1763ms
+2026-06-02 17:24:23.503 -03:00 [INF] Iniciando API
+2026-06-02 17:24:26.753 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-02 17:24:26.890 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-02 17:24:26.892 -03:00 [INF] Hosting environment: Development
+2026-06-02 17:24:26.892 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-02 17:24:27.027 -03:00 [INF] HTTP GET /swagger responded 301 in 94.0015 ms
+2026-06-02 17:24:27.150 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-02 17:24:27.493 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 794.6794ms
+2026-06-02 17:24:27.616 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 130.7241 ms
+2026-06-02 17:24:27.637 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 490.4539ms
+2026-06-02 17:24:27.637 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-02 17:24:27.638 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-02 17:24:27.638 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-02 17:24:27.640 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-02 17:24:27.645 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 5.2467ms
+2026-06-02 17:24:27.646 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-02 17:24:27.668 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-02 17:24:27.668 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 30.1413 ms
+2026-06-02 17:24:27.669 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-02 17:24:27.669 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 31.2070 ms
+2026-06-02 17:24:27.716 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-02 17:24:27.717 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 67.1254 ms
+2026-06-02 17:24:27.712 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 74.7317ms
+2026-06-02 17:24:27.776 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 137.0084ms
+2026-06-02 17:24:27.776 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 138.7575ms
+2026-06-02 17:24:27.821 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 176.1115ms
+2026-06-02 17:24:28.018 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-02 17:24:28.053 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 34.5313 ms
+2026-06-02 17:24:28.055 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 37.01ms
+2026-06-02 17:24:31.951 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/api/Clientes - null null
+2026-06-02 17:24:31.968 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API)'
+2026-06-02 17:24:32.025 -03:00 [INF] Route matched with {action = "Get", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RestApiModeloDDD.Application.Dtos.ClienteDto]]] Get() on controller RestApiModeloDDD.API.Controllers.ClientesController (RestApiModeloDDD.API).
+2026-06-02 17:24:32.739 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-02 17:24:32.743 -03:00 [INF] Iniciando consulta de clientes na camada Application
+2026-06-02 17:24:34.901 -03:00 [INF] Executed DbCommand (62ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[DataCadastro], [c].[Email], [c].[IsAtivo], [c].[Nome], [c].[Sobrenome]
+FROM [Clientes] AS [c]
+2026-06-02 17:24:35.064 -03:00 [INF] Consulta de clientes finalizada na camada Application. Quantidade: 5
+2026-06-02 17:24:35.099 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2352.2126ms.
+2026-06-02 17:24:35.130 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RestApiModeloDDD.Application.Dtos.ClienteDto, RestApiModeloDDD.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-02 17:24:35.143 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API) in 3113.8106ms
+2026-06-02 17:24:35.144 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Get (RestApiModeloDDD.API)'
+2026-06-02 17:24:35.147 -03:00 [INF] HTTP GET /api/Clientes responded 200 in 3196.2985 ms
+2026-06-02 17:24:35.168 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/api/Clientes - 200 null application/json; charset=utf-8 3218.1953ms

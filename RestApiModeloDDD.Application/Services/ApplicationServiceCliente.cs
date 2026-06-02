@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using FluentValidation;
 using Microsoft.Extensions.Logging;
 using RestApiModeloDDD.Application.Dtos;
 using RestApiModeloDDD.Application.Interfaces;
@@ -64,36 +63,13 @@ namespace RestApiModeloDDD.Application.Services
             return mapper.Map<IEnumerable<ClienteDto>>(listaClientes);
         }
 
-        public async Task<ClienteDto?> GetByIdAsync(int id)
+        public async Task<ClienteDto> GetByIdAsync(int id)
         {
-            _logger.LogInformation(
-                "Iniciando consulta de cliente por Id na camada Application. Id: {ClienteId}",
-                id);
-
-            if (id <= 0)
-            {
-                _logger.LogWarning(
-                    "Id inválido informado para consulta. Id: {ClienteId}",
-                    id);
-
-                throw new ValidationException(
-                    "O Id do cliente deve ser maior que zero.");
-            }
-
             var cliente = await serviceCliente.GetByIdAsync(id);
 
             if (cliente == null)
-            {
-                _logger.LogWarning(
-                    "Cliente não encontrado na camada Application. Id: {ClienteId}",
-                    id);
-
-                return null;
-            }
-
-            _logger.LogInformation(
-                "Cliente encontrado com sucesso na camada Application. Id: {ClienteId}",
-                id);
+                throw new NotFoundException(
+                    $"Cliente com Id {id} não encontrado.");
 
             return mapper.Map<ClienteDto>(cliente);
         }
@@ -110,7 +86,7 @@ namespace RestApiModeloDDD.Application.Services
                     "Id inválido informado para remoção. Id: {ClienteId}",
                     id);
 
-                throw new ValidationException(
+                throw new DomainValidationException(
                     "O Id do cliente deve ser maior que zero.");
             }
 
@@ -135,8 +111,7 @@ namespace RestApiModeloDDD.Application.Services
                     "Tentativa de atualização com Id inválido. Id: {ClienteId}",
                     clienteDto.Id);
 
-                throw new ValidationException(
-                    "O Id do cliente deve ser maior que zero.");
+                throw new DomainValidationException("O Id do cliente deve ser maior que zero.");
             }
 
             var clienteExistente =
@@ -170,8 +145,7 @@ namespace RestApiModeloDDD.Application.Services
                 _logger.LogWarning(
                     "ClienteDto recebido é nulo");
 
-                throw new ValidationException(
-                    "Os dados do cliente são obrigatórios.");
+                throw new DomainValidationException("Os dados do cliente são obrigatórios.");
             }
         }
 
@@ -190,7 +164,7 @@ namespace RestApiModeloDDD.Application.Services
                     "Erro de validação da entidade Cliente. Erros: {Erros}",
                     string.Join(" | ", erros));
 
-                throw new ValidationException(result.Errors);
+                throw new DomainValidationException( result.Errors.Select(x => x.ErrorMessage));
             }
         }
     }

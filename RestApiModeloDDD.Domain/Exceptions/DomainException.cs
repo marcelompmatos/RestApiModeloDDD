@@ -2,14 +2,14 @@
 
 namespace RestApiModeloDDD.Domain.Exceptions
 {
-    public sealed class NotFoundException : DomainException
+    public abstract class DomainException : Exception
     {
-        public NotFoundException(string message)
+        protected DomainException(string message)
             : base(message)
         {
         }
 
-        public NotFoundException(
+        protected DomainException(
             string message,
             Exception innerException)
             : base(message, innerException)
