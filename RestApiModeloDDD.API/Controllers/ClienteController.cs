@@ -47,8 +47,7 @@ namespace RestApiModeloDDD.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(
-            [FromBody] ClienteDto clienteDto)
+        public async Task<IActionResult> Post([FromBody] ClienteDto clienteDto)
         {
             await _applicationServiceCliente.AddAsync(clienteDto);
 
@@ -56,9 +55,7 @@ namespace RestApiModeloDDD.API.Controllers
         }
 
         [HttpPut("{id:int}")]
-        public async Task<IActionResult> Put(
-            int id,
-            [FromBody] ClienteDto clienteDto)
+        public async Task<IActionResult> Put(int id,[FromBody] ClienteDto clienteDto)
         {
             clienteDto.Id = id;
 

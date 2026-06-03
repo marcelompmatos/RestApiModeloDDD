@@ -7,14 +7,12 @@ namespace RestApiModeloDDD.Domain.Exceptions
     {
         public IReadOnlyCollection<string> Errors { get; }
 
-        public DomainValidationException(string error)
-            : base(error)
+        public DomainValidationException(string error) : base(error)
         {
             Errors = new[] { error };
         }
 
-        public DomainValidationException(IEnumerable<string> errors)
-            : base("Erro de validação.")
+        public DomainValidationException(IEnumerable<string> errors) : base("Erro de validação.")
         {
             Errors = errors.ToList();
         }
