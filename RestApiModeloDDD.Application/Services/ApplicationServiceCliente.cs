@@ -18,9 +18,7 @@ namespace RestApiModeloDDD.Application.Services
         private readonly IMapper mapper;
         private readonly ILogger<ApplicationServiceCliente> _logger;
 
-        public ApplicationServiceCliente(
-            IServiceCliente serviceCliente,
-            IMapper mapper,
+        public ApplicationServiceCliente(IServiceCliente serviceCliente, IMapper mapper,
             ILogger<ApplicationServiceCliente> logger)
         {
             this.serviceCliente = serviceCliente;
