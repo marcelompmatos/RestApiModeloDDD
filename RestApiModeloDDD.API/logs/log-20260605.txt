@@ -1,0 +1,191 @@
+2026-06-05 10:32:05.452 -03:00 [INF] Iniciando API
+2026-06-05 10:32:19.858 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-05 10:32:20.026 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-05 10:32:20.027 -03:00 [INF] Hosting environment: Development
+2026-06-05 10:32:20.027 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-05 10:32:21.910 -03:00 [INF] HTTP GET /swagger responded 301 in 127.8799 ms
+2026-06-05 10:32:22.079 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 2279.2601ms
+2026-06-05 10:32:22.172 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-05 10:32:22.362 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 181.7253 ms
+2026-06-05 10:32:22.363 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 192.3324ms
+2026-06-05 10:32:22.480 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-05 10:32:22.484 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-05 10:32:22.511 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-05 10:32:22.522 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-05 10:32:22.537 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-05 10:32:22.537 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 25.3518 ms
+2026-06-05 10:32:22.607 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 10.1186ms
+2026-06-05 10:32:22.860 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-05 10:32:23.542 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-05 10:32:23.666 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 1115.1807 ms
+2026-06-05 10:32:24.708 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-05 10:32:24.969 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 2022.6422 ms
+2026-06-05 10:32:25.542 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 3061.8455ms
+2026-06-05 10:32:25.681 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 3169.4919ms
+2026-06-05 10:32:27.005 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 4240.1652ms
+2026-06-05 10:32:27.325 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 4840.4343ms
+2026-06-05 10:32:27.499 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-05 10:32:27.521 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 21.0737 ms
+2026-06-05 10:32:27.523 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 23.2622ms
+2026-06-05 13:58:34.750 -03:00 [INF] Iniciando API
+2026-06-05 13:58:38.102 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-05 13:58:38.288 -03:00 [INF] HTTP GET /swagger responded 301 in 54.7827 ms
+2026-06-05 13:58:38.351 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-05 13:58:38.445 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 386.5109ms
+2026-06-05 13:58:38.509 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-05 13:58:38.510 -03:00 [INF] Hosting environment: Development
+2026-06-05 13:58:38.510 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-05 13:58:38.557 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 198.0489 ms
+2026-06-05 13:58:38.559 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 208.2488ms
+2026-06-05 13:58:38.627 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-05 13:58:38.627 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-05 13:58:38.630 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-05 13:58:38.628 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-05 13:58:38.627 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-05 13:58:38.643 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 12.9656ms
+2026-06-05 13:58:38.684 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-05 13:58:38.684 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 54.8999 ms
+2026-06-05 13:58:38.695 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-05 13:58:38.695 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 64.8578 ms
+2026-06-05 13:58:38.700 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 73.1338ms
+2026-06-05 13:58:38.718 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-05 13:58:38.718 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 88.6336 ms
+2026-06-05 13:58:38.751 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 120.8522ms
+2026-06-05 13:58:38.785 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 157.0969ms
+2026-06-05 13:58:38.799 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 172.0359ms
+2026-06-05 13:58:39.015 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-05 13:58:39.034 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 18.0118 ms
+2026-06-05 13:58:39.042 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 28.1576ms
+2026-06-05 14:01:51.712 -03:00 [INF] Request starting HTTP/2 PUT https://localhost:44387/api/Clientes/11 - application/json 53
+2026-06-05 14:01:51.730 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API)'
+2026-06-05 14:01:51.787 -03:00 [INF] Route matched with {action = "Put", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Put(Int32, RestApiModeloDDD.Application.Dtos.ClienteDto) on controller RestApiModeloDDD.API.Controllers.ClientesController (RestApiModeloDDD.API).
+2026-06-05 14:01:52.558 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-05 14:01:56.493 -03:00 [INF] Iniciando atualização de cliente na camada Application. Id: 11
+2026-06-05 14:01:59.392 -03:00 [INF] Executed DbCommand (360ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DataCadastro], [c].[Email], [c].[IsAtivo], [c].[Nome], [c].[Sobrenome]
+FROM [Clientes] AS [c]
+WHERE [c].[Id] = @__p_0
+2026-06-05 14:02:02.797 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API) in 11002.7035ms
+2026-06-05 14:02:03.254 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API)'
+2026-06-05 14:02:04.630 -03:00 [WRN] Erro de validação
+RestApiModeloDDD.Domain.Exceptions.DomainValidationException: Erro de validação.
+   at RestApiModeloDDD.Domain.Helpers.ValidationHelper.Validate[TEntity](TEntity entity, AbstractValidator`1 validator) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Domain\Helpers\ValidationHelper.cs:line 17
+   at RestApiModeloDDD.Application.Services.ApplicationServiceCliente.UpdateAsync(ClienteDto clienteDto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Application\Services\ApplicationServiceCliente.cs:line 135
+   at RestApiModeloDDD.API.Controllers.ClientesController.Put(Int32 id, ClienteDto clienteDto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Controllers\ClienteController.cs:line 62
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at RestApiModeloDDD.API.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Middlewares\ExceptionMiddleware.cs:line 27
+2026-06-05 14:02:04.653 -03:00 [INF] HTTP PUT /api/Clientes/11 responded 400 in 12938.9828 ms
+2026-06-05 14:02:04.665 -03:00 [INF] Request finished HTTP/2 PUT https://localhost:44387/api/Clientes/11 - 400 null application/json 12953.8246ms
+2026-06-05 14:04:47.888 -03:00 [INF] Request starting HTTP/2 PUT https://localhost:44387/api/Clientes/11 - application/json 57
+2026-06-05 14:04:47.890 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API)'
+2026-06-05 14:04:47.891 -03:00 [INF] Route matched with {action = "Put", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Put(Int32, RestApiModeloDDD.Application.Dtos.ClienteDto) on controller RestApiModeloDDD.API.Controllers.ClientesController (RestApiModeloDDD.API).
+2026-06-05 14:04:48.256 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-06-05 14:04:48.299 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API) in 407.7578ms
+2026-06-05 14:04:48.299 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API)'
+2026-06-05 14:04:48.299 -03:00 [INF] HTTP PUT /api/Clientes/11 responded 400 in 410.4797 ms
+2026-06-05 14:04:48.300 -03:00 [INF] Request finished HTTP/2 PUT https://localhost:44387/api/Clientes/11 - 400 null application/problem+json; charset=utf-8 411.8083ms
+2026-06-05 14:05:15.348 -03:00 [INF] Request starting HTTP/2 PUT https://localhost:44387/api/Clientes/11 - application/json 43
+2026-06-05 14:05:15.350 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API)'
+2026-06-05 14:05:15.350 -03:00 [INF] Route matched with {action = "Put", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Put(Int32, RestApiModeloDDD.Application.Dtos.ClienteDto) on controller RestApiModeloDDD.API.Controllers.ClientesController (RestApiModeloDDD.API).
+2026-06-05 14:05:15.398 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-05 14:05:17.341 -03:00 [INF] Iniciando atualização de cliente na camada Application. Id: 11
+2026-06-05 14:05:17.672 -03:00 [INF] Executed DbCommand (144ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DataCadastro], [c].[Email], [c].[IsAtivo], [c].[Nome], [c].[Sobrenome]
+FROM [Clientes] AS [c]
+WHERE [c].[Id] = @__p_0
+2026-06-05 14:05:38.219 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API) in 22867.9138ms
+2026-06-05 14:05:38.669 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API)'
+2026-06-05 14:05:40.049 -03:00 [WRN] Erro de validação
+RestApiModeloDDD.Domain.Exceptions.DomainValidationException: Erro de validação.
+   at RestApiModeloDDD.Domain.Helpers.ValidationHelper.Validate[TEntity](TEntity entity, AbstractValidator`1 validator) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Domain\Helpers\ValidationHelper.cs:line 17
+   at RestApiModeloDDD.Application.Services.ApplicationServiceCliente.UpdateAsync(ClienteDto clienteDto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Application\Services\ApplicationServiceCliente.cs:line 135
+   at RestApiModeloDDD.API.Controllers.ClientesController.Put(Int32 id, ClienteDto clienteDto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Controllers\ClienteController.cs:line 62
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at RestApiModeloDDD.API.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Middlewares\ExceptionMiddleware.cs:line 27
+2026-06-05 14:05:40.052 -03:00 [INF] HTTP PUT /api/Clientes/11 responded 400 in 24703.1535 ms
+2026-06-05 14:05:40.053 -03:00 [INF] Request finished HTTP/2 PUT https://localhost:44387/api/Clientes/11 - 400 null application/json 24704.6892ms
+2026-06-05 14:30:36.304 -03:00 [INF] Iniciando API
+2026-06-05 14:30:40.640 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-05 14:30:40.862 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-05 14:30:40.862 -03:00 [INF] Hosting environment: Development
+2026-06-05 14:30:40.863 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-05 14:30:40.966 -03:00 [INF] HTTP GET /swagger responded 301 in 77.2484 ms
+2026-06-05 14:30:41.031 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-05 14:30:41.209 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 623.2312ms
+2026-06-05 14:30:41.358 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 274.5385 ms
+2026-06-05 14:30:41.360 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 329.7594ms
+2026-06-05 14:30:41.389 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-05 14:30:41.400 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-05 14:30:41.412 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-05 14:30:41.427 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-05 14:30:41.428 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 37.9942 ms
+2026-06-05 14:30:41.450 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-05 14:30:41.451 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-05 14:30:41.457 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-05 14:30:41.458 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 41.0863 ms
+2026-06-05 14:30:41.459 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 5.3039ms
+2026-06-05 14:30:41.460 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-05 14:30:41.461 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 60.4438 ms
+2026-06-05 14:30:41.504 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 114.8824ms
+2026-06-05 14:30:41.532 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 119.7809ms
+2026-06-05 14:30:41.744 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 344.7772ms
+2026-06-05 14:30:42.818 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 1368.0818ms
+2026-06-05 14:30:43.026 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-05 14:30:43.915 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 889.0441 ms
+2026-06-05 14:30:43.917 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 891.5834ms
+2026-06-05 15:36:52.958 -03:00 [INF] Request starting HTTP/2 PUT https://localhost:44387/api/Clientes/11 - application/json 55
+2026-06-05 15:36:53.052 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API)'
+2026-06-05 15:36:53.100 -03:00 [INF] Route matched with {action = "Put", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Put(Int32, RestApiModeloDDD.Application.Dtos.ClienteDto) on controller RestApiModeloDDD.API.Controllers.ClientesController (RestApiModeloDDD.API).
+2026-06-05 15:36:53.779 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-05 15:36:56.018 -03:00 [INF] Iniciando atualização de cliente na camada Application. Id: 11
+2026-06-05 15:36:58.979 -03:00 [INF] Executed DbCommand (101ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DataCadastro], [c].[Email], [c].[IsAtivo], [c].[Nome], [c].[Sobrenome]
+FROM [Clientes] AS [c]
+WHERE [c].[Id] = @__p_0
+2026-06-05 15:37:02.198 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API) in 9093.1684ms
+2026-06-05 15:37:02.593 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.Put (RestApiModeloDDD.API)'
+2026-06-05 15:37:04.533 -03:00 [WRN] Erro de validação
+RestApiModeloDDD.Domain.Exceptions.DomainValidationException: Erro de validação.
+   at RestApiModeloDDD.Domain.Helpers.ValidationHelper.Validate[TEntity](TEntity entity, AbstractValidator`1 validator) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Domain\Helpers\ValidationHelper.cs:line 15
+   at RestApiModeloDDD.Application.Services.ApplicationServiceCliente.UpdateAsync(ClienteDto clienteDto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Application\Services\ApplicationServiceCliente.cs:line 128
+   at RestApiModeloDDD.API.Controllers.ClientesController.Put(Int32 id, ClienteDto clienteDto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Controllers\ClienteController.cs:line 62
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at RestApiModeloDDD.API.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Middlewares\ExceptionMiddleware.cs:line 27
+2026-06-05 15:37:06.200 -03:00 [INF] HTTP PUT /api/Clientes/11 responded 400 in 13239.0628 ms
+2026-06-05 15:37:06.215 -03:00 [INF] Request finished HTTP/2 PUT https://localhost:44387/api/Clientes/11 - 400 null application/json 13259.1197ms

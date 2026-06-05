@@ -5,6 +5,7 @@ using RestApiModeloDDD.Application.Interfaces;
 using RestApiModeloDDD.Domain.Core.Interfaces.Services;
 using RestApiModeloDDD.Domain.Entitys;
 using RestApiModeloDDD.Domain.Exceptions;
+using RestApiModeloDDD.Domain.Helpers;
 using RestApiModeloDDD.Domain.Validations;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,11 +33,10 @@ namespace RestApiModeloDDD.Application.Services
                 "Iniciando cadastro de cliente na camada Application. Nome: {NomeCliente}",
                 clienteDto?.Nome);
 
-            ValidarClienteDto(clienteDto);
-
+            
             var cliente = mapper.Map<Cliente>(clienteDto);
-
-            ValidarEntidade(cliente);
+                       
+            ValidationHelper.Validate(cliente,   new ClienteValidation());
 
             await serviceCliente.AddAsync(cliente);
 
@@ -101,8 +101,6 @@ namespace RestApiModeloDDD.Application.Services
                 "Iniciando atualização de cliente na camada Application. Id: {ClienteId}",
                 clienteDto?.Id);
 
-            ValidarClienteDto(clienteDto);
-
             if (clienteDto.Id <= 0)
             {
                 _logger.LogWarning(
@@ -127,7 +125,7 @@ namespace RestApiModeloDDD.Application.Services
 
             var cliente = mapper.Map<Cliente>(clienteDto);
 
-            ValidarEntidade(cliente);
+            ValidationHelper.Validate(cliente,  new ClienteValidation());
 
             await serviceCliente.UpdateAsync(cliente);
 
@@ -136,34 +134,5 @@ namespace RestApiModeloDDD.Application.Services
                 clienteDto.Id);
         }
 
-        private void ValidarClienteDto(ClienteDto clienteDto)
-        {
-            if (clienteDto == null)
-            {
-                _logger.LogWarning(
-                    "ClienteDto recebido é nulo");
-
-                throw new DomainValidationException("Os dados do cliente são obrigatórios.");
-            }
-        }
-
-        private void ValidarEntidade(Cliente cliente)
-        {
-            var validation = new ClienteValidation();
-
-            var result = validation.Validate(cliente);
-
-            if (!result.IsValid)
-            {
-                var erros = result.Errors
-                    .Select(e => $"{e.PropertyName}: {e.ErrorMessage}");
-
-                _logger.LogWarning(
-                    "Erro de validação da entidade Cliente. Erros: {Erros}",
-                    string.Join(" | ", erros));
-
-                throw new DomainValidationException( result.Errors.Select(x => x.ErrorMessage));
-            }
-        }
     }
 }
