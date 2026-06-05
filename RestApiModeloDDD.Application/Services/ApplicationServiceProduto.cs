@@ -4,6 +4,7 @@ using RestApiModeloDDD.Application.Dtos;
 using RestApiModeloDDD.Application.Interfaces;
 using RestApiModeloDDD.Domain.Core.Interfaces.Services;
 using RestApiModeloDDD.Domain.Entitys;
+using RestApiModeloDDD.Domain.Exceptions;
 using RestApiModeloDDD.Domain.Helpers;
 using RestApiModeloDDD.Domain.Validations;
 using System.Collections.Generic;
@@ -36,7 +37,19 @@ namespace RestApiModeloDDD.Application.Services
 
             var produto = mapper.Map<Produto>(produtoDto);
 
-            ValidationHelper.Validate(produto, new ProdutoValidation());
+            var result = produto.Validate();
+
+            if (!result.IsValid)
+            {
+                var erros = result.Errors
+                    .Select(x => x.ErrorMessage);
+
+                _logger.LogWarning(
+                    "Erro de validação da entidade Cliente. Erros: {Erros}",
+                    string.Join(" | ", erros));
+
+                throw new DomainValidationException(erros);
+            }
 
             await serviceProduto.AddAsync(produto);
 
