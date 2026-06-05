@@ -4,6 +4,8 @@ using RestApiModeloDDD.Application.Dtos;
 using RestApiModeloDDD.Application.Interfaces;
 using RestApiModeloDDD.Domain.Core.Interfaces.Services;
 using RestApiModeloDDD.Domain.Entitys;
+using RestApiModeloDDD.Domain.Helpers;
+using RestApiModeloDDD.Domain.Validations;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -33,6 +35,8 @@ namespace RestApiModeloDDD.Application.Services
                 produtoDto?.Nome);
 
             var produto = mapper.Map<Produto>(produtoDto);
+
+            ValidationHelper.Validate(produto, new ProdutoValidation());
 
             await serviceProduto.AddAsync(produto);
 

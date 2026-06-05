@@ -5,8 +5,6 @@ using RestApiModeloDDD.Application.Interfaces;
 using RestApiModeloDDD.Domain.Core.Interfaces.Services;
 using RestApiModeloDDD.Domain.Entitys;
 using RestApiModeloDDD.Domain.Exceptions;
-using RestApiModeloDDD.Domain.Helpers;
-using RestApiModeloDDD.Domain.Validations;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -35,8 +33,20 @@ namespace RestApiModeloDDD.Application.Services
 
             
             var cliente = mapper.Map<Cliente>(clienteDto);
-                       
-            ValidationHelper.Validate(cliente,   new ClienteValidation());
+
+            var result = cliente.Validate();
+
+            if (!result.IsValid)
+            {
+                var erros = result.Errors
+                    .Select(x => x.ErrorMessage);
+
+                _logger.LogWarning(
+                    "Erro de validação da entidade Cliente. Erros: {Erros}",
+                    string.Join(" | ", erros));
+
+                throw new DomainValidationException(erros);
+            }
 
             await serviceCliente.AddAsync(cliente);
 
@@ -125,7 +135,19 @@ namespace RestApiModeloDDD.Application.Services
 
             var cliente = mapper.Map<Cliente>(clienteDto);
 
-            ValidationHelper.Validate(cliente,  new ClienteValidation());
+            var result = cliente.Validate();
+
+            if (!result.IsValid)
+            {
+                var erros = result.Errors
+                    .Select(x => x.ErrorMessage);
+
+                _logger.LogWarning(
+                    "Erro de validação da entidade Cliente. Erros: {Erros}",
+                    string.Join(" | ", erros));
+
+                throw new DomainValidationException(erros);
+            }
 
             await serviceCliente.UpdateAsync(cliente);
 
