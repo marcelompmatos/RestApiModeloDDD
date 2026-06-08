@@ -1,6 +1,8 @@
 ﻿using RestApiModeloDDD.Domain.Core.Interfaces.Repositories;
 using RestApiModeloDDD.Domain.Core.Interfaces.Services;
+using RestApiModeloDDD.Domain.Entities;
 using RestApiModeloDDD.Domain.Exceptions;
+using RestApiModeloDDD.Domain.Interfaces.Services;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

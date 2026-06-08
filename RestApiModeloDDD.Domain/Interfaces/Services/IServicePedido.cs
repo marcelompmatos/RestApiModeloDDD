@@ -10,6 +10,8 @@ namespace RestApiModeloDDD.Domain.Interfaces.Services
         Task<List<Pedido>> GetPedidosAsync();
         Task<Pedido> GetPedidoAsync(int id);
 
+        Task AddAsync(Pedido pedido);
+
     }
 
 }

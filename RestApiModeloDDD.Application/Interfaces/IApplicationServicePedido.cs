@@ -8,5 +8,7 @@ namespace RestApiModeloDDD.Application.Interfaces
     {
         Task<List<PedidoDto>> GetPedidosAsync();
         Task<PedidoDto> GetPedidoAsync(int id);
+
+        Task AddAsync(CriarPedidoDto dto);
     }
 }

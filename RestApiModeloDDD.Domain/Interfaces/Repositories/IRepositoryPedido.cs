@@ -10,5 +10,7 @@ namespace RestApiModeloDDD.Domain.Interfaces.Repositories
         Task<List<Pedido>> GetPedidosAsync();
         Task<Pedido?> GetPedidoAsync(int id);
 
+ 
+
     }
 }

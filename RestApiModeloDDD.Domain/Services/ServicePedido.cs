@@ -2,6 +2,7 @@
 using RestApiModeloDDD.Domain.Entities;
 using RestApiModeloDDD.Domain.Interfaces.Repositories;
 using RestApiModeloDDD.Domain.Interfaces.Services;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -58,6 +59,27 @@ namespace RestApiModeloDDD.Domain.Services
                 pedidos.Count);
 
             return pedidos;
+        }
+
+        public async Task AddAsync(Pedido pedido)
+        {
+            _logger.LogInformation(
+                "Iniciando cadastro de pedido. ClienteId: {ClienteId}",
+                pedido.ClienteId);
+
+            if (pedido == null)
+            {
+                _logger.LogWarning(
+                    "Tentativa de cadastro de pedido nulo");
+
+                throw new ArgumentNullException(nameof(pedido));
+            }
+
+            await _pedidoRepository.AddAsync(pedido);
+
+            _logger.LogInformation(
+                "Pedido cadastrado com sucesso. PedidoId: {PedidoId}",
+                pedido.Id);
         }
     }
 }

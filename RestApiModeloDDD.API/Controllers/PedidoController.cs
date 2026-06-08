@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using RestApiModeloDDD.API.Observability;
 using RestApiModeloDDD.Application.Dtos;
 using RestApiModeloDDD.Application.Interfaces;
 using RestApiModeloDDD.Domain.Entities;
-using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +23,23 @@ namespace RestApiModeloDDD.API.Controllers
             this._applicationServicePedido = applicationServicePedido;
             this._logger = logger;
         }
+        [HttpPost]
+        public async Task<ActionResult> Post([FromBody] CriarPedidoDto dto)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            await _applicationServicePedido.AddAsync(dto);
+           
+
+
+            _logger.LogInformation(
+                "Pedido criado para o cliente {ClienteId}",
+                dto.ClienteId);
+
+            return Created();
+        }
+
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Pedido>>> GetAll()
