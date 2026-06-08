@@ -6,7 +6,8 @@ namespace RestApiModeloDDD.Application.Interfaces
 {
     public interface IApplicationServiceCliente
     {
-        Task AddAsync(ClienteDto clienteDto);
+
+        Task<int> AddAsync(ClienteDto clienteDto);
 
         Task UpdateAsync(ClienteDto clienteDto);
 

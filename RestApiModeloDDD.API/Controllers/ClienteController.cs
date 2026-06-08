@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Logging;
 using RestApiModeloDDD.Application.Dtos;
 using RestApiModeloDDD.Application.Interfaces;
+using RestApiModeloDDD.Domain.Entities;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -45,14 +46,21 @@ namespace RestApiModeloDDD.API.Controllers
 
             return Ok(cliente);
         }
-
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] ClienteDto clienteDto)
         {
-            await _applicationServiceCliente.AddAsync(clienteDto);
+            var clienteId = await _applicationServiceCliente.AddAsync(clienteDto);
 
-            return Created();
+            _logger.LogInformation(
+                "Cliente criado. ClienteId: {ClienteId}",
+                clienteId);
+
+            return CreatedAtAction(
+                nameof(Get),
+                new { id = clienteId },
+                new { id = clienteId });
         }
+
 
         [HttpPut("{id:int}")]
         public async Task<IActionResult> Put(int id,[FromBody] ClienteDto clienteDto)

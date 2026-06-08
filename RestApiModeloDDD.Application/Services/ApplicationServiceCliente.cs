@@ -25,7 +25,7 @@ namespace RestApiModeloDDD.Application.Services
             _logger = logger;
         }
 
-        public async Task AddAsync(ClienteDto clienteDto)
+        public async Task<int> AddAsync(ClienteDto clienteDto)
         {
             _logger.LogInformation(
                 "Iniciando cadastro de cliente na camada Application. Nome: {NomeCliente}",
@@ -53,6 +53,9 @@ namespace RestApiModeloDDD.Application.Services
             _logger.LogInformation(
                 "Cliente cadastrado com sucesso na camada Application. Nome: {NomeCliente}",
                 clienteDto.Nome);
+
+            return cliente.Id;
+
         }
 
         public async Task<IEnumerable<ClienteDto>> GetAllAsync()
