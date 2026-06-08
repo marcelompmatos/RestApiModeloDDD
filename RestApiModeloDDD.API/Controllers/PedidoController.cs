@@ -26,21 +26,17 @@ namespace RestApiModeloDDD.API.Controllers
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] CriarPedidoDto dto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            await _applicationServicePedido.AddAsync(dto);
-           
-
+            var pedidoId = await _applicationServicePedido.AddAsync(dto);
 
             _logger.LogInformation(
-                "Pedido criado para o cliente {ClienteId}",
-                dto.ClienteId);
+                "Pedido criado. PedidoId: {PedidoId}",
+                pedidoId);
 
-            return Created();
+            return CreatedAtAction(
+                nameof(GetById),
+                new { id = pedidoId },
+                new { id = pedidoId });
         }
-
-
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Pedido>>> GetAll()
         {
@@ -61,7 +57,6 @@ namespace RestApiModeloDDD.API.Controllers
 
             return Ok(pedidos);
         }
-
         [HttpGet("{id}")]
         public async Task<ActionResult<PedidoDto>> GetById(int id)
         {

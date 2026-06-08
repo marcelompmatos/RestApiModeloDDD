@@ -20,7 +20,6 @@ namespace RestApiModeloDDD.Domain.Services
            this._logger = logger;
 
         }
-
         public async Task<Pedido> GetPedidoAsync(int id)
         {
             _logger.LogInformation(
@@ -45,7 +44,6 @@ namespace RestApiModeloDDD.Domain.Services
 
             return pedido;
         }
-
         public async Task<List<Pedido>> GetPedidosAsync()
         {
             _logger.LogInformation(
@@ -60,7 +58,6 @@ namespace RestApiModeloDDD.Domain.Services
 
             return pedidos;
         }
-
         public async Task AddAsync(Pedido pedido)
         {
             _logger.LogInformation(

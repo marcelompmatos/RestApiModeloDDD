@@ -90,7 +90,6 @@ namespace RestApiModeloDDD.Application.Services
                 }).ToList()
             };
         }
-
         public async Task<List<PedidoDto>> GetPedidosAsync()
         {
             _logger.LogInformation(
@@ -124,9 +123,7 @@ namespace RestApiModeloDDD.Application.Services
 
             }).ToList();
         }
-
-
-        public async Task AddAsync(CriarPedidoDto dto)
+        public async Task<int> AddAsync(CriarPedidoDto dto)
         {
             var itensPedido = new List<ItemPedido>();
 
@@ -148,6 +145,8 @@ namespace RestApiModeloDDD.Application.Services
                     Quantidade = item.Quantidade,
                     ValorUnitario = produto.Valor
                 });
+                
+
             }
 
             var pedido = new Pedido
@@ -162,7 +161,7 @@ namespace RestApiModeloDDD.Application.Services
 
             await _servicePedido.AddAsync(pedido);
 
-           
+           return pedido.Id;
         }
 
     }
