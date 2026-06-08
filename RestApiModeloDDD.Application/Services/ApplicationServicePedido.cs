@@ -125,6 +125,10 @@ namespace RestApiModeloDDD.Application.Services
         }
         public async Task<int> AddAsync(CriarPedidoDto dto)
         {
+            _logger.LogInformation(
+                "Iniciando cadastro de pedido para o ClienteId: {ClienteId}",
+                dto.ClienteId);
+
             var itensPedido = new List<ItemPedido>();
 
             foreach (var item in dto.Itens)
@@ -139,14 +143,28 @@ namespace RestApiModeloDDD.Application.Services
                     throw new DomainValidationException(
                         $"Produto {produto.Nome} está indisponível.");
 
-                itensPedido.Add(new ItemPedido
+                var itemPedido = new ItemPedido
                 {
                     ProdutoId = produto.Id,
                     Quantidade = item.Quantidade,
                     ValorUnitario = produto.Valor
-                });
-                
+                };
 
+                var itemResult = itemPedido.Validate();
+
+                if (!itemResult.IsValid)
+                {
+                    var erros = itemResult.Errors
+                        .Select(x => x.ErrorMessage);
+
+                    _logger.LogWarning(
+                        "Erro de validação da entidade ItemPedido. Erros: {Erros}",
+                        string.Join(" | ", erros));
+
+                    throw new DomainValidationException(erros);
+                }
+
+                itensPedido.Add(itemPedido);
             }
 
             var pedido = new Pedido
@@ -159,9 +177,27 @@ namespace RestApiModeloDDD.Application.Services
             pedido.ValorTotal = pedido.Itens.Sum(x =>
                 x.Quantidade * x.ValorUnitario);
 
+            var result = pedido.Validate();
+
+            if (!result.IsValid)
+            {
+                var erros = result.Errors
+                    .Select(x => x.ErrorMessage);
+
+                _logger.LogWarning(
+                    "Erro de validação da entidade Pedido. Erros: {Erros}",
+                    string.Join(" | ", erros));
+
+                throw new DomainValidationException(erros);
+            }
+
             await _servicePedido.AddAsync(pedido);
 
-           return pedido.Id;
+            _logger.LogInformation(
+                "Pedido cadastrado com sucesso. PedidoId: {PedidoId}",
+                pedido.Id);
+
+            return pedido.Id;
         }
 
     }

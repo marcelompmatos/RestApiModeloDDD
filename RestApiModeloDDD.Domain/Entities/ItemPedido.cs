@@ -1,4 +1,6 @@
-﻿using RestApiModeloDDD.Domain.Entitys;
+﻿using FluentValidation.Results;
+using RestApiModeloDDD.Domain.Entitys;
+using RestApiModeloDDD.Domain.Validations;
 
 namespace RestApiModeloDDD.Domain.Entities
 {
@@ -11,5 +13,8 @@ namespace RestApiModeloDDD.Domain.Entities
 
         public virtual Pedido Pedido { get; set; }
         public virtual Produto Produto { get; set; }
+
+        public ValidationResult Validate()
+     => new ItemPedidoValidation().Validate(this);
     }
 }
