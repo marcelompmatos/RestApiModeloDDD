@@ -1,92 +1,84 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using RestApiModeloDDD.Application.Dtos;
 using RestApiModeloDDD.Application.Interfaces;
-using RestApiModeloDDD.Domain.Entities;
-using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
+namespace RestApiModeloDDD.API.Controllers;
 
-namespace RestApiModeloDDD.API.Controllers
+[ApiController]
+[Route("api/[controller]")]
+[Produces("application/json")]
+public class PedidoController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class PedidoController : ControllerBase
+    private readonly IApplicationServicePedido _applicationServicePedido;
+
+    public PedidoController(
+        IApplicationServicePedido applicationServicePedido)
     {
-        private readonly IApplicationServicePedido _applicationServicePedido;
-        private readonly ILogger<PedidoController> _logger;
+        _applicationServicePedido = applicationServicePedido;
+    }
 
-        public PedidoController(IApplicationServicePedido applicationServicePedido, ILogger<PedidoController> logger)
-        {
-            this._applicationServicePedido = applicationServicePedido;
-            this._logger = logger;
-        }
-        [HttpPost]
-        public async Task<ActionResult> Post([FromBody] CriarPedidoDto dto)
-        {
-            var pedidoId = await _applicationServicePedido.AddAsync(dto);
+    /// <summary>
+    /// Cria um novo pedido.
+    /// </summary>
+    [HttpPost]
+    [ProducesResponseType(StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    public async Task<IActionResult> Create(
+        [FromBody] CriarPedidoDto dto,
+        CancellationToken cancellationToken)
+    {
+        var pedidoId =
+            await _applicationServicePedido.AddAsync(dto);
 
-            _logger.LogInformation(
-                "Pedido criado. PedidoId: {PedidoId}",
-                pedidoId);
-
-            return CreatedAtAction(
-                nameof(GetById),
-                new { id = pedidoId },
-                new { id = pedidoId });
-        }
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Pedido>>> GetAll()
-        {
-            _logger.LogInformation("Consultando todos os pedidos");
-
-            var pedidos = await _applicationServicePedido.GetPedidosAsync();
-
-            if (!pedidos.Any())
+        return CreatedAtAction(
+            nameof(GetById),
+            new { id = pedidoId },
+            new
             {
-                _logger.LogWarning("Nenhum pedido encontrado");
+                Id = pedidoId,
+                Message = "Pedido criado com sucesso."
+            });
+    }
 
-                return NoContent();
-            }
+    /// <summary>
+    /// Retorna todos os pedidos.
+    /// </summary>
+    [HttpGet]
+    [ProducesResponseType(typeof(IEnumerable<PedidoDto>), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    public async Task<ActionResult<IEnumerable<PedidoDto>>> GetAll(CancellationToken cancellationToken)
+    {
+        var pedidos =
+            await _applicationServicePedido.GetPedidosAsync();
 
-            _logger.LogInformation(
-                "Total de pedidos encontrados: {Quantidade}",
-                pedidos.Count());
+        if (!pedidos.Any())
+            return NoContent();
 
-            return Ok(pedidos);
-        }
-        [HttpGet("{id}")]
-        public async Task<ActionResult<PedidoDto>> GetById(int id)
-        {
-            if (id <= 0)
-            {
-                _logger.LogWarning("Id inválido informado: {PedidoId}", id);
+        return Ok(pedidos);
+    }
 
-                return BadRequest(new
-                {
-                    message = "Id deve ser maior que zero"
-                });
-            }
+    /// <summary>
+    /// Retorna um pedido pelo Id.
+    /// </summary>
+    [HttpGet("{id:int}")]
+    [ProducesResponseType(typeof(PedidoDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    public async Task<ActionResult<PedidoDto>> GetById(int id, CancellationToken cancellationToken)
+    {
+        var pedido =
+            await _applicationServicePedido.GetPedidoAsync(id);
 
-            _logger.LogInformation("Consultando pedido {PedidoId}", id);
+        if (pedido is null)
+            return NotFound();
 
-            var pedido = await _applicationServicePedido.GetPedidoAsync(id);
-
-            if (pedido == null)
-            {
-                _logger.LogWarning("Pedido {PedidoId} não encontrado", id);
-
-                return NotFound(new
-                {
-                    message = $"Pedido {id} não encontrado"
-                });
-            }
-
-            _logger.LogInformation("Pedido {PedidoId} encontrado", id);
-
-            return Ok(pedido);
-        }
+        return Ok(pedido);
     }
 }

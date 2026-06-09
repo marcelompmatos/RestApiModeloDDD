@@ -51,9 +51,10 @@ namespace RestApiModeloDDD.Application.Services
             await serviceCliente.AddAsync(cliente);
 
             _logger.LogInformation(
-                "Cliente cadastrado com sucesso na camada Application. Nome: {NomeCliente}",
-                clienteDto.Nome);
-
+                "Cliente cadastrado com sucesso na camada Application. Nome: {NomeCliente}, ClienteId: {ClienteId}",
+                clienteDto.Nome, cliente.Id);
+            
+              
             return cliente.Id;
 
         }

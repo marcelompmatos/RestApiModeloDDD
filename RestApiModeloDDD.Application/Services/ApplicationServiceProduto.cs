@@ -27,7 +27,7 @@ namespace RestApiModeloDDD.Application.Services
         }
 
 
-        public async Task AddAsync(ProdutoDto produtoDto)
+        public async Task<int> AddAsync(ProdutoDto produtoDto)
         {
             _logger.LogInformation(
                 "Iniciando cadastro de produto na camada Application. Nome: {NomeProduto}",
@@ -54,6 +54,8 @@ namespace RestApiModeloDDD.Application.Services
             _logger.LogInformation(
                 "Produto cadastrado com sucesso na camada Application. Nome: {NomeProduto}",
                 produtoDto?.Nome);
+
+            return produto.Id;
         }
 
         public async Task<IEnumerable<ProdutoDto>> GetAllAsync()
@@ -96,33 +98,29 @@ namespace RestApiModeloDDD.Application.Services
             return mapper.Map<ProdutoDto>(produto);
         }
 
-        public async Task RemoveAsync(ProdutoDto produtoDto)
+        public async Task RemoveAsync(int id)
         {
             _logger.LogInformation(
                 "Iniciando remoção de produto na camada Application. Id: {ProdutoId}",
-                produtoDto?.Id);
+                id);
 
+            var produto = await serviceProduto.GetByIdAsync(id);
 
-            try
+            if (produto is null)
             {
-                var produto = mapper.Map<Produto>(produtoDto);
-                await serviceProduto.RemoveAsync(produto.Id);
-            }
-            catch (System.Exception ex)
-            {
-                _logger.LogError(
-                    ex,
-                    "Erro ao remover produto na camada Application. Id: {ProdutoId}",
-                    produtoDto?.Id);
-                throw;
-            }
-      
+                _logger.LogWarning(
+                    "Produto não encontrado para remoção. Id: {ProdutoId}",
+                    id);
 
-            
+                throw new KeyNotFoundException(
+                    $"Produto {id} não encontrado.");
+            }
+
+            await serviceProduto.RemoveAsync(produto.Id);
 
             _logger.LogInformation(
                 "Produto removido com sucesso na camada Application. Id: {ProdutoId}",
-                produtoDto?.Id);
+                id);
         }
 
         public async Task UpdateAsync(ProdutoDto produtoDto)
