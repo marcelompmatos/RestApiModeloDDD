@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using RestApiModeloDDD.Domain.Entities;
 using RestApiModeloDDD.Domain.Interfaces.Repositories;
 using RestApiModeloDDD.Infrastructure.Data.Context;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -14,62 +15,86 @@ namespace RestApiModeloDDD.Infrastructure.Data.Repositories
         private readonly ILogger<RepositoryPedido> _logger;
 
         public RepositoryPedido(
-            SqlContext sqlContext,
-            ILogger<RepositoryPedido> logger)
-            : base(sqlContext)
+                     SqlContext context,
+                     ILogger<RepositoryBase<Pedido>> logger,
+                     ILogger<RepositoryPedido> pedidoLogger)
+                     : base(context, logger)
         {
-            _context = sqlContext;
-            _logger = logger;
+            _context = context;
+            _logger = pedidoLogger;
         }
-
         public async Task<Pedido?> GetPedidoAsync(int id)
         {
-            _logger.LogInformation(
-                "Consultando pedido. PedidoId: {PedidoId}",
-                id);
-
-            var pedido = await _context.Pedidos
-                .AsNoTracking()
-                .AsSplitQuery()
-                .Include(p => p.Cliente)
-                .Include(p => p.Itens)
-                    .ThenInclude(i => i.Produto)
-                .FirstOrDefaultAsync(p => p.Id == id);
-
-            if (pedido is null)
+            try
             {
-                _logger.LogWarning(
-                    "Pedido não encontrado. PedidoId: {PedidoId}",
+                _logger.LogInformation(
+                    "Consultando pedido. PedidoId: {PedidoId}",
                     id);
 
-                return null;
+                var pedido = await _context.Pedidos
+                    .AsNoTracking()
+                    .AsSplitQuery()
+                    .Include(p => p.Cliente)
+                    .Include(p => p.Itens)
+                        .ThenInclude(i => i.Produto)
+                    .FirstOrDefaultAsync(p => p.Id == id);
+
+                if (pedido is null)
+                {
+                    _logger.LogWarning(
+                        "Pedido não encontrado. PedidoId: {PedidoId}",
+                        id);
+
+                    return null;
+                }
+
+                _logger.LogInformation(
+                    "Pedido encontrado. PedidoId: {PedidoId}",
+                    id);
+
+                return pedido;
             }
+            catch (Exception ex)
+            {
+                _logger.LogError(
+                    ex,
+                    "Erro ao consultar pedido. PedidoId: {PedidoId}",
+                    id);
 
-            _logger.LogInformation(
-                "Pedido encontrado. PedidoId: {PedidoId}",
-                id);
-
-            return pedido;
+                throw;
+            }
         }
 
         public async Task<List<Pedido>> GetPedidosAsync()
         {
-            _logger.LogInformation("Consultando pedidos no repositório");
+            try
+            {
+                _logger.LogInformation(
+                    "Consultando pedidos no repositório.");
 
-            var pedidos = await _context.Pedidos
-                .AsNoTracking()
-                .Include(p => p.Cliente)
-                .ToListAsync();
+                var pedidos = await _context.Pedidos
+                    .AsNoTracking()
+                    .Include(p => p.Cliente)
+                    .ToListAsync();
 
-            _logger.LogInformation(
-                "Consulta finalizada. Quantidade: {Quantidade}",
-                pedidos.Count);
+                _logger.LogInformation(
+                    "Consulta finalizada. Quantidade: {Quantidade}",
+                    pedidos.Count);
 
-            return pedidos;
+                return pedidos;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(
+                    ex,
+                    "Erro ao consultar lista de pedidos.");
+
+                throw;
+            }
         }
 
 
-        
+
     }
 
 }

@@ -1,4 +1,5 @@
-﻿using RestApiModeloDDD.Domain.Core.Interfaces.Repositories;
+﻿using Microsoft.Extensions.Logging;
+using RestApiModeloDDD.Domain.Core.Interfaces.Repositories;
 using RestApiModeloDDD.Domain.Entitys;
 using RestApiModeloDDD.Infrastructure.Data.Context;
 
@@ -8,8 +9,9 @@ namespace RestApiModeloDDD.Infrastructure.Data.Repositories
     {
         private readonly SqlContext sqlContext;
 
-        public RepositoryProduto(SqlContext sqlContext)
-            : base(sqlContext)
+        public RepositoryProduto(SqlContext sqlContext, 
+            ILogger<RepositoryBase<Produto>> logger)
+            : base(sqlContext, logger)
         {
             this.sqlContext = sqlContext;
         }
