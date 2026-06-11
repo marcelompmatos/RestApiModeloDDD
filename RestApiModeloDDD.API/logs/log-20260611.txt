@@ -1,0 +1,60 @@
+2026-06-11 10:58:38.408 -03:00 [INF] Iniciando API
+2026-06-11 10:58:49.312 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-11 10:58:49.638 -03:00 [INF] HTTP GET /swagger responded 301 in 48.3546 ms
+2026-06-11 10:58:49.765 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-11 10:58:49.976 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 742.3032ms
+2026-06-11 10:58:49.984 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-11 10:58:49.984 -03:00 [INF] Hosting environment: Development
+2026-06-11 10:58:49.985 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-11 10:58:50.161 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 170.9421 ms
+2026-06-11 10:58:50.163 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 398.4421ms
+2026-06-11 10:58:50.207 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-11 10:58:50.216 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-11 10:58:50.232 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-11 10:58:50.343 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 113.533ms
+2026-06-11 10:58:50.360 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-11 10:58:50.364 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-11 10:58:50.364 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-11 10:58:50.364 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 156.5235 ms
+2026-06-11 10:58:50.364 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 3.2671 ms
+2026-06-11 10:58:50.371 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-11 10:58:50.399 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-11 10:58:50.399 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 2.3178 ms
+2026-06-11 10:58:50.525 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 154.2768ms
+2026-06-11 10:58:50.564 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 352.1741ms
+2026-06-11 10:58:50.566 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 205.623ms
+2026-06-11 10:58:50.570 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 363.0101ms
+2026-06-11 10:58:50.837 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-11 10:58:50.922 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 85.3302 ms
+2026-06-11 10:58:50.924 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 87.3539ms
+2026-06-11 11:28:11.967 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Pedido - application/json 56
+2026-06-11 11:28:12.007 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.PedidoController.Create (RestApiModeloDDD.API)'
+2026-06-11 11:28:12.058 -03:00 [INF] Route matched with {action = "Create", controller = "Pedido"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(RestApiModeloDDD.Application.Dtos.CriarPedidoDto, System.Threading.CancellationToken) on controller RestApiModeloDDD.API.Controllers.PedidoController (RestApiModeloDDD.API).
+2026-06-11 11:28:12.808 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.PedidoController.Create (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-11 11:28:22.375 -03:00 [INF] Iniciando cadastro de pedido para o ClienteId: 0
+2026-06-11 11:28:26.439 -03:00 [INF] Executed DbCommand (162ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[DataCadastro], [p].[IsAtivo], [p].[IsDisponivel], [p].[Nome], [p].[Valor]
+FROM [Produtos] AS [p]
+WHERE [p].[Id] = @__p_0
+2026-06-11 11:28:28.019 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.PedidoController.Create (RestApiModeloDDD.API) in 15955.1456ms
+2026-06-11 11:28:28.451 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.PedidoController.Create (RestApiModeloDDD.API)'
+2026-06-11 11:28:29.735 -03:00 [WRN] Erro de validação
+RestApiModeloDDD.Domain.Exceptions.DomainValidationException: Produto 0 não encontrado.
+   at RestApiModeloDDD.Application.Services.ApplicationServicePedido.AddAsync(CriarPedidoDto dto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Application\Services\ApplicationServicePedido.cs:line 139
+   at RestApiModeloDDD.API.Controllers.PedidoController.Create(CriarPedidoDto dto, CancellationToken cancellationToken) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Controllers\PedidoController.cs:line 36
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at RestApiModeloDDD.API.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Middlewares\ExceptionMiddleware.cs:line 27
+2026-06-11 11:28:29.772 -03:00 [INF] HTTP POST /api/Pedido responded 400 in 17795.3733 ms
+2026-06-11 11:28:29.785 -03:00 [INF] Request finished HTTP/2 POST https://localhost:44387/api/Pedido - 400 null application/json 17829.9708ms

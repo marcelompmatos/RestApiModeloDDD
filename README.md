@@ -276,6 +276,19 @@ Conversão entre entidades e DTOs utilizando AutoMapper..
 
 ---
 
+## Logs Estruturados (Structured Logging)
+
+A aplicação utiliza o **Serilog** como mecanismo de logging estruturado, permitindo rastreabilidade, monitoramento e observabilidade da execução da API.
+
+### Configuração
+
+A configuração centralizada está localizada em:
+
+```text
+RestApiModeloDDD.API
+└── Logging
+    └── SerilogConfiguration.cs
+
 ## Testes
 
 Validação de regras utilizando xUnit.
@@ -560,13 +573,15 @@ Este projeto foi desenvolvido com foco em estudo de arquitetura corporativa, vis
 
 Evoluções previstas:
 
-- autenticação JWT
-- logs estruturados
-- versionamento de API
-- dockerização
-- integração com cloud
-- CI/CD
-- observabilidade
+- Autenticação JWT e Refresh Token
+- Versionamento de API
+- Health Checks
+- Docker e Docker Compose
+- CI/CD com GitHub Actions
+- Cache distribuído com Redis
+- Observabilidade com OpenTelemetry
+- Mensageria com RabbitMQ
+- CQRS com MediatR
 
 ---
 
