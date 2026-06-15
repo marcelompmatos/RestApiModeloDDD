@@ -20,6 +20,8 @@ namespace RestApiModeloDDD.Infrastructure.Data.Context
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<Pedido> Pedidos { get; set; }
         public DbSet<ItemPedido> ItemPedidos { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using Autofac.Core;
 using AutoMapper;
 using RestApiModeloDDD.Application.Interfaces;
 using RestApiModeloDDD.Application.Mappers;
@@ -9,6 +10,7 @@ using RestApiModeloDDD.Domain.Interfaces.Repositories;
 using RestApiModeloDDD.Domain.Interfaces.Services;
 using RestApiModeloDDD.Domain.Services;
 using RestApiModeloDDD.Infrastructure.Data.Repositories;
+using RestApiModeloDDD.Service.Services;
 
 namespace RestApiModeloDDD.Infrastructure.IOC
 {
@@ -29,6 +31,22 @@ namespace RestApiModeloDDD.Infrastructure.IOC
             builder.RegisterType<ApplicationServicePedido>().As<IApplicationServicePedido>();
             builder.RegisterType<RepositoryPedido>().As<IRepositoryPedido>();
             builder.RegisterType<ServicePedido>().As<IServicePedido>();
+
+            builder.RegisterType<ApplicationServiceAuth>()
+       .As<IApplicationServiceAuth>();
+
+            builder.RegisterType<ServiceAuth>()
+                   .As<IServiceAuth>();
+
+            builder.RegisterType<RepositoryUsuario>()
+                   .As<IRepositoryUsuario>();
+
+            builder.RegisterType<RepositoryRefreshToken>()
+                   .As<IRepositoryRefreshToken>();
+
+            builder.RegisterType<JwtService>()
+                   .As<IJwtService>();
+
 
             builder.Register(ctx => new MapperConfiguration(cfg =>
             {
