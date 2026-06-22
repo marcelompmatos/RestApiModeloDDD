@@ -20,8 +20,7 @@ namespace RestApiModeloDDD.Service.Services
 
         public string GenerateAccessToken(Usuario usuario)
         {
-            var key = Encoding.UTF8.GetBytes(
-                _configuration["JwtSettings:SecretKey"]);
+            var key = Encoding.UTF8.GetBytes(_configuration["JwtSettings:SecretKey"]);
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {
@@ -33,7 +32,7 @@ namespace RestApiModeloDDD.Service.Services
                     new Claim(ClaimTypes.Role, usuario.Role)
                 }),
 
-                Expires = DateTime.UtcNow.AddMinutes(15),
+                Expires = DateTime.UtcNow.AddSeconds(30), //DateTime.UtcNow.AddMinutes(15),
 
                 SigningCredentials =
                     new SigningCredentials(

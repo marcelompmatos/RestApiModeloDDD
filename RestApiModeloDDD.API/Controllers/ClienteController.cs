@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RestApiModeloDDD.Application.Dtos;
 using RestApiModeloDDD.Application.Interfaces;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace RestApiModeloDDD.API.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 [Produces("application/json")]

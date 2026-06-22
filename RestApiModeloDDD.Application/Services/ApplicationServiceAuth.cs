@@ -1,4 +1,5 @@
 ﻿using RestApiModeloDDD.Application.Dtos;
+using RestApiModeloDDD.Application.DTOs;
 using RestApiModeloDDD.Application.Interfaces;
 using RestApiModeloDDD.Domain.Interfaces.Services;
 using System;
@@ -19,30 +20,47 @@ namespace RestApiModeloDDD.Application.Services
             _jwtService = jwtService;
         }
 
-        public async Task<TokenDto> Login(
-            LoginDto dto)
+        public async Task<TokenDto> Login(LoginDto dto)
         {
             var usuario =
                 await _serviceAuth.ValidarUsuario(
                     dto.Email,
                     dto.Senha);
 
+            var accessToken =
+                _jwtService.GenerateAccessToken(usuario);
+
+            var refreshToken =
+                await _serviceAuth
+                    .GerarRefreshToken(usuario);
+
             return new TokenDto
             {
-                AccessToken =
-                    _jwtService.GenerateAccessToken(usuario),
-
-                RefreshToken =
-                    _jwtService.GenerateRefreshToken(),
-
-                Expiration =
-                    DateTime.UtcNow.AddMinutes(15)
+                AccessToken = accessToken,
+                RefreshToken = refreshToken,
+                Expiration = DateTime.UtcNow.AddMinutes(15)
             };
         }
 
-        public Task<TokenDto> RefreshToken(RefreshTokenDto dto)
+        public async Task<TokenDto> RefreshToken(RefreshTokenDto dto)
         {
-            throw new NotImplementedException();
+            var usuario =
+                await _serviceAuth
+                    .RenovarRefreshToken(dto.RefreshToken);
+
+            var accessToken =
+                _jwtService.GenerateAccessToken(usuario);
+
+            var novoRefreshToken =
+                await _serviceAuth
+                    .GerarRefreshToken(usuario);
+
+            return new TokenDto
+            {
+                AccessToken = accessToken,
+                RefreshToken = novoRefreshToken,
+                Expiration = DateTime.UtcNow.AddMinutes(15)
+            };
         }
     }
 }

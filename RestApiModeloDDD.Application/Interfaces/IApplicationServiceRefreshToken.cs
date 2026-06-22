@@ -4,10 +4,10 @@ using System.Threading.Tasks;
 
 namespace RestApiModeloDDD.Application.Interfaces
 {
-    public interface IApplicationServiceAuth
+    public interface IApplicationServiceRefreshToken
     {
-        Task<TokenDto> Login(LoginDto dto);
-
         Task<TokenDto> RefreshToken(RefreshTokenDto dto);
+
+        Task RevogarToken(string refreshToken);
     }
 }

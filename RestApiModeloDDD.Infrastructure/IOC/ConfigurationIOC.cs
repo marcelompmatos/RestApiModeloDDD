@@ -32,20 +32,14 @@ namespace RestApiModeloDDD.Infrastructure.IOC
             builder.RegisterType<RepositoryPedido>().As<IRepositoryPedido>();
             builder.RegisterType<ServicePedido>().As<IServicePedido>();
 
-            builder.RegisterType<ApplicationServiceAuth>()
-       .As<IApplicationServiceAuth>();
+            builder.RegisterType<ApplicationServiceAuth>().As<IApplicationServiceAuth>();
+            builder.RegisterType<RepositoryUsuario>().As<IRepositoryUsuario>();
+            builder.RegisterType<ServiceAuth>().As<IServiceAuth>();
 
-            builder.RegisterType<ServiceAuth>()
-                   .As<IServiceAuth>();
-
-            builder.RegisterType<RepositoryUsuario>()
-                   .As<IRepositoryUsuario>();
-
-            builder.RegisterType<RepositoryRefreshToken>()
-                   .As<IRepositoryRefreshToken>();
-
-            builder.RegisterType<JwtService>()
-                   .As<IJwtService>();
+           
+            builder.RegisterType<ApplicationServiceRefreshToken>().As<IApplicationServiceRefreshToken>();
+            builder.RegisterType<RepositoryRefreshToken>().As<IRepositoryRefreshToken>();
+            builder.RegisterType<JwtService>().As<IJwtService>();
 
 
             builder.Register(ctx => new MapperConfiguration(cfg =>
