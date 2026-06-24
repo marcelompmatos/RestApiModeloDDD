@@ -1,0 +1,214 @@
+2026-06-24 15:09:08.668 -03:00 [INF] Iniciando API
+2026-06-24 15:09:13.171 -03:00 [INF] User profile is available. Using 'C:\Users\WWWROOT\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-24 15:09:20.525 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-24 15:09:20.823 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 15:09:20.824 -03:00 [INF] Hosting environment: Development
+2026-06-24 15:09:20.824 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-24 15:09:21.039 -03:00 [INF] HTTP GET /swagger responded 301 in 149.3711 ms
+2026-06-24 15:09:21.138 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 654.4505ms
+2026-06-24 15:09:21.216 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-24 15:09:21.393 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 170.1131 ms
+2026-06-24 15:09:21.395 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 180.9304ms
+2026-06-24 15:09:21.508 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-24 15:09:21.508 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-24 15:09:21.509 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-24 15:09:21.511 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-24 15:09:21.523 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-24 15:09:21.524 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 11.2607ms
+2026-06-24 15:09:21.539 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-24 15:09:21.539 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 28.7347 ms
+2026-06-24 15:09:21.541 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-24 15:09:21.541 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 31.2840 ms
+2026-06-24 15:09:21.543 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-24 15:09:21.543 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 34.6697 ms
+2026-06-24 15:09:21.737 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 229.2857ms
+2026-06-24 15:09:21.765 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 256.6256ms
+2026-06-24 15:09:21.881 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 373.221ms
+2026-06-24 15:09:21.994 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 471.6037ms
+2026-06-24 15:09:22.215 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-24 15:09:22.240 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 23.1122 ms
+2026-06-24 15:09:22.242 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 27.4793ms
+2026-06-24 15:09:47.376 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/login - application/json 44
+2026-06-24 15:09:47.813 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-24 15:09:47.863 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RestApiModeloDDD.Application.Dtos.LoginDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-24 15:09:48.405 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-24 15:09:56.017 -03:00 [INF] Executed DbCommand (281ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-24 15:09:56.879 -03:00 [INF] Adicionando RefreshToken para usuário "e991024a-3ef2-4953-afc5-033f3d0fab98"
+2026-06-24 15:09:57.224 -03:00 [INF] Executed DbCommand (55ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([Id], [CriadoEm], [ExpiraEm], [Revogado], [TokenHash], [UsuarioId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-06-24 15:09:57.240 -03:00 [INF] RefreshToken criado. Id: "4c35a27f-3786-4c4b-932b-a7fb96462786"
+2026-06-24 15:09:57.247 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 8836.1006ms.
+2026-06-24 15:09:57.257 -03:00 [INF] Executing OkObjectResult, writing value of type 'RestApiModeloDDD.Application.DTOs.TokenDto'.
+2026-06-24 15:09:57.275 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) in 9404.8033ms
+2026-06-24 15:09:57.276 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-24 15:09:57.279 -03:00 [INF] HTTP POST /api/Auth/login responded 200 in 9902.7986 ms
+2026-06-24 15:09:57.299 -03:00 [INF] Request finished HTTP/2 POST https://localhost:44387/api/Auth/login - 200 null application/json; charset=utf-8 9923.2903ms
+2026-06-24 15:11:08.923 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/api/Clientes - null null
+2026-06-24 15:11:13.848 -03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '24/06/2026 18:10:26', Current time (UTC): '24/06/2026 18:11:12'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-06-24 15:11:13.945 -03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '24/06/2026 18:10:26', Current time (UTC): '24/06/2026 18:11:12'.
+2026-06-24 15:11:14.200 -03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-06-24 15:11:14.404 -03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-06-24 15:11:14.405 -03:00 [INF] HTTP GET /api/Clientes responded 401 in 5297.0204 ms
+2026-06-24 15:11:14.407 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/api/Clientes - 401 null null 6626.5608ms
+2026-06-24 15:18:17.151 -03:00 [INF] Iniciando API
+2026-06-24 15:18:21.627 -03:00 [INF] User profile is available. Using 'C:\Users\WWWROOT\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-24 15:18:26.619 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-24 15:18:26.767 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 15:18:26.767 -03:00 [INF] Hosting environment: Development
+2026-06-24 15:18:26.768 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-24 15:18:26.899 -03:00 [INF] HTTP GET /swagger responded 301 in 73.0433 ms
+2026-06-24 15:18:27.001 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 412.6721ms
+2026-06-24 15:18:27.004 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-24 15:18:27.321 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 298.8384 ms
+2026-06-24 15:18:27.324 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 320.6891ms
+2026-06-24 15:18:27.352 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-24 15:18:27.352 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-24 15:18:27.354 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-24 15:18:27.355 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-24 15:18:27.364 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 6.6239ms
+2026-06-24 15:18:27.379 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-24 15:18:27.380 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 26.9921 ms
+2026-06-24 15:18:27.444 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-24 15:18:27.461 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-24 15:18:27.462 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 16.3500 ms
+2026-06-24 15:18:27.478 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-24 15:18:27.479 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 125.9840 ms
+2026-06-24 15:18:27.483 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 131.0844ms
+2026-06-24 15:18:27.565 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 121.4098ms
+2026-06-24 15:18:27.583 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 228.909ms
+2026-06-24 15:18:27.598 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 246.1327ms
+2026-06-24 15:18:27.891 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-24 15:18:27.916 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 20.2011 ms
+2026-06-24 15:18:27.918 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.8988ms
+2026-06-24 15:26:18.135 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/login - application/json 44
+2026-06-24 15:26:18.332 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-24 15:26:18.400 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RestApiModeloDDD.Application.Dtos.LoginDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-24 15:26:18.797 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-24 15:26:31.537 -03:00 [INF] Executed DbCommand (85ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-24 15:26:32.151 -03:00 [INF] Adicionando RefreshToken para usuário "e991024a-3ef2-4953-afc5-033f3d0fab98"
+2026-06-24 15:26:32.350 -03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([Id], [CriadoEm], [ExpiraEm], [Revogado], [TokenHash], [UsuarioId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-06-24 15:26:32.366 -03:00 [INF] RefreshToken criado. Id: "481e9b0f-c364-4da8-ab73-8e436226cfcf"
+2026-06-24 15:26:32.372 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 13570.5456ms.
+2026-06-24 15:26:32.411 -03:00 [INF] Executing OkObjectResult, writing value of type 'RestApiModeloDDD.Application.DTOs.TokenDto'.
+2026-06-24 15:26:32.442 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) in 14034.8493ms
+2026-06-24 15:26:32.443 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-24 15:26:32.448 -03:00 [INF] HTTP POST /api/Auth/login responded 200 in 14311.9109 ms
+2026-06-24 15:26:32.460 -03:00 [INF] Request finished HTTP/2 POST https://localhost:44387/api/Auth/login - 200 null application/json; charset=utf-8 14325.5613ms
+2026-06-24 15:27:07.881 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/api/Clientes - null null
+2026-06-24 15:27:08.052 -03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(IEnumerable`1 audiences, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-06-24 15:27:08.057 -03:00 [INF] Bearer was not authenticated. Failure message: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+2026-06-24 15:27:08.066 -03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-06-24 15:27:08.073 -03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-06-24 15:27:08.073 -03:00 [INF] HTTP GET /api/Clientes responded 401 in 191.8323 ms
+2026-06-24 15:27:08.076 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/api/Clientes - 401 null null 195.8338ms
+2026-06-24 15:30:57.212 -03:00 [INF] Iniciando API
+2026-06-24 15:31:00.034 -03:00 [INF] User profile is available. Using 'C:\Users\WWWROOT\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-24 15:31:01.267 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-24 15:31:01.454 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 15:31:01.455 -03:00 [INF] Hosting environment: Development
+2026-06-24 15:31:01.456 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-24 15:31:01.606 -03:00 [INF] HTTP GET /swagger responded 301 in 80.3155 ms
+2026-06-24 15:31:01.972 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 750.0271ms
+2026-06-24 15:31:01.982 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-24 15:31:02.324 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 328.3969 ms
+2026-06-24 15:31:02.325 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 344.8063ms
+2026-06-24 15:31:02.547 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-24 15:31:02.547 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-24 15:31:02.559 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 9.4453ms
+2026-06-24 15:31:02.561 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-24 15:31:02.570 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-24 15:31:02.574 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-24 15:31:02.584 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-24 15:31:02.584 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-24 15:31:02.584 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 13.4972 ms
+2026-06-24 15:31:02.584 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 22.2475 ms
+2026-06-24 15:31:02.601 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-24 15:31:02.601 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 27.5817 ms
+2026-06-24 15:31:02.798 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 228.1737ms
+2026-06-24 15:31:02.798 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 236.9262ms
+2026-06-24 15:31:03.568 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 888.3407ms
+2026-06-24 15:31:04.556 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 2008.8178ms
+2026-06-24 15:31:04.782 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-24 15:31:05.848 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 1065.2779 ms
+2026-06-24 15:31:05.849 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 1067.0697ms
+2026-06-24 15:40:57.741 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/login - application/json 44
+2026-06-24 15:40:57.905 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-24 15:40:57.947 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RestApiModeloDDD.Application.Dtos.LoginDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-24 15:40:58.452 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-24 15:41:05.153 -03:00 [INF] Executed DbCommand (88ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-24 15:41:05.846 -03:00 [INF] Adicionando RefreshToken para usuário "e991024a-3ef2-4953-afc5-033f3d0fab98"
+2026-06-24 15:41:06.099 -03:00 [INF] Executed DbCommand (15ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([Id], [CriadoEm], [ExpiraEm], [Revogado], [TokenHash], [UsuarioId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-06-24 15:41:06.129 -03:00 [INF] RefreshToken criado. Id: "d6864fec-fb71-435b-9002-33bb228e1ef9"
+2026-06-24 15:41:06.137 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 7678.9962ms.
+2026-06-24 15:41:06.149 -03:00 [INF] Executing OkObjectResult, writing value of type 'RestApiModeloDDD.Application.DTOs.TokenDto'.
+2026-06-24 15:41:06.170 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) in 8217.3395ms
+2026-06-24 15:41:06.171 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-24 15:41:06.176 -03:00 [INF] HTTP POST /api/Auth/login responded 200 in 8434.1314 ms
+2026-06-24 15:41:06.200 -03:00 [INF] Request finished HTTP/2 POST https://localhost:44387/api/Auth/login - 200 null application/json; charset=utf-8 8460.0285ms
+2026-06-24 15:41:47.283 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/api/Clientes - null null
+2026-06-24 15:41:47.422 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.GetAll (RestApiModeloDDD.API)'
+2026-06-24 15:41:47.429 -03:00 [INF] Route matched with {action = "GetAll", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RestApiModeloDDD.Application.Dtos.ClienteDto]]] GetAll(System.Threading.CancellationToken) on controller RestApiModeloDDD.API.Controllers.ClientesController (RestApiModeloDDD.API).
+2026-06-24 15:41:47.716 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.ClientesController.GetAll (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-24 15:41:50.652 -03:00 [INF] Iniciando consulta de clientes na camada Application
+2026-06-24 15:41:50.839 -03:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[DataCadastro], [c].[Email], [c].[IsAtivo], [c].[Nome], [c].[Sobrenome]
+FROM [Clientes] AS [c]
+2026-06-24 15:41:50.862 -03:00 [INF] Consulta de clientes finalizada na camada Application. Quantidade: 4
+2026-06-24 15:41:50.891 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.ClientesController.GetAll (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3174.7039ms.
+2026-06-24 15:41:50.894 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RestApiModeloDDD.Application.Dtos.ClienteDto, RestApiModeloDDD.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-24 15:41:50.897 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.ClientesController.GetAll (RestApiModeloDDD.API) in 3466.8098ms
+2026-06-24 15:41:50.897 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.ClientesController.GetAll (RestApiModeloDDD.API)'
+2026-06-24 15:41:50.898 -03:00 [INF] HTTP GET /api/Clientes responded 200 in 3613.9836 ms
+2026-06-24 15:41:50.899 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/api/Clientes - 200 null application/json; charset=utf-8 3617.4602ms
+2026-06-24 15:51:15.608 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/login - application/json 44
+2026-06-24 15:51:15.699 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-24 15:51:15.705 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RestApiModeloDDD.Application.Dtos.LoginDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-24 15:51:15.722 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-24 15:51:18.550 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-24 15:51:19.154 -03:00 [INF] Adicionando RefreshToken para usuário "e991024a-3ef2-4953-afc5-033f3d0fab98"
+2026-06-24 15:51:19.169 -03:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([Id], [CriadoEm], [ExpiraEm], [Revogado], [TokenHash], [UsuarioId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-06-24 15:51:19.171 -03:00 [INF] RefreshToken criado. Id: "5024dc9f-2b23-487b-b1e8-926323d3c677"
+2026-06-24 15:51:19.171 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3448.8787ms.
+2026-06-24 15:51:19.176 -03:00 [INF] Executing OkObjectResult, writing value of type 'RestApiModeloDDD.Application.DTOs.TokenDto'.
+2026-06-24 15:51:19.177 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) in 3470.8601ms
+2026-06-24 15:51:19.178 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-24 15:51:19.178 -03:00 [INF] HTTP POST /api/Auth/login responded 200 in 3569.3673 ms
+2026-06-24 15:51:19.179 -03:00 [INF] Request finished HTTP/2 POST https://localhost:44387/api/Auth/login - 200 null application/json; charset=utf-8 3572.377ms

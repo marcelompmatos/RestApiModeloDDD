@@ -11,8 +11,7 @@ namespace RestApiModeloDDD.API.Controllers
     {
         private readonly IApplicationServiceAuth _authService;
 
-        public AuthController(
-            IApplicationServiceAuth authService)
+        public AuthController(IApplicationServiceAuth authService)
         {
             _authService = authService;
         }

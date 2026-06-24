@@ -1,0 +1,331 @@
+2026-06-23 15:34:20.927 -03:00 [INF] Iniciando API
+2026-06-23 15:34:25.320 -03:00 [INF] User profile is available. Using 'C:\Users\WWWROOT\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-23 15:34:30.193 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-23 15:34:30.364 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-23 15:34:30.364 -03:00 [INF] Hosting environment: Development
+2026-06-23 15:34:30.365 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-23 15:34:30.461 -03:00 [INF] HTTP GET /swagger responded 301 in 45.6999 ms
+2026-06-23 15:34:30.552 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-23 15:34:30.703 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 511.3264ms
+2026-06-23 15:34:30.788 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 85.4994 ms
+2026-06-23 15:34:30.791 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 239.6277ms
+2026-06-23 15:34:30.821 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-23 15:34:30.826 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-23 15:34:30.832 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-23 15:34:30.889 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-23 15:34:30.889 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-23 15:34:30.890 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 64.2083 ms
+2026-06-23 15:34:30.890 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 54.9763 ms
+2026-06-23 15:34:30.904 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-23 15:34:30.905 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 77.8593 ms
+2026-06-23 15:34:30.946 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 124.2859ms
+2026-06-23 15:34:30.951 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-23 15:34:30.962 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 130.5239ms
+2026-06-23 15:34:30.962 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 7.4545ms
+2026-06-23 15:34:31.024 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-23 15:34:31.061 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 235.6734ms
+2026-06-23 15:34:31.198 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 177.3577ms
+2026-06-23 15:34:31.338 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-23 15:34:31.355 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 17.2277 ms
+2026-06-23 15:34:31.357 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.05ms
+2026-06-23 15:34:47.999 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/api/Clientes - null null
+2026-06-23 15:34:48.195 -03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-06-23 15:34:48.200 -03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-06-23 15:34:48.200 -03:00 [INF] HTTP GET /api/Clientes responded 401 in 185.6103 ms
+2026-06-23 15:34:48.202 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/api/Clientes - 401 null null 220.3578ms
+2026-06-23 16:47:03.449 -03:00 [INF] Iniciando API
+2026-06-23 16:47:06.233 -03:00 [INF] User profile is available. Using 'C:\Users\WWWROOT\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-23 16:47:07.259 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-23 16:47:07.498 -03:00 [INF] HTTP GET /swagger responded 301 in 49.4757 ms
+2026-06-23 16:47:07.765 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-23 16:47:07.773 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 560.4177ms
+2026-06-23 16:47:07.826 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-23 16:47:07.826 -03:00 [INF] Hosting environment: Development
+2026-06-23 16:47:07.827 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-23 16:47:07.895 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 117.3912 ms
+2026-06-23 16:47:07.897 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 132.6609ms
+2026-06-23 16:47:07.963 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-23 16:47:07.963 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-23 16:47:07.964 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-23 16:47:07.980 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-23 16:47:08.043 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-23 16:47:08.047 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 65.3969ms
+2026-06-23 16:47:08.068 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-23 16:47:08.069 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-23 16:47:08.069 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 104.9837 ms
+2026-06-23 16:47:08.069 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 25.9476 ms
+2026-06-23 16:47:08.095 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-23 16:47:08.095 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 131.0163ms
+2026-06-23 16:47:08.096 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 131.9406 ms
+2026-06-23 16:47:08.120 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 109.0504ms
+2026-06-23 16:47:08.159 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 195.3909ms
+2026-06-23 16:47:08.166 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 201.9515ms
+2026-06-23 16:47:08.342 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-23 16:47:08.380 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 37.2261 ms
+2026-06-23 16:47:08.383 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 41.1715ms
+2026-06-23 16:48:53.715 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/login - application/json 44
+2026-06-23 16:48:53.887 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-23 16:48:53.926 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RestApiModeloDDD.Application.Dtos.LoginDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-23 16:48:54.552 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-23 16:49:02.219 -03:00 [INF] Executed DbCommand (134ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-23 16:49:02.832 -03:00 [INF] Adicionando RefreshToken para usuário "e991024a-3ef2-4953-afc5-033f3d0fab98"
+2026-06-23 16:49:03.032 -03:00 [INF] Executed DbCommand (20ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([Id], [CriadoEm], [ExpiraEm], [Revogado], [TokenHash], [UsuarioId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-06-23 16:49:03.050 -03:00 [INF] RefreshToken criado. Id: "0f9698a7-ca17-4690-b7e9-31291953787f"
+2026-06-23 16:49:03.055 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 8499.0967ms.
+2026-06-23 16:49:03.103 -03:00 [INF] Executing OkObjectResult, writing value of type 'RestApiModeloDDD.Application.DTOs.TokenDto'.
+2026-06-23 16:49:03.149 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) in 9216.6784ms
+2026-06-23 16:49:03.151 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-23 16:49:03.155 -03:00 [INF] HTTP POST /api/Auth/login responded 200 in 9438.3350 ms
+2026-06-23 16:49:03.172 -03:00 [INF] Request finished HTTP/2 POST https://localhost:44387/api/Auth/login - 200 null application/json; charset=utf-8 9458.3907ms
+2026-06-23 16:49:30.608 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/api/Clientes - null null
+2026-06-23 16:49:30.762 -03:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString, TryReadJwtClaim tryReadJwtClaim)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-06-23 16:49:30.765 -03:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2026-06-23 16:49:30.774 -03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-06-23 16:49:30.779 -03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-06-23 16:49:30.779 -03:00 [INF] HTTP GET /api/Clientes responded 401 in 169.8770 ms
+2026-06-23 16:49:30.781 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/api/Clientes - 401 null null 173.3836ms
+2026-06-23 16:50:26.721 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/api/Clientes - null null
+2026-06-23 16:50:26.820 -03:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString, TryReadJwtClaim tryReadJwtClaim)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-06-23 16:50:26.821 -03:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2026-06-23 16:50:26.822 -03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-06-23 16:50:26.823 -03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-06-23 16:50:26.824 -03:00 [INF] HTTP GET /api/Clientes responded 401 in 101.5732 ms
+2026-06-23 16:50:26.824 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/api/Clientes - 401 null null 103.7028ms
+2026-06-23 16:51:03.403 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/api/Clientes - null null
+2026-06-23 16:51:03.563 -03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '23/06/2026 19:49:32', Current time (UTC): '23/06/2026 19:51:03'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-06-23 16:51:03.580 -03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '23/06/2026 19:49:32', Current time (UTC): '23/06/2026 19:51:03'.
+2026-06-23 16:51:03.580 -03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-06-23 16:51:03.581 -03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-06-23 16:51:03.581 -03:00 [INF] HTTP GET /api/Clientes responded 401 in 166.4430 ms
+2026-06-23 16:51:03.582 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/api/Clientes - 401 null null 179.2595ms
+2026-06-23 16:51:17.716 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-23 16:51:17.726 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 3.1027 ms
+2026-06-23 16:51:17.727 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 11.4294ms
+2026-06-23 16:51:17.749 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-23 16:51:17.750 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-23 16:51:17.751 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 1.8263ms
+2026-06-23 16:51:17.772 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.8662ms
+2026-06-23 16:51:17.974 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-23 16:51:18.006 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 31.6807 ms
+2026-06-23 16:51:18.008 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 32.8408ms
+2026-06-23 17:18:13.303 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/login - application/json 44
+2026-06-23 17:18:13.342 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-23 17:18:13.347 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RestApiModeloDDD.Application.Dtos.LoginDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-23 17:18:13.355 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-23 17:18:15.216 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-23 17:18:15.495 -03:00 [INF] Adicionando RefreshToken para usuário "e991024a-3ef2-4953-afc5-033f3d0fab98"
+2026-06-23 17:18:15.500 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([Id], [CriadoEm], [ExpiraEm], [Revogado], [TokenHash], [UsuarioId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-06-23 17:18:15.502 -03:00 [INF] RefreshToken criado. Id: "9b56571d-a9de-4135-88be-e793cdc6d08a"
+2026-06-23 17:18:15.504 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2148.0205ms.
+2026-06-23 17:18:15.505 -03:00 [INF] Executing OkObjectResult, writing value of type 'RestApiModeloDDD.Application.DTOs.TokenDto'.
+2026-06-23 17:18:15.506 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) in 2157.4021ms
+2026-06-23 17:18:15.506 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-23 17:18:15.507 -03:00 [INF] HTTP POST /api/Auth/login responded 200 in 2202.3826 ms
+2026-06-23 17:18:15.507 -03:00 [INF] Request finished HTTP/2 POST https://localhost:44387/api/Auth/login - 200 null application/json; charset=utf-8 2204.4403ms
+2026-06-23 17:19:40.959 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/login - application/json 44
+2026-06-23 17:19:40.961 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-23 17:19:40.962 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RestApiModeloDDD.Application.Dtos.LoginDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-23 17:19:40.974 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-23 17:19:44.100 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-23 17:19:44.310 -03:00 [INF] Adicionando RefreshToken para usuário "e991024a-3ef2-4953-afc5-033f3d0fab98"
+2026-06-23 17:19:44.313 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([Id], [CriadoEm], [ExpiraEm], [Revogado], [TokenHash], [UsuarioId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-06-23 17:19:44.315 -03:00 [INF] RefreshToken criado. Id: "6ec31399-b39b-40df-acf8-b48f7a89920b"
+2026-06-23 17:19:44.315 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3340.4642ms.
+2026-06-23 17:19:44.316 -03:00 [INF] Executing OkObjectResult, writing value of type 'RestApiModeloDDD.Application.DTOs.TokenDto'.
+2026-06-23 17:19:44.317 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) in 3355.1079ms
+2026-06-23 17:19:44.318 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-23 17:19:44.318 -03:00 [INF] HTTP POST /api/Auth/login responded 200 in 3357.9401 ms
+2026-06-23 17:19:44.319 -03:00 [INF] Request finished HTTP/2 POST https://localhost:44387/api/Auth/login - 200 null application/json; charset=utf-8 3360.214ms
+2026-06-23 17:20:24.989 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/api/Clientes - null null
+2026-06-23 17:20:25.156 -03:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString, TryReadJwtClaim tryReadJwtClaim)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-06-23 17:20:25.161 -03:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2026-06-23 17:20:25.161 -03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-06-23 17:20:25.162 -03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-06-23 17:20:25.162 -03:00 [INF] HTTP GET /api/Clientes responded 401 in 170.9382 ms
+2026-06-23 17:20:25.162 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/api/Clientes - 401 null null 173.1937ms
+2026-06-23 17:22:03.663 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/login - application/json 44
+2026-06-23 17:22:03.766 -03:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString, TryReadJwtClaim tryReadJwtClaim)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-06-23 17:22:03.767 -03:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2026-06-23 17:22:03.767 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-23 17:22:03.768 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RestApiModeloDDD.Application.Dtos.LoginDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-23 17:22:03.769 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-23 17:23:27.366 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-23 17:23:27.577 -03:00 [INF] Adicionando RefreshToken para usuário "e991024a-3ef2-4953-afc5-033f3d0fab98"
+2026-06-23 17:23:27.581 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([Id], [CriadoEm], [ExpiraEm], [Revogado], [TokenHash], [UsuarioId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-06-23 17:23:27.583 -03:00 [INF] RefreshToken criado. Id: "f8f24df6-062a-418f-a508-d8312a7f970a"
+2026-06-23 17:23:27.584 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 83814.8181ms.
+2026-06-23 17:23:27.584 -03:00 [INF] Executing OkObjectResult, writing value of type 'RestApiModeloDDD.Application.DTOs.TokenDto'.
+2026-06-23 17:23:27.585 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) in 83817.4926ms
+2026-06-23 17:23:27.586 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-23 17:23:27.586 -03:00 [INF] HTTP POST /api/Auth/login responded 200 in 83922.2322 ms
+2026-06-23 17:23:27.586 -03:00 [INF] Request finished HTTP/2 POST https://localhost:44387/api/Auth/login - 200 null application/json; charset=utf-8 83923.6757ms
+2026-06-23 17:36:27.773 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/login - application/json 44
+2026-06-23 17:36:27.899 -03:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString, TryReadJwtClaim tryReadJwtClaim)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-06-23 17:36:27.899 -03:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2026-06-23 17:36:27.900 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-23 17:36:27.900 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RestApiModeloDDD.Application.Dtos.LoginDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-23 17:36:27.901 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-23 17:36:29.703 -03:00 [INF] Executed DbCommand (24ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-23 17:36:29.916 -03:00 [INF] Adicionando RefreshToken para usuário "e991024a-3ef2-4953-afc5-033f3d0fab98"
+2026-06-23 17:36:29.951 -03:00 [INF] Executed DbCommand (31ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([Id], [CriadoEm], [ExpiraEm], [Revogado], [TokenHash], [UsuarioId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-06-23 17:36:29.954 -03:00 [INF] RefreshToken criado. Id: "3a073b46-d4ac-4ad3-8adf-fc5d7d61033e"
+2026-06-23 17:36:29.955 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2052.6749ms.
+2026-06-23 17:36:29.955 -03:00 [INF] Executing OkObjectResult, writing value of type 'RestApiModeloDDD.Application.DTOs.TokenDto'.
+2026-06-23 17:36:29.955 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) in 2055.0933ms
+2026-06-23 17:36:29.956 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-23 17:36:29.956 -03:00 [INF] HTTP POST /api/Auth/login responded 200 in 2180.8245 ms
+2026-06-23 17:36:29.956 -03:00 [INF] Request finished HTTP/2 POST https://localhost:44387/api/Auth/login - 200 null application/json; charset=utf-8 2185.399ms
+2026-06-23 17:37:00.441 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/api/Clientes - null null
+2026-06-23 17:37:00.548 -03:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString, TryReadJwtClaim tryReadJwtClaim)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-06-23 17:37:00.549 -03:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2026-06-23 17:37:00.549 -03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-06-23 17:37:00.550 -03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-06-23 17:37:00.550 -03:00 [INF] HTTP GET /api/Clientes responded 401 in 108.9664 ms
+2026-06-23 17:37:00.551 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/api/Clientes - 401 null null 110.0846ms
+2026-06-23 17:37:17.893 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/api/Clientes - null null
+2026-06-23 17:37:17.988 -03:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString, TryReadJwtClaim tryReadJwtClaim)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-06-23 17:37:17.989 -03:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2026-06-23 17:37:17.989 -03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-06-23 17:37:17.989 -03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-06-23 17:37:17.989 -03:00 [INF] HTTP GET /api/Clientes responded 401 in 94.9895 ms
+2026-06-23 17:37:17.989 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/api/Clientes - 401 null null 96.2154ms
+2026-06-23 17:40:46.132 -03:00 [INF] Iniciando API
+2026-06-23 17:40:48.598 -03:00 [INF] User profile is available. Using 'C:\Users\WWWROOT\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-23 17:40:50.425 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-23 17:40:50.567 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-23 17:40:50.568 -03:00 [INF] Hosting environment: Development
+2026-06-23 17:40:50.569 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-23 17:40:50.652 -03:00 [INF] HTTP GET /swagger responded 301 in 79.8805 ms
+2026-06-23 17:40:50.953 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-23 17:40:50.962 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 573.7985ms
+2026-06-23 17:40:51.112 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 139.9609 ms
+2026-06-23 17:40:51.113 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 161.3929ms
+2026-06-23 17:40:51.127 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-23 17:40:51.129 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-23 17:40:51.134 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-23 17:40:51.134 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-23 17:40:51.135 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-23 17:40:51.149 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 13.378ms
+2026-06-23 17:40:51.158 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-23 17:40:51.158 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 30.6660 ms
+2026-06-23 17:40:51.164 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-23 17:40:51.165 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-23 17:40:51.165 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 31.4171 ms
+2026-06-23 17:40:51.165 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 31.0468 ms
+2026-06-23 17:40:51.175 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 48.9587ms
+2026-06-23 17:40:51.213 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 83.1204ms
+2026-06-23 17:40:51.265 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 130.3721ms
+2026-06-23 17:40:51.271 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 136.6524ms
+2026-06-23 17:40:51.500 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-23 17:40:51.571 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 71.1701 ms
+2026-06-23 17:40:51.755 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 216.2553ms

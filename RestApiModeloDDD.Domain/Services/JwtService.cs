@@ -32,7 +32,10 @@ namespace RestApiModeloDDD.Service.Services
                     new Claim(ClaimTypes.Role, usuario.Role)
                 }),
 
-                Expires = DateTime.UtcNow.AddSeconds(30), //DateTime.UtcNow.AddMinutes(15),
+                Expires = DateTime.UtcNow.AddMinutes(15),
+
+                Issuer = _configuration["JwtSettings:Issuer"],
+                Audience = _configuration["JwtSettings:Audience"],
 
                 SigningCredentials =
                     new SigningCredentials(
