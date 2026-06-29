@@ -11,10 +11,10 @@ namespace RestApiModeloDDD.Domain.Interfaces.Repositories
 
         Task<RefreshToken> ObterPorToken(string token);
 
-        Task<IEnumerable<RefreshToken>> ObterPorUsuario(Guid usuarioId);
+        Task<IEnumerable<RefreshToken>> ObterPorUsuario(int usuarioId);
 
         Task Atualizar(RefreshToken refreshToken);
 
-        Task Remover(Guid id);
+        Task Remover(int id);
     }
 }

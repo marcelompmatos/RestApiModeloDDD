@@ -1,0 +1,72 @@
+2026-06-26 15:01:03.066 -03:00 [INF] Iniciando API
+2026-06-26 15:01:14.277 -03:00 [INF] User profile is available. Using 'C:\Users\WWWROOT\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-26 15:01:16.272 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-26 15:01:16.457 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-26 15:01:16.457 -03:00 [INF] Hosting environment: Development
+2026-06-26 15:01:16.458 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-26 15:01:17.249 -03:00 [INF] HTTP GET /swagger responded 301 in 37.6165 ms
+2026-06-26 15:01:17.323 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-26 15:01:17.557 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 1393.2867ms
+2026-06-26 15:01:17.655 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 106.5870 ms
+2026-06-26 15:01:17.656 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 334.1421ms
+2026-06-26 15:01:17.674 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-26 15:01:17.692 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-26 15:01:17.710 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-26 15:01:17.739 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-26 15:01:17.739 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 64.7067 ms
+2026-06-26 15:01:17.740 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-26 15:01:17.756 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-26 15:01:17.757 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-26 15:01:17.757 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 47.2124 ms
+2026-06-26 15:01:17.757 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 14.9321ms
+2026-06-26 15:01:17.775 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-26 15:01:17.776 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 82.7864 ms
+2026-06-26 15:01:17.803 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 128.7404ms
+2026-06-26 15:01:17.832 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 122.7857ms
+2026-06-26 15:01:17.905 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 213.3901ms
+2026-06-26 15:01:17.915 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 168.3993ms
+2026-06-26 15:01:18.088 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-26 15:01:18.149 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 60.0523 ms
+2026-06-26 15:01:18.157 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 70.3413ms
+2026-06-26 15:05:23.948 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/login - application/json 44
+2026-06-26 15:05:24.155 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-26 15:05:24.196 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RestApiModeloDDD.Application.Dtos.LoginDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-26 15:05:24.643 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-26 15:14:07.652 -03:00 [INF] Iniciando API
+2026-06-26 15:14:11.544 -03:00 [INF] User profile is available. Using 'C:\Users\WWWROOT\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-26 15:14:12.570 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-26 15:14:12.687 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-26 15:14:12.688 -03:00 [INF] Hosting environment: Development
+2026-06-26 15:14:12.688 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-26 15:14:12.733 -03:00 [INF] HTTP GET /swagger responded 301 in 50.3204 ms
+2026-06-26 15:14:12.814 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-26 15:14:12.814 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 283.4184ms
+2026-06-26 15:14:12.921 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 92.7987 ms
+2026-06-26 15:14:12.925 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 111.8155ms
+2026-06-26 15:14:13.016 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-26 15:14:12.982 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-26 15:14:13.019 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-26 15:14:13.027 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-26 15:14:13.027 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-26 15:14:13.033 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 5.1761ms
+2026-06-26 15:14:13.059 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-26 15:14:13.059 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-26 15:14:13.060 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 41.9380 ms
+2026-06-26 15:14:13.060 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 43.1650 ms
+2026-06-26 15:14:13.128 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-26 15:14:13.130 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 101.7317 ms
+2026-06-26 15:14:13.167 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 205.3815ms
+2026-06-26 15:14:13.180 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 163.6397ms
+2026-06-26 15:14:13.216 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 196.968ms
+2026-06-26 15:14:13.258 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 231.3192ms
+2026-06-26 15:14:13.615 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-26 15:14:15.003 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 1386.7145 ms
+2026-06-26 15:14:15.007 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 1391.1648ms
+2026-06-26 15:15:07.630 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/login - application/json 44
+2026-06-26 15:15:07.803 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-26 15:15:07.859 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RestApiModeloDDD.Application.Dtos.LoginDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-26 15:15:08.262 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-26 15:15:16.902 -03:00 [INF] Executed DbCommand (111ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__email_0

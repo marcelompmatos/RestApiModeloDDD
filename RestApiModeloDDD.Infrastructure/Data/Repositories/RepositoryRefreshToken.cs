@@ -84,7 +84,7 @@ namespace RestApiModeloDDD.Infrastructure.Data.Repositories
             }
         }
 
-        public async Task<IEnumerable<RefreshToken>> ObterPorUsuario(Guid usuarioId)
+        public async Task<IEnumerable<RefreshToken>> ObterPorUsuario(int usuarioId)
         {
             try
             {
@@ -121,7 +121,7 @@ namespace RestApiModeloDDD.Infrastructure.Data.Repositories
             }
         }
 
-        public async Task Remover(Guid id)
+        public async Task Remover(int id)
         {
             try
             {

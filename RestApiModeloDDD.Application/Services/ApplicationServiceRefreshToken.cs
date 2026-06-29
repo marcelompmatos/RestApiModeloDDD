@@ -17,7 +17,7 @@ namespace RestApiModeloDDD.Application.Services
             _serviceRefreshToken = serviceRefreshToken;
         }
 
-        public async Task<RefreshTokenDto> GerarToken(Guid usuarioId)
+        public async Task<RefreshTokenDto> GerarToken(int usuarioId)
         {
             var refreshToken =
                 await _serviceRefreshToken.GerarToken(usuarioId);

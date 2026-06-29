@@ -18,11 +18,11 @@ namespace RestApiModeloDDD.Domain.Services
         }
 
         public async Task<RefreshToken> GerarToken(
-            Guid usuarioId)
+            int usuarioId)
         {
             var refreshToken = new RefreshToken
             {
-                Id = Guid.NewGuid(),
+              
                 UsuarioId = usuarioId,
                 TokenHash = Convert.ToBase64String(
                     RandomNumberGenerator.GetBytes(64)),
@@ -53,7 +53,7 @@ namespace RestApiModeloDDD.Domain.Services
             return refreshToken;
         }
 
-        public async Task RevogarToken(Guid id)
+        public async Task RevogarToken(int id)
         {
             var refreshToken =
                 await _repository.ObterPorToken(id.ToString());
@@ -67,7 +67,7 @@ namespace RestApiModeloDDD.Domain.Services
         }
 
         public async Task RevogarTokensUsuario(
-            Guid usuarioId)
+            int usuarioId)
         {
             var tokens =
                 await _repository.ObterPorUsuario(usuarioId);
@@ -84,5 +84,7 @@ namespace RestApiModeloDDD.Domain.Services
         {
             await _repository.Atualizar(refreshToken);
         }
+
+       
     }
 }

@@ -6,13 +6,13 @@ namespace RestApiModeloDDD.Domain.Interfaces.Services
 {
     public interface IServiceRefreshToken
     {
-        Task<RefreshToken> GerarToken(Guid usuarioId);
+        Task<RefreshToken> GerarToken(int  usuarioId);
 
         Task<RefreshToken> ValidarToken(string token);
 
-        Task RevogarToken(Guid id);
+        Task RevogarToken(int id);
 
-        Task RevogarTokensUsuario(Guid usuarioId);
+        Task RevogarTokensUsuario(int usuarioId);
 
         Task AtualizarToken(RefreshToken refreshToken);
     }

@@ -32,7 +32,7 @@ namespace RestApiModeloDDD.Infrastructure.Data.Repositories
                 .FirstOrDefaultAsync(x => x.Email == email);
         }
 
-        public async Task<Usuario> ObterPorId(Guid id)
+        public async Task<Usuario> ObterPorId(int id)
         {
             return await _context.Set<Usuario>()
                 .AsNoTracking()

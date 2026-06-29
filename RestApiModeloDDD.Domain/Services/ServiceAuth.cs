@@ -59,7 +59,6 @@ public class ServiceAuth : IServiceAuth
         await _repositoryRefreshToken.Adicionar(
             new RefreshToken
             {
-                Id = Guid.NewGuid(),
                 UsuarioId = usuario.Id,
                 TokenHash = refreshToken,
                 CriadoEm = DateTime.UtcNow,

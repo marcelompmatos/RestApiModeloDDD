@@ -1,0 +1,936 @@
+2026-06-29 19:41:17.798 -03:00 [INF] Iniciando API
+2026-06-29 19:41:24.069 -03:00 [INF] User profile is available. Using 'C:\Users\WWWROOT\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-29 19:41:29.845 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-29 19:41:30.053 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-29 19:41:30.053 -03:00 [INF] Hosting environment: Development
+2026-06-29 19:41:30.053 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-29 19:41:30.255 -03:00 [INF] HTTP GET /swagger responded 301 in 59.3789 ms
+2026-06-29 19:41:30.391 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-29 19:41:30.392 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 685.9821ms
+2026-06-29 19:41:30.553 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 155.8540 ms
+2026-06-29 19:41:30.554 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 166.6579ms
+2026-06-29 19:41:30.604 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-29 19:41:30.604 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-29 19:41:30.620 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-29 19:41:30.631 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-29 19:41:30.708 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 11.9382ms
+2026-06-29 19:41:30.707 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-29 19:41:30.718 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-29 19:41:30.718 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 113.2941 ms
+2026-06-29 19:41:30.721 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-29 19:41:30.721 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 100.9806 ms
+2026-06-29 19:41:30.755 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-29 19:41:30.755 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 46.5184 ms
+2026-06-29 19:41:30.799 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 221.0251ms
+2026-06-29 19:41:30.803 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 182.8391ms
+2026-06-29 19:41:30.838 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 130.4631ms
+2026-06-29 19:41:31.165 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 586.8982ms
+2026-06-29 19:41:31.257 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-29 19:41:31.296 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/favicon-32x32.png - null null
+2026-06-29 19:41:31.299 -03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2026-06-29 19:41:31.299 -03:00 [INF] HTTP GET /swagger/favicon-32x32.png responded 200 in 2.8697 ms
+2026-06-29 19:41:31.299 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/favicon-32x32.png - 200 628 image/png 3.7688ms
+2026-06-29 19:41:31.307 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 49.2493 ms
+2026-06-29 19:41:31.310 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 52.0951ms
+2026-06-29 19:42:39.764 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/login - application/json 44
+2026-06-29 19:42:40.023 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-29 19:42:40.076 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RestApiModeloDDD.Application.Dtos.LoginDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-29 19:42:41.788 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-29 19:42:56.240 -03:00 [INF] Executed DbCommand (221ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-29 19:43:01.152 -03:00 [INF] Adicionando RefreshToken para usuário "e991024a-3ef2-4953-afc5-033f3d0fab98"
+2026-06-29 19:43:01.729 -03:00 [INF] Executed DbCommand (56ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([Id], [CriadoEm], [ExpiraEm], [Revogado], [TokenHash], [UsuarioId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-06-29 19:43:01.753 -03:00 [INF] RefreshToken criado. Id: "ac7488d8-234b-4f4c-ac75-d5ed4e0ecd7c"
+2026-06-29 19:43:01.762 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 19966.7253ms.
+2026-06-29 19:43:01.822 -03:00 [INF] Executing OkObjectResult, writing value of type 'RestApiModeloDDD.Application.DTOs.TokenDto'.
+2026-06-29 19:43:01.846 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) in 21753.9544ms
+2026-06-29 19:43:01.847 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-29 19:43:01.851 -03:00 [INF] HTTP POST /api/Auth/login responded 200 in 22086.1755 ms
+2026-06-29 19:43:01.879 -03:00 [INF] Request finished HTTP/2 POST https://localhost:44387/api/Auth/login - 200 null application/json; charset=utf-8 22115.1716ms
+2026-06-29 19:43:53.853 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/refresh - application/json 51
+2026-06-29 19:43:53.856 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Refresh (RestApiModeloDDD.API)'
+2026-06-29 19:43:53.861 -03:00 [INF] Route matched with {action = "Refresh", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Refresh(RestApiModeloDDD.Application.Dtos.RefreshTokenDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-29 19:43:53.886 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Refresh (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-29 19:43:59.738 -03:00 [INF] Consultando RefreshToken.
+2026-06-29 19:44:00.016 -03:00 [INF] Executed DbCommand (84ms) [Parameters=[@__token_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[CriadoEm], [r].[ExpiraEm], [r].[Revogado], [r].[TokenHash], [r].[UsuarioId], [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [RefreshTokens] AS [r]
+INNER JOIN [Usuarios] AS [u] ON [r].[UsuarioId] = [u].[Id]
+WHERE [r].[TokenHash] = @__token_0
+2026-06-29 19:44:00.126 -03:00 [ERR] Erro inesperado ao atualizar entidade RefreshToken.
+System.InvalidCastException: Unable to cast object of type 'System.Guid' to type 'System.Int32'.
+   at RepositoryBase`1.UpdateAsync(TEntity obj) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Infrastructure\Data\Repositories\RepositoryBase.cs:line 93
+2026-06-29 19:44:00.287 -03:00 [ERR] Erro ao atualizar RefreshToken "ac7488d8-234b-4f4c-ac75-d5ed4e0ecd7c"
+System.InvalidCastException: Unable to cast object of type 'System.Guid' to type 'System.Int32'.
+   at RepositoryBase`1.UpdateAsync(TEntity obj) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Infrastructure\Data\Repositories\RepositoryBase.cs:line 93
+   at RestApiModeloDDD.Infrastructure.Data.Repositories.RepositoryRefreshToken.Atualizar(RefreshToken refreshToken) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Infrastructure\Data\Repositories\RepositoryRefreshToken.cs:line 111
+2026-06-29 19:44:02.351 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.AuthController.Refresh (RestApiModeloDDD.API) in 8489.9935ms
+2026-06-29 19:44:02.856 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Refresh (RestApiModeloDDD.API)'
+2026-06-29 19:44:20.797 -03:00 [ERR] Erro interno não tratado
+System.InvalidCastException: Unable to cast object of type 'System.Guid' to type 'System.Int32'.
+   at RepositoryBase`1.UpdateAsync(TEntity obj) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Infrastructure\Data\Repositories\RepositoryBase.cs:line 93
+   at RestApiModeloDDD.Infrastructure.Data.Repositories.RepositoryRefreshToken.Atualizar(RefreshToken refreshToken) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Infrastructure\Data\Repositories\RepositoryRefreshToken.cs:line 111
+   at ServiceAuth.RenovarRefreshToken(String refreshToken) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Domain\Services\ServiceAuth.cs:line 93
+   at RestApiModeloDDD.Application.Services.ApplicationServiceAuth.RefreshToken(RefreshTokenDto dto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Application\Services\ApplicationServiceAuth.cs:line 47
+   at RestApiModeloDDD.API.Controllers.AuthController.Refresh(RefreshTokenDto dto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Controllers\AuthController.cs:line 33
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at RestApiModeloDDD.API.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Middlewares\ExceptionMiddleware.cs:line 27
+2026-06-29 19:44:28.003 -03:00 [ERR] HTTP POST /api/Auth/refresh responded 500 in 34149.3768 ms
+2026-06-29 19:44:28.673 -03:00 [INF] Request finished HTTP/2 POST https://localhost:44387/api/Auth/refresh - 500 null null 34820.5189ms
+2026-06-29 19:45:08.872 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/refresh - application/json 51
+2026-06-29 19:45:08.873 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Refresh (RestApiModeloDDD.API)'
+2026-06-29 19:45:08.876 -03:00 [INF] Route matched with {action = "Refresh", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Refresh(RestApiModeloDDD.Application.Dtos.RefreshTokenDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-29 19:45:08.940 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Refresh (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-29 19:45:30.156 -03:00 [INF] Consultando RefreshToken.
+2026-06-29 19:45:30.221 -03:00 [INF] Executed DbCommand (43ms) [Parameters=[@__token_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[CriadoEm], [r].[ExpiraEm], [r].[Revogado], [r].[TokenHash], [r].[UsuarioId], [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [RefreshTokens] AS [r]
+INNER JOIN [Usuarios] AS [u] ON [r].[UsuarioId] = [u].[Id]
+WHERE [r].[TokenHash] = @__token_0
+2026-06-29 19:46:07.582 -03:00 [ERR] Erro inesperado ao atualizar entidade RefreshToken.
+System.InvalidCastException: Unable to cast object of type 'System.Guid' to type 'System.Int32'.
+   at RepositoryBase`1.UpdateAsync(TEntity obj) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Infrastructure\Data\Repositories\RepositoryBase.cs:line 93
+2026-06-29 19:47:05.753 -03:00 [ERR] Erro ao atualizar RefreshToken "ac7488d8-234b-4f4c-ac75-d5ed4e0ecd7c"
+System.InvalidCastException: Unable to cast object of type 'System.Guid' to type 'System.Int32'.
+   at RepositoryBase`1.UpdateAsync(TEntity obj) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Infrastructure\Data\Repositories\RepositoryBase.cs:line 93
+   at RestApiModeloDDD.Infrastructure.Data.Repositories.RepositoryRefreshToken.Atualizar(RefreshToken refreshToken) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Infrastructure\Data\Repositories\RepositoryRefreshToken.cs:line 111
+2026-06-29 19:47:07.925 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.AuthController.Refresh (RestApiModeloDDD.API) in 119048.5637ms
+2026-06-29 19:47:08.272 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Refresh (RestApiModeloDDD.API)'
+2026-06-29 19:47:12.722 -03:00 [ERR] Erro interno não tratado
+System.InvalidCastException: Unable to cast object of type 'System.Guid' to type 'System.Int32'.
+   at RepositoryBase`1.UpdateAsync(TEntity obj) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Infrastructure\Data\Repositories\RepositoryBase.cs:line 93
+   at RestApiModeloDDD.Infrastructure.Data.Repositories.RepositoryRefreshToken.Atualizar(RefreshToken refreshToken) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Infrastructure\Data\Repositories\RepositoryRefreshToken.cs:line 111
+   at ServiceAuth.RenovarRefreshToken(String refreshToken) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Domain\Services\ServiceAuth.cs:line 93
+   at RestApiModeloDDD.Application.Services.ApplicationServiceAuth.RefreshToken(RefreshTokenDto dto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Application\Services\ApplicationServiceAuth.cs:line 47
+   at RestApiModeloDDD.API.Controllers.AuthController.Refresh(RefreshTokenDto dto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Controllers\AuthController.cs:line 33
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at RestApiModeloDDD.API.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Middlewares\ExceptionMiddleware.cs:line 27
+2026-06-29 19:47:12.733 -03:00 [ERR] HTTP POST /api/Auth/refresh responded 500 in 123859.9691 ms
+2026-06-29 19:47:12.733 -03:00 [INF] Request finished HTTP/2 POST https://localhost:44387/api/Auth/refresh - 500 null null 123861.2648ms
+2026-06-29 19:47:21.744 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/refresh - application/json 51
+2026-06-29 19:47:21.744 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Refresh (RestApiModeloDDD.API)'
+2026-06-29 19:47:21.745 -03:00 [INF] Route matched with {action = "Refresh", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Refresh(RestApiModeloDDD.Application.Dtos.RefreshTokenDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-29 19:47:21.745 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Refresh (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-29 19:47:24.313 -03:00 [INF] Consultando RefreshToken.
+2026-06-29 19:47:24.362 -03:00 [INF] Executed DbCommand (47ms) [Parameters=[@__token_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[CriadoEm], [r].[ExpiraEm], [r].[Revogado], [r].[TokenHash], [r].[UsuarioId], [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [RefreshTokens] AS [r]
+INNER JOIN [Usuarios] AS [u] ON [r].[UsuarioId] = [u].[Id]
+WHERE [r].[TokenHash] = @__token_0
+2026-06-29 19:54:45.960 -03:00 [INF] Iniciando API
+2026-06-29 19:54:49.374 -03:00 [INF] User profile is available. Using 'C:\Users\WWWROOT\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-29 19:54:50.624 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-29 19:54:50.789 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-29 19:54:50.790 -03:00 [INF] Hosting environment: Development
+2026-06-29 19:54:50.790 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-29 19:54:50.909 -03:00 [INF] HTTP GET /swagger responded 301 in 72.0159 ms
+2026-06-29 19:54:50.996 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 425.6167ms
+2026-06-29 19:54:51.066 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-29 19:54:51.194 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 118.4582 ms
+2026-06-29 19:54:51.198 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 136.211ms
+2026-06-29 19:54:51.211 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-29 19:54:51.211 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-29 19:54:51.246 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-29 19:54:51.247 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-29 19:54:51.250 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-29 19:54:51.252 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 5.1765ms
+2026-06-29 19:54:51.291 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-29 19:54:51.291 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 39.3617 ms
+2026-06-29 19:54:51.294 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-29 19:54:51.295 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 79.6066 ms
+2026-06-29 19:54:51.324 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-29 19:54:51.324 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 108.9572 ms
+2026-06-29 19:54:51.330 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 119.4441ms
+2026-06-29 19:54:51.358 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 108.183ms
+2026-06-29 19:54:51.422 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 174.776ms
+2026-06-29 19:54:51.469 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 258.1941ms
+2026-06-29 19:54:51.736 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-29 19:54:51.792 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 55.0893 ms
+2026-06-29 19:54:51.794 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 58.0997ms
+2026-06-29 19:55:22.988 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/login - application/json 44
+2026-06-29 19:55:23.212 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-29 19:55:23.276 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RestApiModeloDDD.Application.Dtos.LoginDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-29 19:55:23.795 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-29 19:55:30.953 -03:00 [INF] Executed DbCommand (216ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-29 19:55:31.131 -03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'RestApiModeloDDD.Infrastructure.Data.Context.SqlContext'.
+System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Guid'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Guid()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetGuid(Int32 i)
+   at lambda_method507(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Guid'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Guid()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetGuid(Int32 i)
+   at lambda_method507(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2026-06-29 19:55:34.731 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) in 11449.4482ms
+2026-06-29 19:55:35.860 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-29 19:55:52.271 -03:00 [ERR] Erro interno não tratado
+System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Guid'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Guid()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetGuid(Int32 i)
+   at lambda_method507(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at RestApiModeloDDD.Infrastructure.Data.Repositories.RepositoryUsuario.ObterPorEmail(String email) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Infrastructure\Data\Repositories\RepositoryUsuario.cs:line 30
+   at ServiceAuth.ValidarUsuario(String email, String senha) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Domain\Services\ServiceAuth.cs:line 27
+   at RestApiModeloDDD.Application.Services.ApplicationServiceAuth.Login(LoginDto dto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Application\Services\ApplicationServiceAuth.cs:line 25
+   at RestApiModeloDDD.API.Controllers.AuthController.Login(LoginDto dto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Controllers\AuthController.cs:line 23
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at RestApiModeloDDD.API.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Middlewares\ExceptionMiddleware.cs:line 27
+2026-06-29 19:55:52.404 -03:00 [ERR] HTTP POST /api/Auth/login responded 500 in 29415.4729 ms
+2026-06-29 19:55:52.421 -03:00 [INF] Request finished HTTP/2 POST https://localhost:44387/api/Auth/login - 500 null null 29434.0678ms
+2026-06-29 19:56:21.504 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/login - application/json 44
+2026-06-29 19:56:21.510 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-29 19:56:21.513 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RestApiModeloDDD.Application.Dtos.LoginDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-29 19:56:21.518 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-29 19:57:41.659 -03:00 [INF] Iniciando API
+2026-06-29 19:57:44.114 -03:00 [INF] User profile is available. Using 'C:\Users\WWWROOT\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-29 19:57:44.949 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-29 19:57:45.090 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-29 19:57:45.090 -03:00 [INF] Hosting environment: Development
+2026-06-29 19:57:45.091 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-29 19:57:45.167 -03:00 [INF] HTTP GET /swagger responded 301 in 66.4331 ms
+2026-06-29 19:57:45.225 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-29 19:57:45.485 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 580.7919ms
+2026-06-29 19:57:45.592 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 292.8606 ms
+2026-06-29 19:57:45.598 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 370.0756ms
+2026-06-29 19:57:45.647 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-29 19:57:45.651 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-29 19:57:45.660 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-29 19:57:45.666 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 5.3188ms
+2026-06-29 19:57:45.667 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-29 19:57:45.669 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-29 19:57:45.670 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 22.4838 ms
+2026-06-29 19:57:45.670 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-29 19:57:45.671 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-29 19:57:45.671 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 3.6596 ms
+2026-06-29 19:57:45.676 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-29 19:57:45.676 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 23.8759 ms
+2026-06-29 19:57:45.773 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 121.7169ms
+2026-06-29 19:57:45.774 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 128.5814ms
+2026-06-29 19:57:45.845 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 174.7907ms
+2026-06-29 19:57:45.846 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 178.6435ms
+2026-06-29 19:57:46.004 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-29 19:57:46.036 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 31.2205 ms
+2026-06-29 19:57:46.038 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 34.4275ms
+2026-06-29 19:58:06.378 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/login - application/json 44
+2026-06-29 19:58:06.564 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-29 19:58:06.600 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RestApiModeloDDD.Application.Dtos.LoginDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-29 19:58:07.964 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-29 19:58:11.493 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/login - application/json 44
+2026-06-29 19:58:12.809 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-29 19:58:13.989 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RestApiModeloDDD.Application.Dtos.LoginDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-29 19:58:14.017 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-29 19:58:31.614 -03:00 [INF] Executed DbCommand (139ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-29 19:58:31.615 -03:00 [INF] Executed DbCommand (139ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-29 19:58:31.806 -03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'RestApiModeloDDD.Infrastructure.Data.Context.SqlContext'.
+System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Guid'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Guid()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetGuid(Int32 i)
+   at lambda_method507(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Guid'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Guid()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetGuid(Int32 i)
+   at lambda_method507(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2026-06-29 19:58:31.806 -03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'RestApiModeloDDD.Infrastructure.Data.Context.SqlContext'.
+System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Guid'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Guid()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetGuid(Int32 i)
+   at lambda_method507(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Guid'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Guid()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetGuid(Int32 i)
+   at lambda_method507(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2026-06-29 19:58:37.269 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) in 30664.1375ms
+2026-06-29 19:58:37.269 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) in 23275.9206ms
+2026-06-29 19:58:38.543 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-29 19:58:38.543 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-29 20:02:02.510 -03:00 [INF] Iniciando API
+2026-06-29 20:02:05.077 -03:00 [INF] User profile is available. Using 'C:\Users\WWWROOT\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-29 20:02:05.924 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-29 20:02:06.080 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-29 20:02:06.080 -03:00 [INF] Hosting environment: Development
+2026-06-29 20:02:06.081 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-29 20:02:06.165 -03:00 [INF] HTTP GET /swagger responded 301 in 63.0871 ms
+2026-06-29 20:02:06.213 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-29 20:02:06.458 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 603.5532ms
+2026-06-29 20:02:06.592 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 111.0896 ms
+2026-06-29 20:02:06.594 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 382.308ms
+2026-06-29 20:02:06.616 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-29 20:02:06.619 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-29 20:02:06.626 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-29 20:02:06.641 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-29 20:02:06.641 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-29 20:02:06.641 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 21.7414 ms
+2026-06-29 20:02:06.641 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 25.4941 ms
+2026-06-29 20:02:06.641 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-29 20:02:06.642 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 15.0524 ms
+2026-06-29 20:02:06.660 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 37.6129ms
+2026-06-29 20:02:06.690 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 70.544ms
+2026-06-29 20:02:06.692 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-29 20:02:06.692 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-29 20:02:06.697 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 3.9837ms
+2026-06-29 20:02:06.742 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 126.41ms
+2026-06-29 20:02:06.774 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 82.2396ms
+2026-06-29 20:02:06.935 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-29 20:02:06.958 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 21.1583 ms
+2026-06-29 20:02:06.959 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.3506ms
+2026-06-29 20:02:20.418 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/login - application/json 44
+2026-06-29 20:02:20.522 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-29 20:02:20.555 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RestApiModeloDDD.Application.Dtos.LoginDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-29 20:02:20.855 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-29 20:02:27.100 -03:00 [INF] Executed DbCommand (110ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-29 20:02:27.227 -03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'RestApiModeloDDD.Infrastructure.Data.Context.SqlContext'.
+System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Guid'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Guid()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetGuid(Int32 i)
+   at lambda_method507(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Guid'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Guid()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetGuid(Int32 i)
+   at lambda_method507(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2026-06-29 20:02:29.843 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) in 9283.6145ms
+2026-06-29 20:02:30.361 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-29 20:15:11.613 -03:00 [INF] Iniciando API
+2026-06-29 20:15:15.310 -03:00 [INF] User profile is available. Using 'C:\Users\WWWROOT\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-29 20:15:16.381 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-29 20:15:17.966 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-29 20:15:17.967 -03:00 [INF] Hosting environment: Development
+2026-06-29 20:15:17.968 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-29 20:15:19.006 -03:00 [INF] HTTP GET /swagger responded 301 in 61.2445 ms
+2026-06-29 20:15:19.105 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 2780.6457ms
+2026-06-29 20:15:19.155 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-29 20:15:19.238 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 77.6351 ms
+2026-06-29 20:15:19.240 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 85.7741ms
+2026-06-29 20:15:19.270 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-29 20:15:19.270 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-29 20:15:19.274 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-29 20:15:19.275 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-29 20:15:19.288 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-29 20:15:19.292 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 16.1355ms
+2026-06-29 20:15:19.300 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-29 20:15:19.301 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 30.1622 ms
+2026-06-29 20:15:19.305 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-29 20:15:19.307 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 35.3558 ms
+2026-06-29 20:15:19.312 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-29 20:15:19.313 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 38.3473 ms
+2026-06-29 20:15:19.369 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 100.0527ms
+2026-06-29 20:15:19.370 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 97.7638ms
+2026-06-29 20:15:19.487 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 216.715ms
+2026-06-29 20:15:19.500 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 212.6329ms
+2026-06-29 20:15:19.931 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-29 20:15:19.947 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 16.0217 ms
+2026-06-29 20:15:19.949 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.1834ms
+2026-06-29 20:15:41.452 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/login - application/json 44
+2026-06-29 20:15:43.618 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-29 20:15:43.688 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RestApiModeloDDD.Application.Dtos.LoginDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-29 20:15:44.270 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-29 20:15:53.783 -03:00 [INF] Executed DbCommand (197ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-29 20:16:02.935 -03:00 [INF] Adicionando RefreshToken para usuário 1
+2026-06-29 20:16:03.685 -03:00 [INF] Executed DbCommand (209ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([CriadoEm], [ExpiraEm], [Revogado], [TokenHash], [UsuarioId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-06-29 20:16:05.136 -03:00 [ERR] An exception occurred in the database while saving changes for context type 'RestApiModeloDDD.Infrastructure.Data.Context.SqlContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'DDD.dbo.RefreshTokens'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:8eec1981-0dda-4e99-9d4a-da1b1c0741fc
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'DDD.dbo.RefreshTokens'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:8eec1981-0dda-4e99-9d4a-da1b1c0741fc
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-06-29 20:16:05.821 -03:00 [ERR] Erro ao inserir entidade RefreshToken.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'DDD.dbo.RefreshTokens'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:8eec1981-0dda-4e99-9d4a-da1b1c0741fc
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at RepositoryBase`1.AddAsync(TEntity obj) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Infrastructure\Data\Repositories\RepositoryBase.cs:line 28
+2026-06-29 20:16:07.006 -03:00 [ERR] Erro ao adicionar RefreshToken.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'DDD.dbo.RefreshTokens'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:8eec1981-0dda-4e99-9d4a-da1b1c0741fc
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at RepositoryBase`1.AddAsync(TEntity obj) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Infrastructure\Data\Repositories\RepositoryBase.cs:line 28
+   at RestApiModeloDDD.Infrastructure.Data.Repositories.RepositoryRefreshToken.Adicionar(RefreshToken refreshToken) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Infrastructure\Data\Repositories\RepositoryRefreshToken.cs:line 38
+2026-06-29 20:16:15.794 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) in 30731.726ms
+2026-06-29 20:16:17.639 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-29 20:16:37.521 -03:00 [ERR] Erro interno não tratado
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'DDD.dbo.RefreshTokens'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:8eec1981-0dda-4e99-9d4a-da1b1c0741fc
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at RepositoryBase`1.AddAsync(TEntity obj) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Infrastructure\Data\Repositories\RepositoryBase.cs:line 28
+   at RestApiModeloDDD.Infrastructure.Data.Repositories.RepositoryRefreshToken.Adicionar(RefreshToken refreshToken) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Infrastructure\Data\Repositories\RepositoryRefreshToken.cs:line 38
+   at ServiceAuth.GerarRefreshToken(Usuario usuario) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Domain\Services\ServiceAuth.cs:line 59
+   at RestApiModeloDDD.Application.Services.ApplicationServiceAuth.Login(LoginDto dto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Application\Services\ApplicationServiceAuth.cs:line 33
+   at RestApiModeloDDD.API.Controllers.AuthController.Login(LoginDto dto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Controllers\AuthController.cs:line 23
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at RestApiModeloDDD.API.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Middlewares\ExceptionMiddleware.cs:line 27
+2026-06-29 20:16:37.651 -03:00 [ERR] HTTP POST /api/Auth/login responded 500 in 56049.3094 ms
+2026-06-29 20:16:37.663 -03:00 [INF] Request finished HTTP/2 POST https://localhost:44387/api/Auth/login - 500 null null 56306.1672ms
+2026-06-29 20:19:45.592 -03:00 [INF] Iniciando API
+2026-06-29 20:19:48.446 -03:00 [INF] User profile is available. Using 'C:\Users\WWWROOT\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-29 20:19:49.553 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-29 20:19:49.696 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-29 20:19:49.697 -03:00 [INF] Hosting environment: Development
+2026-06-29 20:19:49.698 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-29 20:19:49.781 -03:00 [INF] HTTP GET /swagger responded 301 in 74.0956 ms
+2026-06-29 20:19:49.907 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-29 20:19:50.089 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 582.0767ms
+2026-06-29 20:19:50.220 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 121.9081 ms
+2026-06-29 20:19:50.222 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 319.1206ms
+2026-06-29 20:19:50.287 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-29 20:19:50.287 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-29 20:19:50.287 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-29 20:19:50.319 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-29 20:19:50.319 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 30.5195 ms
+2026-06-29 20:19:50.323 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 35.826ms
+2026-06-29 20:19:50.325 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-29 20:19:50.327 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 38.7541 ms
+2026-06-29 20:19:50.335 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-29 20:19:50.338 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 50.9621ms
+2026-06-29 20:19:50.346 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 9.9202ms
+2026-06-29 20:19:50.360 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-29 20:19:50.361 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 73.1074 ms
+2026-06-29 20:19:50.373 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-29 20:19:50.463 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 176.2433ms
+2026-06-29 20:19:50.513 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 142.7968ms
+2026-06-29 20:19:50.755 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-29 20:19:50.774 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 18.3939 ms
+2026-06-29 20:19:50.778 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 23.0069ms
+2026-06-29 20:20:37.418 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/login - application/json 44
+2026-06-29 20:20:37.627 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-29 20:20:37.686 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RestApiModeloDDD.Application.Dtos.LoginDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-29 20:20:38.291 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-29 20:20:51.314 -03:00 [INF] Executed DbCommand (286ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-29 20:21:13.053 -03:00 [INF] Adicionando RefreshToken para usuário 1
+2026-06-29 20:21:13.466 -03:00 [INF] Executed DbCommand (66ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([CriadoEm], [ExpiraEm], [Revogado], [TokenHash], [UsuarioId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-06-29 20:21:15.100 -03:00 [ERR] An exception occurred in the database while saving changes for context type 'RestApiModeloDDD.Infrastructure.Data.Context.SqlContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'DDD.dbo.RefreshTokens'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:1f891f76-2c84-4c6e-9dda-610cffeb8a6f
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'DDD.dbo.RefreshTokens'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:1f891f76-2c84-4c6e-9dda-610cffeb8a6f
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-06-29 20:21:15.616 -03:00 [ERR] Erro ao inserir entidade RefreshToken.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'DDD.dbo.RefreshTokens'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:1f891f76-2c84-4c6e-9dda-610cffeb8a6f
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at RepositoryBase`1.AddAsync(TEntity obj) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Infrastructure\Data\Repositories\RepositoryBase.cs:line 28
+2026-06-29 20:21:16.268 -03:00 [ERR] Erro ao adicionar RefreshToken.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'DDD.dbo.RefreshTokens'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:1f891f76-2c84-4c6e-9dda-610cffeb8a6f
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at RepositoryBase`1.AddAsync(TEntity obj) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Infrastructure\Data\Repositories\RepositoryBase.cs:line 28
+   at RestApiModeloDDD.Infrastructure.Data.Repositories.RepositoryRefreshToken.Adicionar(RefreshToken refreshToken) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Infrastructure\Data\Repositories\RepositoryRefreshToken.cs:line 38
+2026-06-29 20:21:21.006 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) in 43313.4417ms
+2026-06-29 20:21:22.143 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-29 20:22:04.949 -03:00 [INF] Iniciando API
+2026-06-29 20:22:08.791 -03:00 [INF] User profile is available. Using 'C:\Users\WWWROOT\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-29 20:22:15.202 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-29 20:22:15.387 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-29 20:22:15.388 -03:00 [INF] Hosting environment: Development
+2026-06-29 20:22:15.388 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-29 20:22:15.605 -03:00 [INF] HTTP GET /swagger responded 301 in 124.2138 ms
+2026-06-29 20:22:15.776 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-29 20:22:15.930 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 773.4543ms
+2026-06-29 20:22:16.124 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 146.2225 ms
+2026-06-29 20:22:16.131 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 357.8057ms
+2026-06-29 20:22:16.157 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-29 20:22:16.161 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-29 20:22:16.178 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-29 20:22:16.182 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-29 20:22:16.187 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-29 20:22:16.187 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 29.4745 ms
+2026-06-29 20:22:16.189 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-29 20:22:16.197 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 13.4022ms
+2026-06-29 20:22:16.213 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-29 20:22:16.213 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 51.6429 ms
+2026-06-29 20:22:16.226 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-29 20:22:16.226 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 47.6337 ms
+2026-06-29 20:22:16.258 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 100.71ms
+2026-06-29 20:22:16.316 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 154.6281ms
+2026-06-29 20:22:16.379 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 210.3512ms
+2026-06-29 20:22:16.416 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 226.5035ms
+2026-06-29 20:22:16.564 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-29 20:22:16.633 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 64.7316 ms
+2026-06-29 20:22:16.643 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 79.0514ms
+2026-06-29 20:22:32.609 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/login - application/json 44
+2026-06-29 20:22:32.766 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-29 20:22:32.811 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RestApiModeloDDD.Application.Dtos.LoginDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-29 20:22:33.178 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-29 20:22:39.931 -03:00 [INF] Executed DbCommand (108ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-29 20:22:46.246 -03:00 [INF] Adicionando RefreshToken para usuário 1
+2026-06-29 20:26:22.090 -03:00 [INF] Iniciando API
+2026-06-29 20:26:25.363 -03:00 [INF] User profile is available. Using 'C:\Users\WWWROOT\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-29 20:26:26.888 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger - null null
+2026-06-29 20:26:27.048 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-29 20:26:27.048 -03:00 [INF] Hosting environment: Development
+2026-06-29 20:26:27.049 -03:00 [INF] Content root path: C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API
+2026-06-29 20:26:27.121 -03:00 [INF] HTTP GET /swagger responded 301 in 37.6777 ms
+2026-06-29 20:26:27.195 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger - 301 null null 352.334ms
+2026-06-29 20:26:27.204 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/index.html - null null
+2026-06-29 20:26:27.386 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 105.2301 ms
+2026-06-29 20:26:27.398 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/index.html - 200 null text/html;charset=utf-8 188.5179ms
+2026-06-29 20:26:27.408 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - null null
+2026-06-29 20:26:27.466 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - null null
+2026-06-29 20:26:27.551 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-29 20:26:27.553 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_vs/browserLink - null null
+2026-06-29 20:26:28.799 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-29 20:26:28.804 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 3.5148ms
+2026-06-29 20:26:28.869 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-29 20:26:28.870 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 1403.2542 ms
+2026-06-29 20:26:28.871 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-29 20:26:28.872 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 1320.5640 ms
+2026-06-29 20:26:29.052 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui.css - 200 141841 text/css 1647.4183ms
+2026-06-29 20:26:29.249 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-standalone-preset.js - 200 307021 text/javascript 1502.9697ms
+2026-06-29 20:26:29.366 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-29 20:26:29.457 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 1906.3649 ms
+2026-06-29 20:26:29.770 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/swagger-ui-bundle.js - 200 974176 text/javascript 2303.0983ms
+2026-06-29 20:26:30.026 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/_vs/browserLink - 200 null text/javascript; charset=UTF-8 2469.5255ms
+2026-06-29 20:26:30.125 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - null null
+2026-06-29 20:26:30.203 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 77.9504 ms
+2026-06-29 20:26:30.205 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44387/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 80.4395ms
+2026-06-29 20:26:49.562 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/login - application/json 44
+2026-06-29 20:26:49.740 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-29 20:26:49.792 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RestApiModeloDDD.Application.Dtos.LoginDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-29 20:26:50.321 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-29 20:26:57.455 -03:00 [INF] Executed DbCommand (97ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-29 20:27:00.518 -03:00 [INF] Adicionando RefreshToken para usuário 1
+2026-06-29 20:27:22.750 -03:00 [INF] Executed DbCommand (121ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([CriadoEm], [ExpiraEm], [Revogado], [TokenHash], [UsuarioId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-06-29 20:27:25.218 -03:00 [INF] RefreshToken criado. Id: 1
+2026-06-29 20:27:25.248 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 34920.9078ms.
+2026-06-29 20:27:25.259 -03:00 [INF] Executing OkObjectResult, writing value of type 'RestApiModeloDDD.Application.DTOs.TokenDto'.
+2026-06-29 20:27:25.283 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API) in 35480.7315ms
+2026-06-29 20:27:25.284 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Login (RestApiModeloDDD.API)'
+2026-06-29 20:27:25.289 -03:00 [INF] HTTP POST /api/Auth/login responded 200 in 35719.5866 ms
+2026-06-29 20:27:25.301 -03:00 [INF] Request finished HTTP/2 POST https://localhost:44387/api/Auth/login - 200 null application/json; charset=utf-8 35739.7852ms
+2026-06-29 20:31:32.305 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/refresh - application/json 51
+2026-06-29 20:31:32.310 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Refresh (RestApiModeloDDD.API)'
+2026-06-29 20:31:32.315 -03:00 [INF] Route matched with {action = "Refresh", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Refresh(RestApiModeloDDD.Application.Dtos.RefreshTokenDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-29 20:31:32.321 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Refresh (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-29 20:31:34.769 -03:00 [INF] Consultando RefreshToken.
+2026-06-29 20:31:34.984 -03:00 [INF] Executed DbCommand (61ms) [Parameters=[@__token_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[CriadoEm], [r].[ExpiraEm], [r].[Revogado], [r].[TokenHash], [r].[UsuarioId], [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [RefreshTokens] AS [r]
+INNER JOIN [Usuarios] AS [u] ON [r].[UsuarioId] = [u].[Id]
+WHERE [r].[TokenHash] = @__token_0
+2026-06-29 20:31:40.916 -03:00 [INF] Executed DbCommand (51ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[CriadoEm], [r].[ExpiraEm], [r].[Revogado], [r].[TokenHash], [r].[UsuarioId]
+FROM [RefreshTokens] AS [r]
+WHERE [r].[Id] = @__p_0
+2026-06-29 20:31:52.234 -03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [RefreshTokens] SET [Revogado] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2026-06-29 20:31:52.248 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [Usuarios] AS [u]
+WHERE [u].[Id] = @__id_0
+2026-06-29 20:31:54.541 -03:00 [INF] Adicionando RefreshToken para usuário 1
+2026-06-29 20:31:56.381 -03:00 [INF] Executed DbCommand (49ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([CriadoEm], [ExpiraEm], [Revogado], [TokenHash], [UsuarioId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-06-29 20:31:56.382 -03:00 [INF] RefreshToken criado. Id: 2
+2026-06-29 20:31:56.383 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.AuthController.Refresh (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 24061.7073ms.
+2026-06-29 20:31:56.388 -03:00 [INF] Executing OkObjectResult, writing value of type 'RestApiModeloDDD.Application.DTOs.TokenDto'.
+2026-06-29 20:31:56.390 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.AuthController.Refresh (RestApiModeloDDD.API) in 24073.8674ms
+2026-06-29 20:31:56.390 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Refresh (RestApiModeloDDD.API)'
+2026-06-29 20:31:56.390 -03:00 [INF] HTTP POST /api/Auth/refresh responded 200 in 24083.8607 ms
+2026-06-29 20:31:56.391 -03:00 [INF] Request finished HTTP/2 POST https://localhost:44387/api/Auth/refresh - 200 null application/json; charset=utf-8 24085.7979ms
+2026-06-29 20:32:21.864 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/refresh - application/json 51
+2026-06-29 20:32:21.867 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Refresh (RestApiModeloDDD.API)'
+2026-06-29 20:32:21.867 -03:00 [INF] Route matched with {action = "Refresh", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Refresh(RestApiModeloDDD.Application.Dtos.RefreshTokenDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-29 20:32:21.869 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Refresh (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-29 20:32:23.717 -03:00 [INF] Consultando RefreshToken.
+2026-06-29 20:32:23.785 -03:00 [INF] Executed DbCommand (37ms) [Parameters=[@__token_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[CriadoEm], [r].[ExpiraEm], [r].[Revogado], [r].[TokenHash], [r].[UsuarioId], [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [RefreshTokens] AS [r]
+INNER JOIN [Usuarios] AS [u] ON [r].[UsuarioId] = [u].[Id]
+WHERE [r].[TokenHash] = @__token_0
+2026-06-29 20:32:25.411 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.AuthController.Refresh (RestApiModeloDDD.API) in 3543.6752ms
+2026-06-29 20:32:26.007 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Refresh (RestApiModeloDDD.API)'
+2026-06-29 20:32:29.568 -03:00 [WRN] Erro de domínio
+RestApiModeloDDD.Domain.Exceptions.UnauthorizedException: Refresh token revogado.
+   at ServiceAuth.RenovarRefreshToken(String refreshToken) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Domain\Services\ServiceAuth.cs:line 83
+   at RestApiModeloDDD.Application.Services.ApplicationServiceAuth.RefreshToken(RefreshTokenDto dto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.Application\Services\ApplicationServiceAuth.cs:line 47
+   at RestApiModeloDDD.API.Controllers.AuthController.Refresh(RefreshTokenDto dto) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Controllers\AuthController.cs:line 33
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at RestApiModeloDDD.API.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\WWWROOT\OneDrive\Documentos\Projetos\ModeloDDD\RestApiModeloDDD.API\Middlewares\ExceptionMiddleware.cs:line 27
+2026-06-29 20:32:29.598 -03:00 [INF] HTTP POST /api/Auth/refresh responded 400 in 7732.8186 ms
+2026-06-29 20:32:29.598 -03:00 [INF] Request finished HTTP/2 POST https://localhost:44387/api/Auth/refresh - 400 null null 7733.9527ms
+2026-06-29 20:33:29.454 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44387/api/Auth/refresh - application/json 51
+2026-06-29 20:33:29.455 -03:00 [INF] Executing endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Refresh (RestApiModeloDDD.API)'
+2026-06-29 20:33:29.455 -03:00 [INF] Route matched with {action = "Refresh", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Refresh(RestApiModeloDDD.Application.Dtos.RefreshTokenDto) on controller RestApiModeloDDD.API.Controllers.AuthController (RestApiModeloDDD.API).
+2026-06-29 20:33:29.457 -03:00 [INF] Executing action method RestApiModeloDDD.API.Controllers.AuthController.Refresh (RestApiModeloDDD.API) - Validation state: "Valid"
+2026-06-29 20:33:32.742 -03:00 [INF] Consultando RefreshToken.
+2026-06-29 20:33:32.761 -03:00 [INF] Executed DbCommand (17ms) [Parameters=[@__token_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[CriadoEm], [r].[ExpiraEm], [r].[Revogado], [r].[TokenHash], [r].[UsuarioId], [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [RefreshTokens] AS [r]
+INNER JOIN [Usuarios] AS [u] ON [r].[UsuarioId] = [u].[Id]
+WHERE [r].[TokenHash] = @__token_0
+2026-06-29 20:33:34.370 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[CriadoEm], [r].[ExpiraEm], [r].[Revogado], [r].[TokenHash], [r].[UsuarioId]
+FROM [RefreshTokens] AS [r]
+WHERE [r].[Id] = @__p_0
+2026-06-29 20:33:34.377 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [RefreshTokens] SET [Revogado] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2026-06-29 20:33:34.388 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Ativo], [u].[Email], [u].[Nome], [u].[Role], [u].[SenhaHash]
+FROM [Usuarios] AS [u]
+WHERE [u].[Id] = @__id_0
+2026-06-29 20:33:35.397 -03:00 [INF] Adicionando RefreshToken para usuário 1
+2026-06-29 20:33:36.679 -03:00 [INF] Executed DbCommand (45ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([CriadoEm], [ExpiraEm], [Revogado], [TokenHash], [UsuarioId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-06-29 20:33:36.680 -03:00 [INF] RefreshToken criado. Id: 3
+2026-06-29 20:33:36.681 -03:00 [INF] Executed action method RestApiModeloDDD.API.Controllers.AuthController.Refresh (RestApiModeloDDD.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 7224.24ms.
+2026-06-29 20:33:36.682 -03:00 [INF] Executing OkObjectResult, writing value of type 'RestApiModeloDDD.Application.DTOs.TokenDto'.
+2026-06-29 20:33:36.682 -03:00 [INF] Executed action RestApiModeloDDD.API.Controllers.AuthController.Refresh (RestApiModeloDDD.API) in 7226.4866ms
+2026-06-29 20:33:36.683 -03:00 [INF] Executed endpoint 'RestApiModeloDDD.API.Controllers.AuthController.Refresh (RestApiModeloDDD.API)'
+2026-06-29 20:33:36.685 -03:00 [INF] HTTP POST /api/Auth/refresh responded 200 in 7230.6770 ms
+2026-06-29 20:33:36.687 -03:00 [INF] Request finished HTTP/2 POST https://localhost:44387/api/Auth/refresh - 200 null application/json; charset=utf-8 7233.2867ms

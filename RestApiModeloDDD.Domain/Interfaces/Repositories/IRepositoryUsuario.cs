@@ -8,7 +8,7 @@ namespace RestApiModeloDDD.Domain.Interfaces.Repositories
     {
         Task<Usuario> ObterPorEmail(string email);
 
-        Task<Usuario> ObterPorId(Guid id);
+        Task<Usuario> ObterPorId(int id);
 
         Task Adicionar(Usuario usuario);
 
