@@ -527,6 +527,157 @@ Isso ocorre porque o Entity Framework Core já atua como Unit of Work através d
 
 Assim, optou-se por utilizar diretamente o `DbContext`, reduzindo complexidade e evitando sobreposição de padrões já fornecidos pela infraestrutura.
 
+---
+
+# Autenticação
+
+A API implementa autenticação baseada em **JWT (JSON Web Token)** utilizando tokens de acesso e **Refresh Tokens**, seguindo boas práticas de segurança para aplicações REST.
+
+## Fluxo de autenticação
+
+```text
+Login
+   │
+   ▼
+Validação das credenciais
+   │
+   ▼
+Geração do Access Token (JWT)
++
+Geração do Refresh Token
+   │
+   ▼
+Cliente utiliza o JWT nas requisições protegidas
+   │
+   ▼
+JWT expirou?
+   │
+   ├── Não → Continua utilizando normalmente
+   │
+   └── Sim
+         │
+         ▼
+ Envia Refresh Token
+         │
+         ▼
+ Validação do Refresh Token
+         │
+         ▼
+ Geração de novo JWT
+ +
+ Novo Refresh Token
+```
+
+## Access Token (JWT)
+
+O Access Token possui curta duração e contém as informações necessárias para autenticação das requisições.
+
+Características:
+
+- Assinado digitalmente
+- Expiração configurável
+- Contém as Claims do usuário
+- Utilizado no cabeçalho Authorization
+
+Exemplo:
+
+```http
+Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
+```
+
+---
+
+## Refresh Token
+
+O Refresh Token possui vida útil maior e é armazenado no banco de dados para permitir a emissão de novos Access Tokens sem exigir um novo login.
+
+Informações armazenadas:
+
+- Id
+- UsuarioId
+- TokenHash
+- ExpiraEm
+- Revogado
+- CriadoEm
+
+Boas práticas aplicadas:
+
+- Armazenamento do token em formato hash
+- Verificação de expiração
+- Revogação de tokens utilizados
+- Geração de novo Refresh Token a cada renovação
+
+---
+
+## Endpoints
+
+### Login
+
+```http
+POST /api/auth/login
+```
+
+Retorno:
+
+```json
+{
+  "accessToken": "...",
+  "refreshToken": "...",
+  "expiresIn": 3600
+}
+```
+
+---
+
+### Renovação do Token
+
+```http
+POST /api/auth/refresh
+```
+
+Request:
+
+```json
+{
+  "refreshToken": "..."
+}
+```
+
+Resposta:
+
+```json
+{
+  "accessToken": "...",
+  "refreshToken": "...",
+  "expiresIn": 3600
+}
+```
+
+---
+
+## Benefícios da implementação
+
+- Autenticação stateless
+- Melhor experiência para o usuário
+- Renovação automática da sessão
+- Maior segurança
+- Revogação de Refresh Tokens
+- Proteção contra reutilização de tokens
+- Compatível com aplicações Web, Mobile e APIs
+
+---
+
+## Tecnologias utilizadas
+
+- ASP.NET Core Authentication
+- JWT Bearer Authentication
+- System.IdentityModel.Tokens.Jwt
+- SQL Server
+- Entity Framework Core
+
+
+
+
 ### Tests
 
 Validação automatizada das regras.
