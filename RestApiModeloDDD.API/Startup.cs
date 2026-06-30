@@ -1,8 +1,10 @@
 using Autofac;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -10,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using RestApiModeloDDD.API.Configurations;
 using RestApiModeloDDD.API.Middlewares;
 using RestApiModeloDDD.API.Observability;
 using RestApiModeloDDD.Domain.Validations;
@@ -38,24 +41,31 @@ namespace RestApiModeloDDD.API
             services.AddDbContext<SqlContext>(options =>
                 options.UseSqlServer(connection));
 
+            // =========================
             // OBSERVABILIDADE
+            // =========================
             services.AddObservability();
 
             // =========================
-            // JWT SETTINGS (CORRIGIDO)
+            // HEALTH CHECKS
+            // =========================
+            services.AddHealthChecksConfiguration();
+
+            // =========================
+            // JWT
             // =========================
             var secretKey = Configuration["JwtSettings:SecretKey"];
             var issuer = Configuration["JwtSettings:Issuer"];
             var audience = Configuration["JwtSettings:Audience"];
 
             if (string.IsNullOrWhiteSpace(secretKey))
-                throw new Exception("JwtSettings:SecretKey não configurado no appsettings.json");
+                throw new Exception("JwtSettings:SecretKey não configurado.");
 
             if (string.IsNullOrWhiteSpace(issuer))
-                throw new Exception("JwtSettings:Issuer não configurado no appsettings.json");
+                throw new Exception("JwtSettings:Issuer não configurado.");
 
             if (string.IsNullOrWhiteSpace(audience))
-                throw new Exception("JwtSettings:Audience não configurado no appsettings.json");
+                throw new Exception("JwtSettings:Audience não configurado.");
 
             var key = Encoding.UTF8.GetBytes(secretKey);
 
@@ -65,69 +75,74 @@ namespace RestApiModeloDDD.API
                     options.RequireHttpsMetadata = false;
                     options.SaveToken = true;
 
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidateIssuerSigningKey = true,
-                        IssuerSigningKey = new SymmetricSecurityKey(key),
+                    options.TokenValidationParameters =
+                        new TokenValidationParameters
+                        {
+                            ValidateIssuerSigningKey = true,
+                            IssuerSigningKey = new SymmetricSecurityKey(key),
 
-                        ValidateIssuer = true,
-                        ValidIssuer = issuer,
+                            ValidateIssuer = true,
+                            ValidIssuer = issuer,
 
-                        ValidateAudience = true,
-                        ValidAudience = audience,
+                            ValidateAudience = true,
+                            ValidAudience = audience,
 
-                        ValidateLifetime = true,
+                            ValidateLifetime = true,
 
-                        ClockSkew = TimeSpan.Zero
-                    };
+                            ClockSkew = TimeSpan.Zero
+                        };
                 });
 
             services.AddAuthorization();
 
             services.AddControllers();
 
-            // FluentValidation
+            // =========================
+            // FLUENT VALIDATION
+            // =========================
             services.AddFluentValidationAutoValidation();
             services.AddValidatorsFromAssemblyContaining<ClienteValidation>();
 
             services.AddEndpointsApiExplorer();
 
             // =========================
-            // SWAGGER + JWT
+            // SWAGGER
             // =========================
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1",
-                    new OpenApiInfo
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "API Model DDD",
+                    Version = "v1"
+                });
+
+                c.AddSecurityDefinition("Bearer",
+                    new OpenApiSecurityScheme
                     {
-                        Title = "API Model DDD",
-                        Version = "v1"
+                        Name = "Authorization",
+                        Type = SecuritySchemeType.Http,
+                        Scheme = "bearer",
+                        BearerFormat = "JWT",
+                        In = ParameterLocation.Header,
+                        Description = "Bearer {token}"
                     });
 
-                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-                {
-                    Name = "Authorization",
-                    Type = SecuritySchemeType.Http,
-                    Scheme = "bearer",
-                    BearerFormat = "JWT",
-                    In = ParameterLocation.Header,
-                    Description = "Digite: Bearer {seu_token}"
-                });
-
-                c.AddSecurityRequirement(new OpenApiSecurityRequirement
-                {
+                c.AddSecurityRequirement(
+                    new OpenApiSecurityRequirement
                     {
-                        new OpenApiSecurityScheme
                         {
-                            Reference = new OpenApiReference
+                            new OpenApiSecurityScheme
                             {
-                                Type = ReferenceType.SecurityScheme,
-                                Id = "Bearer"
-                            }
-                        },
-                        Array.Empty<string>()
-                    }
-                });
+                                Reference =
+                                    new OpenApiReference
+                                    {
+                                        Type = ReferenceType.SecurityScheme,
+                                        Id = "Bearer"
+                                    }
+                            },
+                            Array.Empty<string>()
+                        }
+                    });
             });
         }
 
@@ -136,7 +151,9 @@ namespace RestApiModeloDDD.API
             builder.RegisterModule(new ModuleIOC());
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(
+            IApplicationBuilder app,
+            IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -146,6 +163,8 @@ namespace RestApiModeloDDD.API
             app.UseSerilogRequestLogging();
 
             app.UseMiddleware<ExceptionMiddleware>();
+
+            app.UseHttpsRedirection();
 
             app.UseRouting();
 
@@ -160,11 +179,16 @@ namespace RestApiModeloDDD.API
                 c.RoutePrefix = "swagger";
             });
 
-            app.UseHttpsRedirection();
-
-            // ORDEM CORRETA (IMPORTANTE)
             app.UseAuthentication();
+
             app.UseAuthorization();
+
+            app.UseHealthChecks("/health", new HealthCheckOptions
+            {
+                Predicate = _ => true,
+                ResponseWriter =
+                    UIResponseWriter.WriteHealthCheckUIResponse
+            });
 
             app.UseEndpoints(endpoints =>
             {
@@ -173,3 +197,4 @@ namespace RestApiModeloDDD.API
         }
     }
 }
+
