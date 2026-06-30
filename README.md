@@ -724,7 +724,6 @@ Este projeto foi desenvolvido com foco em estudo de arquitetura corporativa, vis
 
 Evoluções previstas:
 
-- Autenticação JWT e Refresh Token
 - Versionamento de API
 - Health Checks
 - Docker e Docker Compose
@@ -733,6 +732,11 @@ Evoluções previstas:
 - Observabilidade com OpenTelemetry
 - Mensageria com RabbitMQ
 - CQRS com MediatR
+- Mensageria com RabbitMQ
+- CQRS com MediatR
+- Background Services
+- Rate Limiting
+- API Gateway
 
 ---
 
